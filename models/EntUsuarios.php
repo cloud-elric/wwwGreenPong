@@ -18,7 +18,6 @@ use Yii;
  * @property WrkPuntuaciones[] $wrkPuntuaciones
  */
 class EntUsuarios extends \yii\db\ActiveRecord {
-	
 	public $aceptaTerminos;
 	
 	/**
@@ -35,6 +34,16 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 		return [ 
 				[ 
 						[ 
+								
+								'aceptaTerminos' 
+						],
+						'required',
+						'requiredValue' => 1,
+						'message' => 'Debe aceptar los terminos y condiciones' 
+				],
+				[ 
+						[ 
+								
 								'txt_nombre',
 								'txt_apellido_paterno',
 								'txt_email',
