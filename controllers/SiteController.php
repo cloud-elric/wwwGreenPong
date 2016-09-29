@@ -137,6 +137,13 @@ class SiteController extends Controller {
 	}
 	
 	/**
+	 * Guarda puntuación
+	 */
+	public function actionGuardarPuntuación(){
+		
+	}
+	
+	/**
 	 * Login action.
 	 *
 	 * @return string
