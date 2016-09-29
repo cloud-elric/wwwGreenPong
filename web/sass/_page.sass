@@ -1,8 +1,14 @@
 /*!
 	-----------------------------------------------------------------------------
 
-	4.0 - Page
-			# Page
+	3.0 - Page
+			# Header
+			# Login
+				- Aceptar - Terminos y condiciones
+				- Checkbox - Terminos y condiciones
+			# Ingresar Código
+			# Modal
+			# Jugar
 
 	-----------------------------------------------------------------------------
 	*/
@@ -27,14 +33,7 @@ header
 		justify-content: center
 		position: relative
 		width: 100%
-		.nav-trigger
-			// background-color: red
-			left: 30px
-			position: absolute
-			top: 30px
-			+transition(left 0.3s ease-in)
-			@include respond-to(xs)
-				left: 10px
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
 		.logo
 			// background-color: green
 			display: block
@@ -47,195 +46,23 @@ header
 			@include respond-to(xs)
 				height: auto
 				width: 60%
-		.nav
-			background-color: #222
-			bottom: 0
-			height: calc(100vh - 100px)
-			left: 0
-			position: fixed
-			top: 100px
-			width: 200px
-			+transition(all 300ms ease-in-out)
-			transform: translateX(-200px)
-			a
-				background-color: transparent
-				border-left: 1px solid #222
-				color: $white
-				font-size: 1.05em
-				display: block
-				padding: 14px 20px
-				&:hover
-					background-color: rgba($white,.2)
-					border-left: 3px solid $yellow
-					padding-left: 30px
-			&.nav-toggle
-				// +transition(all 300ms ease-in-out)
-				transform: translateX(0)
 
-/*  Contenedor 2
+/*  Login
 	================================================ */
-.me-conts
+.login-cont
 	align-items: center
-	background-color: teal
 	background-image: url(../images/bg.jpg)
 	background-position: 50%
 	background-repeat: no-repeat
 	background-size: cover
 	display: flex
 	justify-content: center
+	min-height: 100vh
 	position: relative
 	width: 100%
-	// @include respond-to(lg)
-	// 	height: 100vh
-	// @include respond-to(md)
-	// 	height: 100vh
-	// @include respond-to(sm)
-	// 	margin: 60px 0
-	// @include respond-to(xs)
-	// 	margin: 60px 0
-	// Card
-	.me-card
-		// background-color: rgba($white,.2)
-		margin: 160px auto 40px
-		max-width: 400px
-		text-align: center
-		width: 90%
-		@include respond-to(sm)
-			margin: 160px 0 60px
-		@include respond-to(xs)
-			margin: 160px 0 60px
-		.me-card-header
-			// background-color: $yellow
-			background: rgba(251,227,0,1)
-			background: -moz-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
-			background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(251,227,0,1)), color-stop(50%, rgba(251,227,0,1)), color-stop(51%, rgba(255,255,255,1)), color-stop(71%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)))
-			background: -webkit-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
-			background: -o-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
-			background: -ms-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
-			background: linear-gradient(168deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe300', endColorstr='#ffffff', GradientType=1 )
-			height: 150px
-			overflow: hidden
-			text-align: left
-			@include respond-to(xs)
-				height: 154px
-			@include respond-to(xx)
-				height: 208px
-			.me-card-header-anuncio
-				// background-color: rgba(red,.2)
-				text-transform: uppercase
-				// transform: rotate(-14deg)
-				// transform: translateY(20px)
-				transform-origin: left
-				transform: translateY(56px) translateX(7px) rotate(-12deg)
-				h3
-					font-family: $f-proximan-black
-					font-style: italic
-					font-size: 1.9em
-				p
-					font-family: $f-proximan-regular
-					font-style: italic
-					font-size: .9em
-					span
-						font-family: $f-proximan-black
-		.me-card-body
-			background-color: $white
-			color: $black
-			padding: 4px 30px 0
-			.id
-				text-align: center
-				input[type="text"]
-					background-color: #EEE
-					border: 1px solid $white
-					+border-radius(2)
-					display: inline-block
-					font-family: $f-proximan-bold
-					font-size: 2em
-					padding: 6px 16px
-					text-align: center
-					width: 100%
-					&:active,
-					&:focus
-						border: 1px solid $yellow
-						outline: none
-				.help-block-error
-					color: red
-					margin-top: 4px
-				p
-					display: block
-			.recibiras
-				font-family: $f-proximan-regular
-				letter-spacing: 1px
-				margin-top: 6px
-			hr
-				background-color: $yellow
-				height: 3px
-				margin: 6px auto 10px
-				width: 90%
-			.texto
-				font-weight: bold
-			.card-logo
-				height: 60px
-				margin: 18px auto
-			.vigencia
-				background-color: $yellow
-				+border-radius(3px 3px 0 0)
-				padding: 8px 20px
-				font-size: .9em
-				font-family: $f-proximan-bold
-				margin: 0 auto
-				max-width: 240px
-				width: 90%
-		// Btn Jugar
-		.me-btn-jugar
-			background-color: $yellow
-			border: none
-			+border-radius(12px)
-			color: $white
-			cursor: pointer
-			display: inline-block
-			font-size: 1.2em
-			font-weight: bold
-			letter-spacing: 1px
-			margin-top: 30px
-			padding: 10px 30px
-	// Aviso de privacidad
-	.aviso-privacidad
-		bottom: 20px
-		left: 30px
-		position: absolute
-		span
-			color: rgba($white,.8)
-			cursor: pointer
-			font-size: .9em
-			letter-spacing: 1px
-			text-decoration: underline
-			&:hover
-				color: $white
-
-
-/*  Contenedor 1
-	================================================ */
-.me-cont
-	align-items: center
-	background-color: teal
-	background-image: url(../images/bg.jpg)
-	background-position: 50%
-	background-repeat: no-repeat
-	background-size: cover
-	display: flex
-	// display: none
-	// height: 100vh
-	justify-content: center
-	position: relative
-	width: 100%
-	@include respond-to(lg)
-		height: 100vh
-	@include respond-to(md)
-		height: 100vh
 	.form-login
 		// background-color: rgba($white,.1)
-		margin: 0 auto
+		margin: 150px auto 0
 		max-width: 400px
 		width: 94%
 		@include respond-to(sm)
@@ -285,6 +112,10 @@ header
 				font-size: 1.18em
 				letter-spacing: 1px
 				padding: 10px 30px
+				&:active,
+				&:focus
+					background-color: $yellow-secundary
+					outline: none
 		.btn-field
 			@include respond-to(xs)
 				text-align: center
@@ -292,6 +123,143 @@ header
 		.help-block-error
 			color: red
 			margin-top: 6px
+	// Aviso de privacidad
+	.aviso-privacidad
+		bottom: 20px
+		left: 30px
+		position: absolute
+		span
+			color: rgba($white,.8)
+			cursor: pointer
+			font-size: .9em
+			letter-spacing: 1px
+			text-decoration: underline
+			&:hover
+				color: $white
+
+/*  Ingresar Código
+	================================================ */
+.ingresar-codigo-cont
+	align-items: center
+	background-image: url(../images/bg.jpg)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	justify-content: center
+	position: relative
+	width: 100%
+	// Card
+	.ingresar-codigo-card
+		// background-color: rgba($white,.2)
+		margin: 150px auto 40px
+		max-width: 400px
+		text-align: center
+		width: 90%
+		@include respond-to(sm)
+			margin: 160px 0 60px
+		@include respond-to(xs)
+			margin: 160px 0 60px
+		// header
+		.ingresar-codigo-card-header
+			// background-color: $yellow
+			background: rgba(251,227,0,1)
+			background: -moz-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
+			background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(251,227,0,1)), color-stop(50%, rgba(251,227,0,1)), color-stop(51%, rgba(255,255,255,1)), color-stop(71%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)))
+			background: -webkit-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
+			background: -o-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
+			background: -ms-linear-gradient(-45deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
+			background: linear-gradient(168deg, rgba(251,227,0,1) 0%, rgba(251,227,0,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe300', endColorstr='#ffffff', GradientType=1 )
+			height: 150px
+			overflow: hidden
+			text-align: left
+			@include respond-to(xs)
+				height: 154px
+			@include respond-to(xx)
+				height: 208px
+			// header anuncio
+			.ingresar-codigo-card-header-anuncio
+				// background-color: rgba(red,.2)
+				text-transform: uppercase
+				transform-origin: left
+				transform: translateY(56px) translateX(7px) rotate(-12deg)
+				h3
+					font-family: $f-proximan-black
+					font-style: italic
+					font-size: 1.9em
+				p
+					font-family: $f-proximan-regular
+					font-style: italic
+					font-size: .9em
+					span
+						font-family: $f-proximan-black
+		// body
+		.ingresar-codigo-card-body
+			background-color: $white
+			color: $black
+			padding: 4px 30px 0
+			.id
+				text-align: center
+				input[type="text"]
+					background-color: #EEE
+					border: 1px solid $white
+					+border-radius(2)
+					display: inline-block
+					font-family: $f-proximan-bold
+					font-size: 2em
+					padding: 6px 16px
+					text-align: center
+					width: 100%
+					&:active,
+					&:focus
+						border: 1px solid $yellow
+						outline: none
+				.help-block-error
+					color: red
+					margin-top: 4px
+				p
+					display: block
+			.recibiras
+				font-family: $f-proximan-regular
+				letter-spacing: 1px
+				margin-top: 6px
+			hr
+				background-color: $yellow
+				height: 3px
+				margin: 6px auto 10px
+				width: 90%
+			.texto
+				font-weight: bold
+			.card-logo
+				height: 60px
+				margin: 18px auto
+			.vigencia
+				background-color: $yellow
+				+border-radius(3px 3px 0 0)
+				padding: 8px 20px
+				font-size: .9em
+				font-family: $f-proximan-bold
+				margin: 0 auto
+				max-width: 240px
+				width: 90%
+		// Btn Jugar
+		.ingresar-codigo-card-btn-jugar
+			background-color: $yellow
+			border: none
+			+border-radius(12px)
+			color: $white
+			cursor: pointer
+			display: inline-block
+			font-size: 1.2em
+			font-weight: bold
+			letter-spacing: 1px
+			margin-top: 30px
+			padding: 10px 30px
+			&:active,
+			&:focus
+				background-color: $yellow-secundary
+				outline: none
 	// Aviso de privacidad
 	.aviso-privacidad
 		bottom: 20px
@@ -330,15 +298,12 @@ header
 	list-style: none
 	margin: .5rem
 
-
 .list__item 
 	margin: 0 0 .5rem 0
 	padding: 0
 
-
 .label--checkbox 
 	position: relative
-	// margin: .5rem
 	font-family: Arial, sans-serif
 	line-height: 135%
 	cursor: pointer
@@ -372,7 +337,6 @@ header
 		height: 1rem
 		border: 2px solid $white
 		top: 2px
-  
 	&:checked 
 		&:before 
 			transform: rotate(-45deg)
@@ -380,8 +344,6 @@ header
 			border-color: $yellow
 			border-top-style: none
 			border-right-style: none
-    
-  
 	&:after 
 		content: ""
 		position: absolute
@@ -416,185 +378,25 @@ header
 	font-family: $f-proximan-regular
 
 
-// Algo
-.algo
-	background-color: pink
-	height: 100vh
-	display: flex
-	display: none
-	align-items: center
-	justify-content: center
-	flex-direction: column
-
-/*  Toggle nav
-	================================================ */
-.toggle-nav
-	cursor: pointer
-	position: relative
-	height: 30px
-	width: 40px
-	background-color: dodgerblue
-	&.toggle-nav-anim
-		.bar.top
-			animation: slideTop .3s forwards
-		.bar.bottom
-			animation: slideBottom .3s forwards
-		.bar.middle1
-			animation: middle1Anim .5s forwards
-			box-shadow: 0 2px 4px -2px rgba($black,0.5)
-		.bar.middle2
-			animation: middle2Anim .5s forwards
-			box-shadow: 0 2px 4px -2px rgba($black,0.0)
-	// @include respond-to(xs)
-
-	.bar
-		display: block
-		position: absolute
-		top: 0
-		left: 0
-		height: 4px
-		width: 40px
-		background-color: #fff
-		border-radius: 10px
-		+transition(all 300ms ease-in-out)
-		transform-origin: 21px 2px
-		box-shadow: 0 2px 4px -2px rgba(0,0,0,0.4)
-		@include respond-to(xs)
-			transform-origin: 21px 2px
-	.middle1
-		top: 12px
-	.middle2
-		top: 12px
-		box-shadow: 0 2px 4px -2px rgba(0,0,0,0.0)
-	.bottom
-		top: 24px
-
-	.bar
-		&:first-child
-			margin-top: 0
-
-@keyframes slideTop
-	0%
-		transform: translateY(0) scale(1)
-	60%
-		transform: translateY(8px) scale(1)
-	70%
-		transform: translateY(12px) scale(1)
-	100%
-		transform: translateY(12px) scale(0)
-
-@keyframes slideBottom
-	0%
-		transform: translateY(0) scale(1)
-	60%
-		transform: translateY(-8px) scale(1)
-	70%
-		transform: translateY(-12px) scale(1)
-	100%
-		transform: translateY(-12px) scale(0)
-
-@keyframes middle1Anim
-	0%,50%
-		transform: rotate(0deg)
-	100%
-		transform: rotate(45deg)
-
-@keyframes middle2Anim
-	0%,50%
-		transform: rotate(0)
-	100%
-		transform: rotate(-45deg)
-
-
-
-/*  Menu
-	================================================ */
-#nav-icon3
-	// background-color: red
-	width: 60px
-	height: 45px
-	position: relative
-	// margin: 50px auto
-	-webkit-transform: rotate(0deg)
-	-moz-transform: rotate(0deg)
-	-o-transform: rotate(0deg)
-	transform: rotate(0deg)
-	-webkit-transition: .5s ease-in-out
-	-moz-transition: .5s ease-in-out
-	-o-transition: .5s ease-in-out
-	transition: .5s ease-in-out
-	cursor: pointer
-
-
-#nav-icon3
-	span
-		display: block
-		position: absolute
-		height: 3px
-		width: 100%
-		background: #d3531a
-		border-radius: 9px
-		opacity: 1
-		left: 0
-		-webkit-transform: rotate(0deg)
-		-moz-transform: rotate(0deg)
-		-o-transform: rotate(0deg)
-		transform: rotate(0deg)
-		-webkit-transition: .25s ease-in-out
-		-moz-transition: .25s ease-in-out
-		-o-transition: .25s ease-in-out
-		transition: .25s ease-in-out
-		// Icon 3
-		&:nth-child(1) 
-			top: 0px
-		&:nth-child(2),
-		&:nth-child(3) 
-			top: 18px
-		&:nth-child(4) 
-			top: 36px
-
-
-	&.open
-		span
-			&:nth-child(1) 
-				top: 18px
-				width: 0%
-				left: 50%
-			&:nth-child(2) 
-				-webkit-transform: rotate(45deg)
-				-moz-transform: rotate(45deg)
-				-o-transform: rotate(45deg)
-				transform: rotate(45deg)
-			&:nth-child(3) 
-				-webkit-transform: rotate(-45deg)
-				-moz-transform: rotate(-45deg)
-				-o-transform: rotate(-45deg)
-				transform: rotate(-45deg)
-			&:nth-child(4) 
-				top: 18px
-				width: 0%
-				left: 50%
 
 /*  Modal
 	================================================ */
 .modal 
-	display: none /* Hidden by default */
-	position: fixed /* Stay in place */
-	z-index: 19 /* Sit on top */
-	// padding-top: 100px /* Location of the box */
+	display: none
+	position: fixed
+	z-index: 19
 	left: 0
 	top: 0
-	width: 100% /* Full width */
-	height: 100% /* Full height */
-	overflow: auto /* Enable scroll if needed */
-	background-color: rgb(0,0,0) /* Fallback color */
-	background-color: rgba($black,0.4) /* Black w/ opacity */
+	width: 100%
+	height: 100%
+	overflow: auto
+	background-color: rgb(0,0,0)
+	background-color: rgba($black,0.4)
 	align-items: center
 	justify-content: center
 
-
-/* Modal Content */
-.modal-content 
+// Modal Content
+.modal-content
 	position: relative
 	background-color: #fefefe
 	margin: auto
@@ -608,8 +410,7 @@ header
 	animation-name: animatetop
 	animation-duration: 0.4s
 
-
-/* Add Animation */
+// Animation
 @-webkit-keyframes animatetop 
 	from
 		top:-300px
@@ -617,7 +418,6 @@ header
 	to
 		top:0
 		opacity:1
-
 
 @keyframes animatetop 
 	from
@@ -628,7 +428,7 @@ header
 		opacity:1
 
 
-/* The Close Button */
+// Close Button
 .close 
 	color: white
 	float: right
@@ -640,6 +440,7 @@ header
 		text-decoration: none
 		cursor: pointer
 
+// header
 .modal-header 
 	padding: 4px 20px
 	background-color: $yellow
@@ -653,6 +454,7 @@ header
 		@include respond-to(xs)
 			font-size: 1.35em
 
+// body
 .modal-body
 	padding: 30px 20px
 	p
@@ -669,7 +471,128 @@ header
 		@include respond-to(xs)
 			text-align: center
 
-// .modal-footer 
-// 	padding: 2px 16px
-// 	background-color: #5cb85c
-// 	color: white
+/*  Jugar
+	================================================ */
+.jugar
+	align-items: center
+	background-image: url(../images/bg.jpg)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	min-height: 100vh
+	justify-content: center
+	position: relative
+	width: 100%
+	// Contedor
+	.jugar-cont
+		// background-color: teal
+		margin: 150px 0 40px
+		max-width: 1280px
+		width: 90%
+		// header
+		.jugar-cont-header
+			display: flex
+			justify-content: space-around
+			text-align: center
+			.jugar-score,
+			.jugar-lives
+				color: $white
+				p
+					font-family: $f-proximan-bold
+					font-size: 1.6em
+					span
+						font-family: $f-proximan-regular
+						display: block
+			// .jugar-score
+			// 	background-color: pink
+			// .jugar-lives
+			// 	background-color: green
+		// body
+		.jugar-cont-body
+			// background-color: dodgerblue
+			margin-top: 50px
+			text-align: center
+			#myCanvas
+				background-color: $white
+				border: rgba($white,.3)
+				width: 100%
+			p
+				background-color: $yellow
+				border: none
+				+border-radius(12px)
+				color: $white
+				cursor: pointer
+				display: inline-block
+				font-size: 1.2em
+				font-weight: bold
+				letter-spacing: 1px
+				margin-top: 30px
+				padding: 10px 30px
+				&:hover
+					background-color: $yellow-secundary
+
+/*  Puntuación
+	================================================ */
+.puntuacion
+	background-image: url(../images/bg.jpg)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	min-height: 100vh
+	justify-content: center
+	position: relative
+	width: 100%
+	// Contedor
+	.puntuacion-cont
+		// background-color: teal
+		margin: 150px 0 40px
+		max-width: 1280px
+		width: 90%
+		h3
+			color: $white
+			font-family: $f-proximan-black
+			margin-bottom: 30px
+			text-align: center
+		.puntuacion-cont-tabla
+			background-color: $white
+			.puntuacion-cont-tabla-head
+				background-color: $yellow-secundary
+				display: flex
+				padding: 16px 10px
+				.puntuacion-cont-tabla-head-td
+					// background-color: rgba(green,.2)
+					color: $white
+					font-family: $f-proximan-bold
+					&:nth-child(1)
+						text-align: center
+						width: 6%
+					&:nth-child(2)
+						width: 40%
+					&:nth-child(3)
+						text-align: center
+						width: 12%
+					&:nth-child(4)
+						width: 42%
+			.puntuacion-cont-tabla-body
+				// background-color: rgba(yellow,.2)
+				.puntuacion-cont-tabla-body-tr
+					display: flex
+					padding: 16px 10px
+					&:nth-child(odd)
+						background-color: $white
+					&:nth-child(even)
+						background-color: #fffac8
+					.puntuacion-cont-tabla-body-td
+						// background-color: rgba(green,.2)
+						&:nth-child(1)
+							text-align: center
+							width: 6%
+						&:nth-child(2)
+							width: 40%
+						&:nth-child(3)
+							text-align: center
+							width: 12%
+						&:nth-child(4)
+							width: 42%
