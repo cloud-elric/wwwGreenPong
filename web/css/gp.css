@@ -963,6 +963,44 @@ header .header-cont .logo img {
   background-color: #d9c400;
 }
 
+.jugar .modal-gameover .modal-content .modal-body {
+  text-align: center;
+}
+
+.jugar .modal-gameover .modal-content .modal-body button {
+  background-color: #FBE300;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  padding: 10px 30px;
+}
+
+.jugar .modal-gameover .modal-content .modal-body button:active, .jugar .modal-gameover .modal-content .modal-body button:focus {
+  background-color: #d9c400;
+  outline: none;
+}
+
+.jugar .modal-gameover .modal-content .modal-body button.btn-volver-a-jugar {
+  margin-right: 20px;
+}
+
+.jugar .modal-gameover .modal-content .modal-body button.btn-finalizar {
+  background-color: #181514;
+}
+
+.jugar .modal-gameover .modal-content .modal-body button.btn-finalizar:active, .jugar .modal-gameover .modal-content .modal-body button.btn-finalizar:focus {
+  background-color: #666;
+}
+
 /*  Puntuación
 	@mixin =============================================== */
 .puntuacion {

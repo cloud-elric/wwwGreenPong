@@ -531,6 +531,33 @@ header
 				padding: 10px 30px
 				&:hover
 					background-color: $yellow-secundary
+	.modal-gameover
+		.modal-content
+			.modal-body
+				text-align: center
+				button
+					background-color: $yellow
+					border: none
+					+border-radius(12px)
+					color: $white
+					cursor: pointer
+					display: inline-block
+					font-size: 1.1em
+					font-weight: bold
+					letter-spacing: 1px
+					margin-top: 30px
+					padding: 10px 30px
+					&:active,
+					&:focus
+						background-color: $yellow-secundary
+						outline: none
+					&.btn-volver-a-jugar
+						margin-right: 20px
+					&.btn-finalizar
+						background-color: $text-base
+						&:active,
+						&:focus
+							background-color: #666
 
 /*  Puntuación
 	================================================ */

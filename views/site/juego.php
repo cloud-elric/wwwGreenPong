@@ -48,7 +48,7 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 
 
 	<!-- .modal (GameOver) -->
-	<div id="modal-gameover" class="modal">
+	<div id="modal-gameover" class="modal modal-gameover">
 
 		<!-- .modal-content -->
 		<div class="modal-content">
@@ -60,9 +60,8 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 			<!-- end - .modal-header -->
 			<!-- .modal-body -->
 			<div class="modal-body">
-				<p>
-					Volver a jugar o Finalizar
-				</p>
+				<button class="btn-volver-a-jugar">Volver a jugar</button>
+				<button class="btn-finalizar">Finalizar</button>
 			</div>
 			<!-- end - .modal-body -->
 		</div>
