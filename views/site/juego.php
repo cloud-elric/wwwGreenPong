@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+$this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::className()]]);
 ?>
 <!-- .jugar -->
 <div class="jugar">
@@ -9,9 +10,6 @@ use yii\helpers\Url;
 		
 		<!-- .jugar-cont-header -->
 		<div class="jugar-cont-header">
-
-			<!-- <img id="ball" src="<?=Url::base()?>/images/tennisball.png">
-			<img id="court" src="<?=Url::base()?>/images/tenniscourt.png"> -->
 
 			<!-- .jugar-score -->
 			<div id="score_box" class="jugar-score">
@@ -31,13 +29,47 @@ use yii\helpers\Url;
 
 		<!-- .jugar-cont-body -->
 		<div class="jugar-cont-body">
-			<canvas id="myCanvas"></canvas>
-			<p onclick="iniciarJuego()">iniciar</p>
+			
+			<canvas id="myCanvas" width="600" height="300"></canvas>
+			<!-- <canvas id="myCanvas"  style="border:1px solid #000000;margin-top: 150px;"></canvas> -->
+			<p onclick="iniciarJuego()">Jugar</p>
+			<p class="btn-gameover">modal</p>
+			
+			<div style="display: none;">
+				<img id="ball" src="<?=Url::base()?>/images/tennisball.png">
+				<img id="court" src="<?=Url::base()?>/images/tenniscourt.png">
+			</div>
+
 		</div>
 		<!-- end - .jugar-cont-body -->
 
 	</div>
 	<!-- end - .jugar-cont -->
+
+
+	<!-- .modal (GameOver) -->
+	<div id="modal-gameover" class="modal">
+
+		<!-- .modal-content -->
+		<div class="modal-content">
+			<!-- .modal-header -->
+			<div class="modal-header">
+				<span class="close modal-gameover-close">×</span>
+				<h2>GameOver</h2>
+			</div>
+			<!-- end - .modal-header -->
+			<!-- .modal-body -->
+			<div class="modal-body">
+				<p>
+					Volver a jugar o Finalizar
+				</p>
+			</div>
+			<!-- end - .modal-body -->
+		</div>
+		<!-- end - .modal-content -->
+
+	</div>
+	<!-- end - .modal -->
 
 </div>
 <!-- end - .jugar -->
