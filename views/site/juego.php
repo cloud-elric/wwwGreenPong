@@ -35,7 +35,7 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 			<p onclick="iniciarJuego()">Jugar</p>
 			<p class="btn-gameover">modal</p>
 			
-			<div style="display: none;">
+			<div>
 				<img id="ball" src="<?=Url::base()?>/images/tennisball.png">
 				<img id="court" src="<?=Url::base()?>/images/tenniscourt.png">
 			</div>
