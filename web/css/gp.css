@@ -1,0 +1,1143 @@
+@charset "UTF-8";
+/*!
+	*	Charlenetas
+	*	Descripción de lo que es proyecto
+
+	# url         http://www.charlenetas.com/
+	# author      Damián <@damian>
+	# copyright   Copyright (c) 2016, Charlenetas
+	*/
+/*!
+	--------------------------------------------------------
+	Charlenetas.sass
+	--------------------------------------------------------
+	0.0 - Tipografía
+	1.0 - Normalizar
+	2.0 - Basicos
+			# Basic
+			# Loader
+	3.0 - Page
+	--------------------------------------------------------
+	*/
+/*!
+	-----------------------------------------------------------------------------
+
+	0.0 - Tipografía
+			# Roboto
+			# Roboto
+			# Roboto
+			# Roboto
+			# Roboto
+			# Roboto
+
+	----------------------------------------------------------------------------- */
+/* Exo */
+@import url(https://fonts.googleapis.com/css?family=Exo:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/* Exo 2 */
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/* Lato */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+/* Montserrat */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+/* Raleway */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/*  */
+/* Roboto */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@font-face {
+  font-family: 'futurist_fixed-widthregular';
+  src: url("../fonts/futurist/futrfw_0-webfont.woff2") format("woff2"), url("../fonts/futurist/futrfw_0-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futurist_extraheavyregular';
+  src: url("../fonts/futurist/futurist_extraheavy_regular-webfont.woff2") format("woff2"), url("../fonts/futurist/futurist_extraheavy_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novablack';
+  src: url("../fonts/proximanova/proximanova-black_0-webfont.woff2") format("woff2"), url("../fonts/proximanova/proximanova-black_0-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url("../fonts/proximanova/proximanova-bold_0-webfont.woff2") format("woff2"), url("../fonts/proximanova/proximanova-bold_0-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url("../fonts/proximanova/proximanova-reg_0-webfont.woff2") format("woff2"), url("../fonts/proximanova/proximanova-reg_0-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*!
+	-----------------------------------------------------------------------------
+
+	2.0 - Basicos
+			# Basic
+			# Loader
+			# Header
+			# Nav
+			# Page
+			# Footer
+
+	-----------------------------------------------------------------------------
+	*/
+/*  Basic
+	@mixin =============================================== */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fffeff;
+  background-color: red;
+  color: #181514;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+}
+
+/* a */
+a {
+  color: #FFDF27;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  -ms-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+a:hover {
+  color: #FBE300;
+  text-decoration: none;
+  -ms-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* img */
+img {
+  -ms-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+/* h1 - h6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+.h1 {
+  font-size: 2.8em;
+}
+
+h2,
+.h2 {
+  font-size: 2.4em;
+}
+
+h3,
+.h3 {
+  font-size: 2em;
+}
+
+h4,
+.h4 {
+  font-size: 1.6em;
+}
+
+h5,
+.h5 {
+  font-size: 1.4em;
+}
+
+h6,
+.h6 {
+  font-size: 1.2em;
+}
+
+/* hr */
+hr {
+  border: none;
+  margin: 0;
+}
+
+/* text align */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/*  Loader
+	@mixin =============================================== */
+.loader {
+  align-items: center;
+  background-color: #FFF;
+  bottom: 0;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/*  Cortar texto y colocar tres puntos
+	@mixin =============================================== */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Page
+			# Page
+
+	-----------------------------------------------------------------------------
+	*/
+/*  Header
+	@mixin =============================================== */
+header {
+  background-color: #FBE300;
+  height: 100px;
+  display: flex;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+header .header-cont {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+header .header-cont .nav-trigger {
+  left: 30px;
+  position: absolute;
+  top: 30px;
+  -ms-transition: left 0.3s ease-in;
+  -moz-transition: left 0.3s ease-in;
+  -webkit-transition: left 0.3s ease-in;
+  transition: left 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  header .header-cont .nav-trigger {
+    left: 10px;
+  }
+}
+
+header .header-cont .logo {
+  display: block;
+  height: 90px;
+  max-width: 300px;
+  position: relative;
+  width: 90%;
+}
+
+header .header-cont .logo img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  header .header-cont .logo {
+    height: auto;
+    width: 60%;
+  }
+}
+
+header .header-cont .nav {
+  background-color: #222;
+  bottom: 0;
+  height: calc(100vh - 100px);
+  left: 0;
+  position: fixed;
+  top: 100px;
+  width: 200px;
+  -ms-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  transform: translateX(-200px);
+}
+
+header .header-cont .nav a {
+  background-color: transparent;
+  border-left: 1px solid #222;
+  color: #FFF;
+  font-size: 1.05em;
+  display: block;
+  padding: 14px 20px;
+}
+
+header .header-cont .nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 3px solid #FBE300;
+  padding-left: 30px;
+}
+
+header .header-cont .nav.nav-toggle {
+  transform: translateX(0);
+}
+
+/*  Contenedor 2
+	@mixin =============================================== */
+.me-conts {
+  align-items: center;
+  background-color: teal;
+  background-image: url(../images/bg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.me-conts .me-card {
+  margin: 160px auto 40px;
+  max-width: 400px;
+  text-align: center;
+  width: 90%;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .me-conts .me-card {
+    margin: 160px 0 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .me-conts .me-card {
+    margin: 160px 0 60px;
+  }
+}
+
+.me-conts .me-card .me-card-header {
+  background: #fbe300;
+  background: -moz-linear-gradient(-45deg, #fbe300 0%, #fbe300 50%, white 51%, white 71%, white 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #fbe300), color-stop(50%, #fbe300), color-stop(51%, white), color-stop(71%, white), color-stop(100%, white));
+  background: -webkit-linear-gradient(-45deg, #fbe300 0%, #fbe300 50%, white 51%, white 71%, white 100%);
+  background: -o-linear-gradient(-45deg, #fbe300 0%, #fbe300 50%, white 51%, white 71%, white 100%);
+  background: -ms-linear-gradient(-45deg, #fbe300 0%, #fbe300 50%, white 51%, white 71%, white 100%);
+  background: linear-gradient(168deg, #fbe300 0%, #fbe300 50%, white 51%, white 71%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe300', endColorstr='#ffffff', GradientType=1 );
+  height: 150px;
+  overflow: hidden;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .me-conts .me-card .me-card-header {
+    height: 154px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .me-conts .me-card .me-card-header {
+    height: 208px;
+  }
+}
+
+.me-conts .me-card .me-card-header .me-card-header-anuncio {
+  text-transform: uppercase;
+  transform-origin: left;
+  transform: translateY(56px) translateX(7px) rotate(-12deg);
+}
+
+.me-conts .me-card .me-card-header .me-card-header-anuncio h3 {
+  font-family: "proxima_novablack";
+  font-style: italic;
+  font-size: 1.9em;
+}
+
+.me-conts .me-card .me-card-header .me-card-header-anuncio p {
+  font-family: "proxima_nova_rgregular";
+  font-style: italic;
+  font-size: .9em;
+}
+
+.me-conts .me-card .me-card-header .me-card-header-anuncio p span {
+  font-family: "proxima_novablack";
+}
+
+.me-conts .me-card .me-card-body {
+  background-color: #FFF;
+  color: #000;
+  padding: 4px 30px 0;
+}
+
+.me-conts .me-card .me-card-body .id {
+  text-align: center;
+}
+
+.me-conts .me-card .me-card-body .id input[type="text"] {
+  background-color: #EEE;
+  border: 1px solid #FFF;
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  -ms-border-radius: 2;
+  border-radius: 2;
+  display: inline-block;
+  font-family: "proxima_nova_rgbold";
+  font-size: 2em;
+  padding: 6px 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.me-conts .me-card .me-card-body .id input[type="text"]:active, .me-conts .me-card .me-card-body .id input[type="text"]:focus {
+  border: 1px solid #FBE300;
+  outline: none;
+}
+
+.me-conts .me-card .me-card-body .id .help-block-error {
+  color: red;
+  margin-top: 4px;
+}
+
+.me-conts .me-card .me-card-body .id p {
+  display: block;
+}
+
+.me-conts .me-card .me-card-body .recibiras {
+  font-family: "proxima_nova_rgregular";
+  letter-spacing: 1px;
+  margin-top: 6px;
+}
+
+.me-conts .me-card .me-card-body hr {
+  background-color: #FBE300;
+  height: 3px;
+  margin: 6px auto 10px;
+  width: 90%;
+}
+
+.me-conts .me-card .me-card-body .texto {
+  font-weight: bold;
+}
+
+.me-conts .me-card .me-card-body .card-logo {
+  height: 60px;
+  margin: 18px auto;
+}
+
+.me-conts .me-card .me-card-body .vigencia {
+  background-color: #FBE300;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  padding: 8px 20px;
+  font-size: .9em;
+  font-family: "proxima_nova_rgbold";
+  margin: 0 auto;
+  max-width: 240px;
+  width: 90%;
+}
+
+.me-conts .me-card .me-btn-jugar {
+  background-color: #FBE300;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  padding: 10px 30px;
+}
+
+.me-conts .aviso-privacidad {
+  bottom: 20px;
+  left: 30px;
+  position: absolute;
+}
+
+.me-conts .aviso-privacidad span {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+.me-conts .aviso-privacidad span:hover {
+  color: #FFF;
+}
+
+/*  Contenedor 1
+	@mixin =============================================== */
+.me-cont {
+  align-items: center;
+  background-color: teal;
+  background-image: url(../images/bg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1201px) {
+  .me-cont {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .me-cont {
+    height: 100vh;
+  }
+}
+
+.me-cont .form-login {
+  margin: 0 auto;
+  max-width: 400px;
+  width: 94%;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .me-cont .form-login {
+    margin: 160px 0 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .me-cont .form-login {
+    margin: 160px 0 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .me-cont .form-login .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.me-cont .form-login .input-field,
+.me-cont .form-login .btn-field {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.me-cont .form-login .input-field i.ion,
+.me-cont .form-login .btn-field i.ion {
+  align-items: center;
+  background-color: #FBE300;
+  color: #FFF;
+  display: flex;
+  font-size: 2em;
+  justify-content: center;
+  height: 40px;
+  position: absolute;
+  width: 40px;
+}
+
+.me-cont .form-login .input-field input[type="email"],
+.me-cont .form-login .input-field input[type="text"],
+.me-cont .form-login .btn-field input[type="email"],
+.me-cont .form-login .btn-field input[type="text"] {
+  border: 1px solid #FFF;
+  font-family: "proxima_nova_rgregular";
+  font-size: 1.1em;
+  height: 40px;
+  margin-left: 40px;
+  padding: 0 14px;
+  width: calc(100% - 40px);
+}
+
+.me-cont .form-login .input-field input[type="email"].input-short,
+.me-cont .form-login .input-field input[type="text"].input-short,
+.me-cont .form-login .btn-field input[type="email"].input-short,
+.me-cont .form-login .btn-field input[type="text"].input-short {
+  margin-left: 0;
+  width: 100%;
+}
+
+.me-cont .form-login .input-field input[type="email"]:active, .me-cont .form-login .input-field input[type="email"]:focus,
+.me-cont .form-login .input-field input[type="text"]:active,
+.me-cont .form-login .input-field input[type="text"]:focus,
+.me-cont .form-login .btn-field input[type="email"]:active,
+.me-cont .form-login .btn-field input[type="email"]:focus,
+.me-cont .form-login .btn-field input[type="text"]:active,
+.me-cont .form-login .btn-field input[type="text"]:focus {
+  border: 1px solid #FBE300;
+  outline: none;
+}
+
+.me-cont .form-login .input-field button,
+.me-cont .form-login .btn-field button {
+  background-color: #FBE300;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1.18em;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .me-cont .form-login .btn-field {
+    text-align: center;
+  }
+}
+
+.me-cont .form-login .help-block-error {
+  color: red;
+  margin-top: 6px;
+}
+
+.me-cont .aviso-privacidad {
+  bottom: 20px;
+  left: 30px;
+  position: absolute;
+}
+
+.me-cont .aviso-privacidad span {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+.me-cont .aviso-privacidad span:hover {
+  color: #FFF;
+}
+
+/*  Aceptar - Terminos y condiciones
+	@mixin =============================================== */
+.terminos-condiciones {
+  position: relative;
+}
+
+.terminos-condiciones .aceptar-mask {
+  bottom: 0;
+  height: 100%;
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  width: calc(100% - 2rem);
+  z-index: 4;
+}
+
+/*  Checkbox - Terminos y condiciones
+	@mixin =============================================== */
+.list {
+  list-style: none;
+  margin: .5rem;
+}
+
+.list__item {
+  margin: 0 0 .5rem 0;
+  padding: 0;
+}
+
+.label--checkbox {
+  position: relative;
+  font-family: Arial, sans-serif;
+  line-height: 135%;
+  cursor: pointer;
+  color: #FFF;
+  font-size: .8em;
+}
+
+.label--checkbox .label--checkbox-row {
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .label--checkbox .label--checkbox-row {
+    text-align: center;
+  }
+}
+
+.label--checkbox .label--checkbox-row .label--checkbox-row-col {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .label--checkbox .label--checkbox-row .label--checkbox-row-col {
+    text-align: left;
+  }
+}
+
+.label--checkbox .label--checkbox-row .label--checkbox-row-col span {
+  display: block;
+  text-decoration: underline;
+}
+
+.checkbox {
+  position: relative;
+  top: rem(-6);
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+
+.checkbox:before {
+  -ms-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #FFF;
+  top: 2px;
+}
+
+.checkbox:checked:before {
+  transform: rotate(-45deg);
+  height: .5rem;
+  border-color: #FBE300;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #FFF;
+  cursor: pointer;
+}
+
+/*  Fonts - test
+	@mixin =============================================== */
+.f-futurist-regular,
+.f-futurist-heavy,
+.f-proximan-black,
+.f-proximan-bold,
+.f-proximan-regular {
+  font-size: 2.2em;
+}
+
+.f-futurist-regular {
+  font-family: "futurist_fixed-widthregular";
+}
+
+.f-futurist-heavy {
+  font-family: "futurist_extraheavyregular";
+}
+
+.f-proximan-black {
+  font-family: "proxima_novablack";
+}
+
+.f-proximan-bold {
+  font-family: "proxima_nova_rgbold";
+}
+
+.f-proximan-regular {
+  font-family: "proxima_nova_rgregular";
+}
+
+.algo {
+  background-color: pink;
+  height: 100vh;
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*  Toggle nav
+	@mixin =============================================== */
+.toggle-nav {
+  cursor: pointer;
+  position: relative;
+  height: 30px;
+  width: 40px;
+  background-color: dodgerblue;
+}
+
+.toggle-nav.toggle-nav-anim .bar.top {
+  animation: slideTop .3s forwards;
+}
+
+.toggle-nav.toggle-nav-anim .bar.bottom {
+  animation: slideBottom .3s forwards;
+}
+
+.toggle-nav.toggle-nav-anim .bar.middle1 {
+  animation: middle1Anim .5s forwards;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-nav.toggle-nav-anim .bar.middle2 {
+  animation: middle2Anim .5s forwards;
+  box-shadow: 0 2px 4px -2px transparent;
+}
+
+.toggle-nav .bar {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  -ms-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  transform-origin: 21px 2px;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .toggle-nav .bar {
+    transform-origin: 21px 2px;
+  }
+}
+
+.toggle-nav .middle1 {
+  top: 12px;
+}
+
+.toggle-nav .middle2 {
+  top: 12px;
+  box-shadow: 0 2px 4px -2px transparent;
+}
+
+.toggle-nav .bottom {
+  top: 24px;
+}
+
+.toggle-nav .bar:first-child {
+  margin-top: 0;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  60% {
+    transform: translateY(8px) scale(1);
+  }
+  70% {
+    transform: translateY(12px) scale(1);
+  }
+  100% {
+    transform: translateY(12px) scale(0);
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  60% {
+    transform: translateY(-8px) scale(1);
+  }
+  70% {
+    transform: translateY(-12px) scale(1);
+  }
+  100% {
+    transform: translateY(-12px) scale(0);
+  }
+}
+
+@keyframes middle1Anim {
+  0%, 50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes middle2Anim {
+  0%, 50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+/*  Menu
+	@mixin =============================================== */
+#nav-icon3 {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+  top: 18px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 36px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+/*  Modal
+	@mixin =============================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 19;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #CCC;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 4px 20px;
+  background-color: #FBE300;
+  color: #FFF;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-header {
+    padding: 10px 20px;
+  }
+}
+
+.modal-header h2 {
+  font-size: 1.95em;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .modal-header h2 {
+    font-size: 1.85em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-header h2 {
+    font-size: 1.35em;
+  }
+}
+
+.modal-body {
+  padding: 30px 20px;
+}
+
+.modal-body p {
+  text-align: justify;
+}
+
+.modal-body .aceptar-terminos-condiciones-btn {
+  background-color: #CCC;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.modal-body .aceptar-terminos-condiciones-btn:hover {
+  background-color: #c3c3c3;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-body .aceptar-terminos-condiciones-btn {
+    text-align: center;
+  }
+}

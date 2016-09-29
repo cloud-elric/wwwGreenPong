@@ -79,7 +79,7 @@ class SiteController extends Controller {
 			$codigo->txt_token = Utils::generateToken ( 'cod_' );
 			
 			$codigo->save ();
-			return $this->redirect ( 'ingresar-codigo' );
+			return $this->redirect ( 'site/ingresar-codigo' );
 		}
 		
 		return $this->render ( 'index', [ 
