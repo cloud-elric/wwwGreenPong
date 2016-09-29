@@ -198,4 +198,22 @@ class SiteController extends Controller {
 	public function actionAbout() {
 		return $this->render ( 'about' );
 	}
+
+	/**
+	 * Displays about page.
+	 *
+	 * @return string
+	 */
+	public function actionJuego() {
+		return $this->render ( 'juego' );
+	}
+
+	/**
+	 * Displays about page.
+	 *
+	 * @return string
+	 */
+	public function actionPuntuacion() {
+		return $this->render ( 'puntuacion' );
+	}
 }

@@ -10,14 +10,19 @@ use yii\web\View;
 
 $this->title = 'Registrarse';
 $this->params ['breadcrumbs'] [] = $this->title;
+
+$this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::className()]]);
 ?>
 
-<div class="me-cont">
-	<!-- <form class="form-login"> -->
-
+<!-- .login-cont -->
+<div class="login-cont">
+	
+	<!-- .form-login -->
 	<?php $form = ActiveForm::begin(['id' => 'registro-form', 'options' => ['class' => 'form-login']]); ?>
-
+		
+		<!-- .row -->
 		<div class="row">
+
 		<div class="col-xs-12 col-sm-6 input-field">
 			<i class="ion ion-ios-person"></i>
 			<!-- <input type="text" placeholder="First Name"> -->
@@ -84,61 +89,50 @@ $this->params ['breadcrumbs'] [] = $this->title;
 					<!-- <div class="modal-footer">
 							<h3>Modal Footer</h3>
 						</div> -->
+
 				</div>
 
 			</div>
+
 			<!-- end - .modal -->
 
 		</div>
 	</div>
 
+
 	<?php ActiveForm::end(); ?>
-
+	<!-- end - .form-login -->
+	
+	<!-- .aviso-privacidad -->
 	<div class="aviso-privacidad">
-		<span id="myBtn">Aviso de Privacidad</span>
+		<span class="btn-aviso-privacidad">Aviso de Privacidad</span>
 	</div>
+	<!-- end - .aviso-privacidad -->
 
-	<!-- .modal -->
+	<!-- .modal (Aviso de privacidad) -->
 	<div id="modal-aviso-privacidad" class="modal">
 
-		<!-- Modal content -->
+		<!-- .modal-content -->
 		<div class="modal-content">
+			<!-- .modal-header -->
 			<div class="modal-header">
 				<span class="close modal-aviso-privacidad-close">×</span>
 				<h2>Aviso de privacidad</h2>
 			</div>
+			<!-- end - .modal-header -->
+			<!-- .modal-body -->
 			<div class="modal-body">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
 					aliquam, sunt nesciunt aperiam quis, tenetur libero vero fugit
 					cupiditate nisi! Delectus quis vel cum explicabo incidunt eius
 					rerum enim laborum.</p>
 			</div>
-			<!-- <div class="modal-footer">
-				<h3>Modal Footer</h3>
-			</div> -->
+			<!-- end - .modal-body -->
 		</div>
+		<!-- end - .modal-content -->
 
 	</div>
 	<!-- end - .modal -->
 
 </div>
-
-
-<h1><?php # Html::encode($this->title) ?></h1>
-
-<?php # $form = ActiveForm::begin(['id' => 'registro-form']); ?>
-
-                    <?php # $form->field($usuario, 'txt_nombre')->textInput(['autofocus' php> true])?>
-
-                    <?php # $form->field($usuario, 'txt_apellido_paterno')?>
-
-                    <?php # $form->field($usuario, 'txt_email')?>
-                    
-                    <?php # $form->field($usuario, 'tel_numero_celular')?>
-
-                   
-                        <?php # Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button'])?>
- 
-
-                <?php # ActiveForm::end(); ?>
-
+<!-- end - .login-cont -->

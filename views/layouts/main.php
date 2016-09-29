@@ -28,31 +28,6 @@ AppAsset::register ( $this );
 
 			<header>
 				<div class="header-cont">
-					<div class="nav-trigger">
-
-						<!-- <div class="toggle-nav">
-							<div class="bar top"></div>
-							<div class="bar middle1"></div>
-							<div class="bar bottom"></div>
-							<div class="bar middle2"></div>
-						</div> -->
-
-						<div id="nav-icon3">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-
-					</div>
-
-					<div class="nav">
-						<a href="">Home</a>
-						<a href="">Services</a>
-						<a href="">About</a>
-						<a href="">Contact</a>
-					</div>
-
 					<a href="" class="logo">
 						<img src="<?=Url::base()?>/images/logo.png" alt="Masters Experience">
 					</a>

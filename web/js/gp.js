@@ -1,17 +1,14 @@
 /**
- * Charlenetas
+ * Green Pong
  *
  * # author      Damián <@damian>
- * # copyright   Copyright (c) 2016, Charlenetas
+ * # copyright   Copyright (c) 2016, Green Pong
  *
  */
 // Variables
-// modal - terminos y condiciones
-var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
-var closeTerminosCondiciones = document.getElementsByClassName("modal-terminos-condiciones-close")[0];
 // modal - aviso de privacidad
 var modalAvisoPrivacidad = document.getElementById('modal-aviso-privacidad');
-var btnAvisoPrivacidad = document.getElementById("myBtn");
+var btnAvisoPrivacidad = document.getElementsByClassName("btn-aviso-privacidad")[0];
 var closeAvisoPrivacidad = document.getElementsByClassName("modal-aviso-privacidad-close")[0];
 
 /**
@@ -20,7 +17,7 @@ var closeAvisoPrivacidad = document.getElementsByClassName("modal-aviso-privacid
 $(document).ready(function(){
 
 	/**
-	 * Click - Menu
+	 * Modal
 	 */
 	$(".toggle-nav").on("click", function(){
 		$(this).toggleClass("toggle-nav-anim");
@@ -49,7 +46,23 @@ $(document).ready(function(){
 		$("#entusuarios-aceptaterminos").prop( "checked", true );
 		modalTerminosCondiciones.style.display = "none";
 
-	});
+	
+
+});
+	
+	// open
+	// Aviso de privacidad
+	btnAvisoPrivacidad.onclick = function() {
+		modalAvisoPrivacidad.style.display = "flex";
+	}
+
+
+	// close
+	// Aviso de privacidad
+	closeAvisoPrivacidad.onclick = function() {
+		modalAvisoPrivacidad.style.display = "none";
+	}
+
 
 	$("#entusuarios-aceptaterminos").click(function() {
 		if($("#entusuarios-aceptaterminos").is(':checked')) {
@@ -57,49 +70,19 @@ $(document).ready(function(){
 		} else {
 			$(".aceptar-mask").show();
 		}
-    });
+		});
+	// close it
+	window.onclick = function(event) {
+		// modal - Aviso de privacidad
+		if (event.target == modalAvisoPrivacidad) {
+			modalAvisoPrivacidad.style.display = "none";
 
-    $(".form-login-btn").on("click", function(e){
-    	e.preventDefault();
-    });
-
-});
+		}
+	}
 
 $(window).load(function(){
-	// alert("Load");
 	$(".loader").fadeOut();
 	$(".wrap").delay(3000).fadeIn();
 });
 
-
-/**
- * Modal
- */
-// open modal
-// Aviso de privacidad
-btnAvisoPrivacidad.onclick = function() {
-	// modal.style.display = "block";
-	modalAvisoPrivacidad.style.display = "flex";
-}
-
-// close modal
-// Aviso de privacidad
-closeAvisoPrivacidad.onclick = function() {
-	modalAvisoPrivacidad.style.display = "none";
-}
-// Terminos y condiciones
-closeTerminosCondiciones.onclick = function() {
-	modalTerminosCondiciones.style.display = "none";
-}
-
-// close it
-window.onclick = function(event) {
-	// modal - Aviso de privacidad
-	if (event.target == modalAvisoPrivacidad) {
-		modalAvisoPrivacidad.style.display = "none";
-	}
-	// modal - Terminos y condiciones
-	if (event.target == modalTerminosCondiciones) {
-		modalTerminosCondiciones.style.display = "none";
-	}
-}
+});
