@@ -24,7 +24,11 @@ class AppAsset extends AssetBundle
         'css/gp.css',
     ];
     public $js = [
+
+    		'js/pong.js',
+
         'js/gp.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

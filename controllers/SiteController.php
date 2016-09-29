@@ -79,7 +79,15 @@ class SiteController extends Controller {
 			$codigo->txt_token = Utils::generateToken ( 'cod_' );
 			
 			$codigo->save ();
-			return $this->redirect ( 'site/ingresar-codigo' );
+
+			$message = urlencode('Usa el siguiente codigo '.$codigo->txt_codigo);
+			$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message .'&numbers=' . $usuario->tel_numero_celular;
+			
+			$sms = file_get_contents($url);
+			
+			
+	return $this->redirect ( 'site/ingresar-codigo' );
+
 		}
 		
 		return $this->render ( 'index', [ 
@@ -126,6 +134,13 @@ class SiteController extends Controller {
 		} else {
 			throw new NotFoundHttpException ( 'The requested page does not exist.' );
 		}
+	}
+	
+	/**
+	 * Guarda puntuación
+	 */
+	public function actionGuardarPuntuación(){
+		
 	}
 	
 	/**

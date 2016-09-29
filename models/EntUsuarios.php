@@ -18,6 +18,9 @@ use Yii;
  * @property WrkPuntuaciones[] $wrkPuntuaciones
  */
 class EntUsuarios extends \yii\db\ActiveRecord {
+	
+	public $aceptaTerminos;
+	
 	/**
 	 * @inheritdoc
 	 */
@@ -38,7 +41,7 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 								'tel_numero_celular' 
 						],
 						'required',
-						'message' => '{attribute} es requerido' 
+						'message' => 'Dato requerido' 
 				],
 				[ 
 						[ 
@@ -65,10 +68,6 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 				'txt_apellido_paterno' => 'Apellido paterno',
 				'txt_email' => 'Correo electrónico',
 				'tel_numero_celular' => 'Nùmero celular',
-				'txt_nombre' => 'Txt Nombre',
-				'txt_apellido_paterno' => 'Txt Apellido Paterno',
-				'txt_email' => 'Txt Email',
-				'tel_numero_celular' => 'Tel Numero Celular',
 				'b_participo' => 'B Participo' 
 		];
 	}

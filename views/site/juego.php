@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <!-- .jugar -->
 <div class="jugar">
 	
@@ -6,6 +9,9 @@
 		
 		<!-- .jugar-cont-header -->
 		<div class="jugar-cont-header">
+
+			<!-- <img id="ball" src="<?=Url::base()?>/images/tennisball.png">
+			<img id="court" src="<?=Url::base()?>/images/tenniscourt.png"> -->
 
 			<!-- .jugar-score -->
 			<div id="score_box" class="jugar-score">
@@ -26,10 +32,7 @@
 		<!-- .jugar-cont-body -->
 		<div class="jugar-cont-body">
 			<canvas id="myCanvas"></canvas>
-			<!-- <canvas id="myCanvas" width="600" height="300" style="border:1px solid #000000;margin-top: 150px;"></canvas> -->
-
 			<p onclick="iniciarJuego()">iniciar</p>
-			
 		</div>
 		<!-- end - .jugar-cont-body -->
 
