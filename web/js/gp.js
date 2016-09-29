@@ -46,13 +46,13 @@ $(document).ready(function(){
 	 */
 	$(".aceptar-terminos-condiciones-btn").on("click", function(){
 		$(".aceptar-mask").hide();
-		$("#checkbox").prop( "checked", true );
+		$("#entusuarios-aceptaterminos").prop( "checked", true );
 		modalTerminosCondiciones.style.display = "none";
 
 	});
 
-	$("#checkbox").click(function() {
-		if($("#checkbox").is(':checked')) {
+	$("#entusuarios-aceptaterminos").click(function() {
+		if($("#entusuarios-aceptaterminos").is(':checked')) {
 			alert("Está activado");
 		} else {
 			$(".aceptar-mask").show();
