@@ -11,6 +11,7 @@ use app\models\ContactForm;
 use app\models\EntUsuarios;
 use app\models\WrkCodigos;
 use app\models\Utils;
+use app\models\WrkPosicionesUsuarios;
 
 class SiteController extends Controller {
 	/**
@@ -122,6 +123,30 @@ class SiteController extends Controller {
 	}
 	
 	/**
+	 * Guarda el puntuaje del usuario
+	 */
+	public function actionFinalizarJuego($token){
+		$codigoEncontrado = WrkCodigos::find ()->where ( [
+				'txt_codigo' => $token,
+				'b_codigo_usado' => 0
+		] )->one ();
+		
+		if (empty ( $codigoEncontrado )) {
+			return $this->goHome ();
+		}
+		
+		// Guardar puntuaje
+		$puntuaje = new WrkPosicionesUsuarios();
+		if ($puntuaje->load ( Yii::$app->request->post () ) && $puntuaje->save()) {
+			
+			$codigoEncontrado->b_codigo_usado = 1;
+			$codigoEncontrado->save();
+			return $this->render('puntuacion');
+		}
+		
+	}
+	
+	/**
 	 * Muestra el juego
 	 *
 	 * @param string $token        	
@@ -137,8 +162,11 @@ class SiteController extends Controller {
 			return $this->goHome ();
 		}
 		
+		$puntuaje = new WrkPosicionesUsuarios();
+		
 		return $this->render ( 'juego', [ 
-				'token' => $codigoEncontrado->txt_codigo 
+				'token' => $codigoEncontrado->txt_codigo,
+				'puntuaje'=>$puntuaje
 		] );
 	}
 	

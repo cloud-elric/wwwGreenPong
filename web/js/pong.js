@@ -123,7 +123,7 @@
 		draw();
 	}
 	
-	//PERDE UNA PELOTA
+	//PIERDE UNA PELOTA
 	function dead(){
 		console.log("dead!");
 		isPlayig = false;
@@ -139,6 +139,7 @@
 	function gameOver(){
 		console.log("gameOver");
 		isGameOver = true;
+		modalGameOver.style.display = "flex";
 	}
 	
 	

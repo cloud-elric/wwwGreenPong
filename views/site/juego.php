@@ -72,3 +72,6 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 
 </div>
 <!-- end - .jugar -->
+
+<?php 
+?>

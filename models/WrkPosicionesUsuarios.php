@@ -5,22 +5,23 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "wrk_puntuaciones".
+ * This is the model class for table "wrk_posiciones_usuarios".
  *
- * @property string $id_puntuacion
+ * @property string $id_posicion_usuario
  * @property string $id_usuario
+ * @property string $txt_game_tag
  * @property string $num_puntuacion
  *
  * @property EntUsuarios $idUsuario
  */
-class WrkPuntuaciones extends \yii\db\ActiveRecord
+class WrkPosicionesUsuarios extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'wrk_puntuaciones';
+        return 'wrk_posiciones_usuarios';
     }
 
     /**
@@ -29,8 +30,9 @@ class WrkPuntuaciones extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_usuario', 'num_puntuacion'], 'required'],
+            [['id_usuario'], 'required'],
             [['id_usuario', 'num_puntuacion'], 'integer'],
+            [['txt_game_tag'], 'string', 'max' => 3],
             [['id_usuario'], 'exist', 'skipOnError' => true, 'targetClass' => EntUsuarios::className(), 'targetAttribute' => ['id_usuario' => 'id_usuario']],
         ];
     }
@@ -41,8 +43,9 @@ class WrkPuntuaciones extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_puntuacion' => 'Id Puntuacion',
+            'id_posicion_usuario' => 'Id Posicion Usuario',
             'id_usuario' => 'Id Usuario',
+            'txt_game_tag' => 'Txt Game Tag',
             'num_puntuacion' => 'Num Puntuacion',
         ];
     }
