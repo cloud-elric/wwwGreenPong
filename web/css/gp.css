@@ -242,6 +242,7 @@ hr {
 			# Ingresar Código
 			# Modal
 			# Jugar
+			#Aviso de Privacidad
 
 	-----------------------------------------------------------------------------
 	*/
@@ -1225,4 +1226,59 @@ header .header-cont .logo img {
   .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(4) {
     width: 28%;
   }
+}
+
+/*  Aviso de Privacidad
+	@mixin =============================================== */
+.modal-aviso-privacidad {
+  padding: 30px 0;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum h3 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum h4 {
+  font-size: 1.1em;
+  margin: 30px 0 10px;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum p .link {
+  text-decoration: underline;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum ol {
+  margin-left: 50px;
+  margin-top: 16px;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum ol li {
+  margin-bottom: 20px;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum ol li span.text-e {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum ol li span.text-M {
+  text-transform: uppercase;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum ol li span.text-t {
+  display: block;
+  font-weight: bold;
+}
+
+.modal-aviso-privacidad .aviso-privacidad-colum small {
+  font-size: .9em;
+  font-style: italic;
 }
