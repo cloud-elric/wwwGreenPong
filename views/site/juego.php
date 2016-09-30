@@ -31,13 +31,20 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 		<div class="jugar-cont-body">
 			
 			<div class="jugar-cont-body-canvas">
-				<canvas id="myCanvas" width="600" height="300"></canvas>
+				<canvas id="myCanvas" width="600" height="300">
+					
+				</canvas>
+				<p class="jugar-cont-body-btn-jugar" onclick="iniciarJuego()">
+					<i class="ion ion-play"></i>
+					<!-- <i class="ion ion-refresh"></i> -->
+					Jugar
+				</p>
 			</div>
+
 
 			<!-- <canvas id="myCanvas" width="600" height="300" style="border:1px solid #000000;margin-top: 150px;"></canvas> -->
 			
-			<p onclick="iniciarJuego()">Jugar</p>
-			<p class="btn-gameover">modal</p>
+			<!-- <p onclick="iniciarJuego()">Jugar</p> -->
 			
 			<div>
 				<img id="ball" src="<?=Url::base()?>/images/tennisball.png">

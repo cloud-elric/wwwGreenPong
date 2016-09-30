@@ -408,7 +408,7 @@ header .header-cont .logo img {
 }
 
 .login-cont .form-login .help-block-error {
-  color: red;
+  color: #FFF;
   margin-top: 6px;
 }
 
@@ -931,21 +931,61 @@ header .header-cont .logo img {
 }
 
 .jugar .jugar-cont .jugar-cont-body {
+  background-color: dodgerblue;
   height: calc(100vh - 250px);
   margin: 20px auto;
   overflow: hidden;
+  position: relative;
   text-align: center;
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas {
-  height: 310px;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas #myCanvas {
   background-color: #FFF;
   border: rgba(255, 255, 255, 0.3);
-  width: 600px;
   height: 300px;
+  margin-left: -300px;
+  margin-top: -150px;
+  position: absolute;
+  top: 50%;
+  width: 600px;
+  z-index: 94;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  background-color: #FBE300;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  left: 50%;
+  letter-spacing: 1px;
+  margin-left: -68px;
+  margin-top: -24px;
+  padding: 10px 30px;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar:hover {
+  background-color: #d9c400;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar i {
+  margin-right: 6px;
 }
 
 .jugar .jugar-cont .jugar-cont-body p {

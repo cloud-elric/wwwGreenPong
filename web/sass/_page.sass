@@ -121,7 +121,7 @@ header
 				text-align: center
 		// Error
 		.help-block-error
-			color: red
+			color: $white
 			margin-top: 6px
 	// Aviso de privacidad
 	.aviso-privacidad
@@ -511,21 +511,50 @@ header
 			// 	background-color: green
 		// body
 		.jugar-cont-body
-			// background-color: dodgerblue
+			background-color: dodgerblue
 			height: calc(100vh - 250px)
 			margin: 20px auto
 			overflow: hidden
+			position: relative
 			text-align: center
 			.jugar-cont-body-canvas
-				// background-color: rgba($white,.2)
-				height: 310px
+				background-color: rgba($white,.2)
+				height: 100%
+				overflow: hidden
+				position: relative
 				#myCanvas
 					background-color: $white
 					border: rgba($white,.3)
 					// height: 100%
 					// width: auto
-					width: 600px
 					height: 300px
+					margin-left: -300px
+					margin-top: -150px
+					position: absolute
+					top: 50%
+					width: 600px
+					z-index: 94
+				.jugar-cont-body-btn-jugar
+					+border-radius(12px)
+					background-color: $yellow
+					border: none
+					color: $white
+					cursor: pointer
+					display: block
+					font-size: 1.2em
+					font-weight: bold
+					left: 50%
+					letter-spacing: 1px
+					margin-left: -68px
+					margin-top: -24px
+					padding: 10px 30px
+					position: absolute
+					top: 50%
+					z-index: 99
+					&:hover
+						background-color: $yellow-secundary
+					i
+						margin-right: 6px
 			p
 				background-color: $yellow
 				border: none
