@@ -20,6 +20,7 @@ use Yii;
 class EntUsuarios extends \yii\db\ActiveRecord {
 	public $aceptaTerminos;
 	
+	
 	/**
 	 * @inheritdoc
 	 */
@@ -41,6 +42,13 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 						'requiredValue' => 1,
 						'message' => 'Debe aceptar los terminos y condiciones' 
 				],
+				[
+				[
+						'tel_numero_celular','txt_email'
+				],
+				'unique','message'=>'Dato ya registrado utilice otro'
+								],
+				
 				[ 
 						[ 
 								
@@ -52,6 +60,11 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 						'required',
 						'message' => 'Dato requerido' 
 				],
+				[
+				'txt_email',
+				'trim'
+						],
+				['txt_email','email','message'=>'Ingrese una dirección de correo valida'],
 				[ 
 						[ 
 								'b_participo' 

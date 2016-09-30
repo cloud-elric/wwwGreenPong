@@ -78,16 +78,15 @@ class SiteController extends Controller {
 			$codigo->txt_codigo = substr ( md5 ( microtime () ), 1, 10 );
 			$codigo->txt_token = Utils::generateToken ( 'cod_' );
 			
-			$codigo->save ();
-
-			$message = urlencode('Usa el siguiente codigo '.$codigo->txt_codigo);
-			$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message .'&numbers=' . $usuario->tel_numero_celular;
-			
-			$sms = file_get_contents($url);
-			
-			
-	return $this->redirect ( 'site/ingresar-codigo' );
-
+			if ($codigo->save ()) {
+				
+				// $message = urlencode ( 'Usa el siguiente codigo ' . $codigo->txt_codigo );
+				// $url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
+				
+				// $sms = file_get_contents ( $url );
+				
+				return $this->redirect ( 'site/ingresar-codigo' );
+			}
 		}
 		
 		return $this->render ( 'index', [ 
@@ -104,18 +103,42 @@ class SiteController extends Controller {
 		if ($codigo->load ( Yii::$app->request->post () )) {
 			$codigoEncontrado = WrkCodigos::find ()->where ( [ 
 					'txt_codigo' => $codigo->txt_codigo,
-					'b_codigo_usado'=>0
-			] )->one();
+					'b_codigo_usado' => 0 
+			] )->one ();
 			
-			if(empty($codigoEncontrado)){
-				return $this->render('codigoNoValido');
+			if (empty ( $codigoEncontrado )) {
+				return $this->render ( 'codigoNoValido' );
 			}
 			
-			return $this->render('juego');
+			return Yii::$app->response->redirect ( [ 
+					'site/juego',
+					'token' => $codigo->txt_codigo 
+			] );
 		}
 		
 		return $this->render ( 'ingresarCodigo', [ 
 				'codigo' => $codigo 
+		] );
+	}
+	
+	/**
+	 * Muestra el juego
+	 *
+	 * @param string $token        	
+	 * @return \yii\web\Response|string
+	 */
+	public function actionJuego($token) {
+		$codigoEncontrado = WrkCodigos::find ()->where ( [ 
+				'txt_codigo' => $token,
+				'b_codigo_usado' => 0 
+		] )->one ();
+		
+		if (empty ( $codigoEncontrado )) {
+			return $this->goHome ();
+		}
+		
+		return $this->render ( 'juego', [ 
+				'token' => $codigoEncontrado->txt_codigo 
 		] );
 	}
 	
@@ -139,8 +162,7 @@ class SiteController extends Controller {
 	/**
 	 * Guarda puntuación
 	 */
-	public function actionGuardarPuntuación(){
-		
+	public function actionGuardarPuntuación() {
 	}
 	
 	/**
@@ -198,16 +220,7 @@ class SiteController extends Controller {
 	public function actionAbout() {
 		return $this->render ( 'about' );
 	}
-
-	/**
-	 * Displays about page.
-	 *
-	 * @return string
-	 */
-	public function actionJuego() {
-		return $this->render ( 'juego' );
-	}
-
+	
 	/**
 	 * Displays about page.
 	 *
