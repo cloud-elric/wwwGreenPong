@@ -89,10 +89,25 @@
 
 	function updateScore(){
 		scoreLabel.innerHTML = score ;
+		$('#wrkposicionesusuarios-num_puntuacion').val(score);
+		$('.puntuaje-usuario').text(score);
 	}
 	
 	function updateVidas(){
-		vidasLabel.innerHTML = vidas ;
+		//vidasLabel.innerHTML = vidas ;
+		
+		$('.live').each(function(index){
+			var elemento = $(this);
+			if((index+1)>vidas){
+				elemento.removeClass('ion-ios-tennisball');
+				elemento.addClass('ion-ios-tennisball-outline');
+			}
+		});
+	}
+	
+	function iniciarVidas(){
+		$('.live').removeClass('ion-ios-tennisball-outline');
+		$('.live').addClass('ion-ios-tennisball');
 	}
 	
 
@@ -114,6 +129,8 @@
 		if(isGameOver){
 			score = 0;
 			vidas = 3;
+			iniciarVidas();
+			modalGameOver.style.display = "none";
 		}		
 		
 		isGameOver = false;
@@ -283,4 +300,9 @@
 	$( document ).ready(function() {
 		console.log( "ready!" );
 		init();
+		
+		$(".btn-volver-a-jugar").on("click", function(e){
+			e.preventDefault();
+		});
 	});
+	

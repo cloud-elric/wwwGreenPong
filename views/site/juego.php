@@ -1,6 +1,14 @@
 <?php
 use yii\helpers\Url;
+use yii\widgets\ActiveForm;
 $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::className()]]);
+?>
+
+<?php
+$form = ActiveForm::begin ( [ 
+		'action'=>'finalizar-juego?token='.$token 
+] );
+
 ?>
 <!-- .jugar -->
 <div class="jugar">
@@ -14,12 +22,16 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 			<!-- .jugar-score -->
 			<div id="score_box" class="jugar-score">
 				<p>Score <span id="score">199837247238974283</span></p>
+				<?= $form->field($puntuaje, 'num_puntuacion')->hiddenInput()->label(false)?>
 			</div>
 			<!-- end - .jugar-score -->
 
 			<!-- .jugar-lives -->
 			<div id="lives_box" class="jugar-lives">
-				<p>Up <span id="lives"> <i class="ion ion-ios-tennisball"></i> <i class="ion ion-ios-tennisball-outline"></i> <i class="ion ion-ios-tennisball"></i> </span></p>
+				<p>Up <span id="lives"> </span></p>
+				<i class="ion ion-ios-tennisball live"></i> 
+				<i class="ion ion-ios-tennisball live"></i> 
+				<i class="ion ion-ios-tennisball live"></i>
 			</div>
 			<!-- end - .jugar-lives -->
 
@@ -40,12 +52,6 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 					Jugar
 				</p>
 			</div>
-
-
-			<!-- <canvas id="myCanvas" width="600" height="300" style="border:1px solid #000000;margin-top: 150px;"></canvas> -->
-			
-			<!-- <p onclick="iniciarJuego()">Jugar</p> -->
-			
 			<div>
 				<img id="ball" src="<?=Url::base()?>/images/tennisball.png">
 				<img id="court" src="<?=Url::base()?>/images/tenniscourt.jpg">
@@ -71,7 +77,9 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 			<!-- end - .modal-header -->
 			<!-- .modal-body -->
 			<div class="modal-body">
-				<button class="btn-volver-a-jugar">Volver a jugar</button>
+			Tu puntuación fue de <label class='puntuaje-usuario'></label>
+				<?= $form->field($puntuaje, 'txt_game_tag')->textInput(['maxlength' => true])?>
+				<button class="btn-volver-a-jugar" onclick="iniciarJuego()">Volver a jugar</button>
 				<button class="btn-finalizar">Finalizar</button>
 			</div>
 			<!-- end - .modal-body -->
@@ -84,5 +92,7 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 </div>
 <!-- end - .jugar -->
 
-<?php 
+<?php
+
+ActiveForm::end ();
 ?>
