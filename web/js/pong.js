@@ -122,6 +122,9 @@
 	}
 
 	function iniciarJuego(){
+		
+		$('#js-button-jugar').hide();
+		
 		if(isPlayig){
 			return;
 		}
@@ -142,6 +145,9 @@
 	
 	//PIERDE UNA PELOTA
 	function dead(){
+		
+		$('#js-button-jugar').show();
+		
 		console.log("dead!");
 		isPlayig = false;
 		setCourt();
