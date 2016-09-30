@@ -19,7 +19,7 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 
 			<!-- .jugar-lives -->
 			<div id="lives_box" class="jugar-lives">
-				<p>Up <span id="lives"> <i class="ion ion-ios-heart"></i> <i class="ion ion-ios-heart-outline"></i> <i class="ion ion-ios-heart"></i> </span></p>
+				<p>Up <span id="lives"> <i class="ion ion-ios-tennisball"></i> <i class="ion ion-ios-tennisball-outline"></i> <i class="ion ion-ios-tennisball"></i> </span></p>
 			</div>
 			<!-- end - .jugar-lives -->
 
@@ -30,14 +30,18 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 		<!-- .jugar-cont-body -->
 		<div class="jugar-cont-body">
 			
-			<canvas id="myCanvas" width="600" height="300"></canvas>
-			<!-- <canvas id="myCanvas"  style="border:1px solid #000000;margin-top: 150px;"></canvas> -->
+			<div class="jugar-cont-body-canvas">
+				<canvas id="myCanvas" width="600" height="300"></canvas>
+			</div>
+
+			<!-- <canvas id="myCanvas" width="600" height="300" style="border:1px solid #000000;margin-top: 150px;"></canvas> -->
+			
 			<p onclick="iniciarJuego()">Jugar</p>
 			<p class="btn-gameover">modal</p>
 			
 			<div>
 				<img id="ball" src="<?=Url::base()?>/images/tennisball.png">
-				<img id="court" src="<?=Url::base()?>/images/tenniscourt.png">
+				<img id="court" src="<?=Url::base()?>/images/tenniscourt.jpg">
 			</div>
 
 		</div>

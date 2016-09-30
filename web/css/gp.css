@@ -108,8 +108,7 @@
 }
 
 body {
-  background-color: #fffeff;
-  background-color: red;
+  background-color: #FFF;
   color: #181514;
   font-family: "proxima_nova_rgregular";
   font-size: 16px;
@@ -447,7 +446,7 @@ header .header-cont .logo img {
 
 .ingresar-codigo-cont .ingresar-codigo-card {
   margin: 150px auto 40px;
-  max-width: 400px;
+  max-width: 440px;
   text-align: center;
   width: 90%;
 }
@@ -493,7 +492,8 @@ header .header-cont .logo img {
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-header .ingresar-codigo-card-header-anuncio {
   text-transform: uppercase;
   transform-origin: left;
-  transform: translateY(56px) translateX(7px) rotate(-12deg);
+  transform: translateY(56px) translateX(28px) rotate(-12deg);
+  width: 86%;
 }
 
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-header .ingresar-codigo-card-header-anuncio h3 {
@@ -554,7 +554,7 @@ header .header-cont .logo img {
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .recibiras {
   font-family: "proxima_nova_rgregular";
   letter-spacing: 1px;
-  margin-top: 6px;
+  margin-top: 12px;
 }
 
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body hr {
@@ -570,7 +570,7 @@ header .header-cont .logo img {
 
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .card-logo {
   height: 60px;
-  margin: 18px auto;
+  margin: 30px auto;
 }
 
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .vigencia {
@@ -890,20 +890,19 @@ header .header-cont .logo img {
 /*  Jugar
 	@mixin =============================================== */
 .jugar {
-  align-items: center;
   background-image: url(../images/bg.jpg);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
   position: relative;
   width: 100%;
 }
 
 .jugar .jugar-cont {
-  margin: 150px 0 40px;
+  margin: 140px 0 40px;
   max-width: 1280px;
   width: 90%;
 }
@@ -932,14 +931,21 @@ header .header-cont .logo img {
 }
 
 .jugar .jugar-cont .jugar-cont-body {
-  margin-top: 50px;
+  height: calc(100vh - 250px);
+  margin: 20px auto;
+  overflow: hidden;
   text-align: center;
 }
 
-.jugar .jugar-cont .jugar-cont-body #myCanvas {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas {
+  height: 310px;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas #myCanvas {
   background-color: #FFF;
   border: rgba(255, 255, 255, 0.3);
-  width: 100%;
+  width: 600px;
+  height: 300px;
 }
 
 .jugar .jugar-cont .jugar-cont-body p {
@@ -1048,20 +1054,47 @@ header .header-cont .logo img {
   width: 6%;
 }
 
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(1) {
+    width: 10%;
+  }
+}
+
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(2) {
-  width: 40%;
+  width: 30%;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(2) {
+    width: 30%;
+  }
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(3) {
-  text-align: center;
-  width: 12%;
+  width: 18%;
+}
+
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(3) {
+    text-align: center;
+    width: 32%;
+  }
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(4) {
   width: 42%;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(4) {
+    width: 28%;
+  }
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr {
+  align-items: center;
   display: flex;
   padding: 16px 10px;
 }
@@ -1079,15 +1112,41 @@ header .header-cont .logo img {
   width: 6%;
 }
 
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(1) {
+    width: 10%;
+  }
+}
+
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(2) {
-  width: 40%;
+  width: 30%;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(2) {
+    width: 30%;
+  }
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(3) {
-  text-align: center;
-  width: 12%;
+  width: 18%;
+}
+
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(3) {
+    text-align: center;
+    width: 32%;
+  }
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(4) {
   width: 42%;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(4) {
+    width: 28%;
+  }
 }

@@ -153,7 +153,7 @@ header
 	.ingresar-codigo-card
 		// background-color: rgba($white,.2)
 		margin: 150px auto 40px
-		max-width: 400px
+		max-width: 440px
 		text-align: center
 		width: 90%
 		@include respond-to(sm)
@@ -183,7 +183,8 @@ header
 				// background-color: rgba(red,.2)
 				text-transform: uppercase
 				transform-origin: left
-				transform: translateY(56px) translateX(7px) rotate(-12deg)
+				transform: translateY(56px) translateX(28px) rotate(-12deg)
+				width: 86%
 				h3
 					font-family: $f-proximan-black
 					font-style: italic
@@ -223,7 +224,7 @@ header
 			.recibiras
 				font-family: $f-proximan-regular
 				letter-spacing: 1px
-				margin-top: 6px
+				margin-top: 12px
 			hr
 				background-color: $yellow
 				height: 3px
@@ -233,7 +234,7 @@ header
 				font-weight: bold
 			.card-logo
 				height: 60px
-				margin: 18px auto
+				margin:30px auto
 			.vigencia
 				background-color: $yellow
 				+border-radius(3px 3px 0 0)
@@ -474,20 +475,20 @@ header
 /*  Jugar
 	================================================ */
 .jugar
-	align-items: center
+	// align-items: center
 	background-image: url(../images/bg.jpg)
 	background-position: 50%
 	background-repeat: no-repeat
 	background-size: cover
 	display: flex
-	min-height: 100vh
+	height: 100vh
 	justify-content: center
 	position: relative
 	width: 100%
 	// Contedor
 	.jugar-cont
 		// background-color: teal
-		margin: 150px 0 40px
+		margin: 140px 0 40px
 		max-width: 1280px
 		width: 90%
 		// header
@@ -511,12 +512,20 @@ header
 		// body
 		.jugar-cont-body
 			// background-color: dodgerblue
-			margin-top: 50px
+			height: calc(100vh - 250px)
+			margin: 20px auto
+			overflow: hidden
 			text-align: center
-			#myCanvas
-				background-color: $white
-				border: rgba($white,.3)
-				width: 100%
+			.jugar-cont-body-canvas
+				// background-color: rgba($white,.2)
+				height: 310px
+				#myCanvas
+					background-color: $white
+					border: rgba($white,.3)
+					// height: 100%
+					// width: auto
+					width: 600px
+					height: 300px
 			p
 				background-color: $yellow
 				border: none
@@ -595,16 +604,27 @@ header
 					&:nth-child(1)
 						text-align: center
 						width: 6%
+						@include respond-to(xs)
+							width: 10%
 					&:nth-child(2)
-						width: 40%
+						width: 30%
+						word-wrap: break-word;
+						@include respond-to(xs)
+							width: 30%
 					&:nth-child(3)
-						text-align: center
-						width: 12%
+						width: 18%
+						@include respond-to(xs)
+							text-align: center
+							width: 32%
 					&:nth-child(4)
 						width: 42%
+						word-wrap: break-word;
+						@include respond-to(xs)
+							width: 28%
 			.puntuacion-cont-tabla-body
 				// background-color: rgba(yellow,.2)
 				.puntuacion-cont-tabla-body-tr
+					align-items: center
 					display: flex
 					padding: 16px 10px
 					&:nth-child(odd)
@@ -616,10 +636,20 @@ header
 						&:nth-child(1)
 							text-align: center
 							width: 6%
+							@include respond-to(xs)
+								width: 10%
 						&:nth-child(2)
-							width: 40%
+							width: 30%
+							word-wrap: break-word;
+							@include respond-to(xs)
+								width: 30%
 						&:nth-child(3)
-							text-align: center
-							width: 12%
+							width: 18%
+							@include respond-to(xs)
+								text-align: center
+								width: 32%
 						&:nth-child(4)
 							width: 42%
+							word-wrap: break-word;
+							@include respond-to(xs)
+								width: 28%
