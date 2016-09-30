@@ -16,26 +16,20 @@
 			</div>
 
 			<div class="puntuacion-cont-tabla-body">
+				<?php 
+				$index = 1;
+				foreach($puntuaciones as $puntuacion){?>
+				
 				<div class="puntuacion-cont-tabla-body-tr">
-					<div class="puntuacion-cont-tabla-body-td">1</div>
-					<div class="puntuacion-cont-tabla-body-td">Juan Perez Mercedes</div>
-					<div class="puntuacion-cont-tabla-body-td">JPM</div>
-					<div class="puntuacion-cont-tabla-body-td">234325546635345443534543543534534523</div>
-				</div>
-
-				<div class="puntuacion-cont-tabla-body-tr">
-					<div class="puntuacion-cont-tabla-body-td">1</div>
-					<div class="puntuacion-cont-tabla-body-td">Juan Perez Mercedes</div>
-					<div class="puntuacion-cont-tabla-body-td">JPM</div>
-					<div class="puntuacion-cont-tabla-body-td">23432554663523</div>
-				</div>
-
-				<div class="puntuacion-cont-tabla-body-tr">
-					<div class="puntuacion-cont-tabla-body-td">1</div>
-					<div class="puntuacion-cont-tabla-body-td">Juan Perez Mercedes</div>
-					<div class="puntuacion-cont-tabla-body-td">JPM</div>
-					<div class="puntuacion-cont-tabla-body-td">23432554663523</div>
-				</div>
+					<div class="puntuacion-cont-tabla-body-td"><?=$index?></div>
+					<div class="puntuacion-cont-tabla-body-td"><?=$puntuacion->idUsuario->nombreCompleto?></div>
+					<div class="puntuacion-cont-tabla-body-td"><?=$puntuacion->txt_game_tag?></div>
+					<div class="puntuacion-cont-tabla-body-td"><?=$puntuacion->num_puntuacion?></div>
+				</div>	
+				<?php
+				$index++;
+				}
+				?>
 			</div>
 
 		</div>

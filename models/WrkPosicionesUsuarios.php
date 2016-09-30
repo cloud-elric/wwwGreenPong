@@ -57,4 +57,5 @@ class WrkPosicionesUsuarios extends \yii\db\ActiveRecord
     {
         return $this->hasOne(EntUsuarios::className(), ['id_usuario' => 'id_usuario']);
     }
+    
 }

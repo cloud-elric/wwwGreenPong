@@ -42,12 +42,12 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 						'requiredValue' => 1,
 						'message' => 'Debe aceptar los terminos y condiciones' 
 				],
-				[
-				[
-						'tel_numero_celular','txt_email'
-				],
-				'unique','message'=>'Dato ya registrado utilice otro'
-								],
+// 				[
+// 				[
+// 						'tel_numero_celular','txt_email'
+// 				],
+// 				'unique','message'=>'Dato ya registrado utilice otro'
+// 								],
 				
 				[ 
 						[ 
@@ -112,5 +112,9 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 		return $this->hasMany ( WrkPuntuaciones::className (), [ 
 				'id_usuario' => 'id_usuario' 
 		] );
+	}
+	
+	public function getNombreCompleto(){
+		return $this->txt_nombre.' '.$this->txt_apellido_paterno;
 	}
 }

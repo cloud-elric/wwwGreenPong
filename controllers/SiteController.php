@@ -12,6 +12,7 @@ use app\models\EntUsuarios;
 use app\models\WrkCodigos;
 use app\models\Utils;
 use app\models\WrkPosicionesUsuarios;
+use yii\data\ActiveDataProvider;
 
 class SiteController extends Controller {
 	/**
@@ -137,11 +138,12 @@ class SiteController extends Controller {
 		
 		// Guardar puntuaje
 		$puntuaje = new WrkPosicionesUsuarios();
-		if ($puntuaje->load ( Yii::$app->request->post () ) && $puntuaje->save()) {
+		$puntuaje->id_usuario = $codigoEncontrado->id_usuario;
+		if ($puntuaje->load ( Yii::$app->request->post () ) && $puntuaje->save() ) {
 			
-			$codigoEncontrado->b_codigo_usado = 1;
-			$codigoEncontrado->save();
-			return $this->render('puntuacion');
+// 			$codigoEncontrado->b_codigo_usado = 1;
+// 			$codigoEncontrado->save();
+			return $this->redirect('puntuacion');
 		}
 		
 	}
@@ -185,12 +187,6 @@ class SiteController extends Controller {
 		} else {
 			throw new NotFoundHttpException ( 'The requested page does not exist.' );
 		}
-	}
-	
-	/**
-	 * Guarda puntuación
-	 */
-	public function actionGuardarPuntuación() {
 	}
 	
 	/**
@@ -254,7 +250,27 @@ class SiteController extends Controller {
 	 *
 	 * @return string
 	 */
-	public function actionPuntuacion() {
-		return $this->render ( 'puntuacion' );
+	public function actionPuntuacion($codigo=null) {
+		
+	$codigoEncontrado = WrkCodigos::find ()->where ( [ 
+				'txt_codigo' => $token,
+				'b_codigo_usado' => 0 
+		] )->one ();
+		
+		$query = WrkPosicionesUsuarios::find()->orderBy('num_puntuacion desc, fch_puntuacion desc');
+		// Carga el dataprovider
+		$dataProvider = new ActiveDataProvider( [ 
+				'query' => $query,
+// 				'sort' => [ 
+// 						'defaultOrder' => $order 
+// 				],
+				'pagination' => [ 
+						'pageSize' =>30,
+						'page' => 0 
+				] 
+		] );
+		
+		$puntuaciones = $dataProvider->getModels ();
+		return $this->render ( 'puntuacion', ['puntuaciones'=>$puntuaciones]);
 	}
 }
