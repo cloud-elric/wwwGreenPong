@@ -955,7 +955,7 @@ header .header-cont .logo img {
   position: absolute;
   top: 50%;
   width: 600px;
-  z-index: 94;
+  z-index: 14;
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar {
@@ -977,7 +977,7 @@ header .header-cont .logo img {
   padding: 10px 30px;
   position: absolute;
   top: 50%;
-  z-index: 99;
+  z-index: 17;
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar:hover {
@@ -1011,6 +1011,42 @@ header .header-cont .logo img {
 
 .jugar .modal-gameover .modal-content .modal-body {
   text-align: center;
+}
+
+.jugar .modal-gameover .modal-content .modal-body .p-puntuacion {
+  font-family: "proxima_nova_rgregular";
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.jugar .modal-gameover .modal-content .modal-body .p-puntuacion label {
+  font-family: "proxima_nova_rgbold";
+}
+
+.jugar .modal-gameover .modal-content .modal-body .form-group {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.jugar .modal-gameover .modal-content .modal-body .form-group input[type="text"].form-control {
+  border: 1px solid #CCC;
+  font-family: "proxima_nova_rgregular";
+  font-size: 1.1em;
+  height: 40px;
+  margin-left: 10px;
+  padding: 0 14px;
+}
+
+.jugar .modal-gameover .modal-content .modal-body .form-group input[type="text"].form-control.input-short {
+  margin-left: 0;
+  width: 100%;
+}
+
+.jugar .modal-gameover .modal-content .modal-body .form-group input[type="text"].form-control:active, .jugar .modal-gameover .modal-content .modal-body .form-group input[type="text"].form-control:focus {
+  border: 1px solid #FBE300;
+  outline: none;
 }
 
 .jugar .modal-gameover .modal-content .modal-body button {

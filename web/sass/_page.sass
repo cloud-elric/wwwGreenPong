@@ -533,7 +533,7 @@ header
 					position: absolute
 					top: 50%
 					width: 600px
-					z-index: 94
+					z-index: 14
 				.jugar-cont-body-btn-jugar
 					+border-radius(12px)
 					background-color: $yellow
@@ -550,7 +550,7 @@ header
 					padding: 10px 30px
 					position: absolute
 					top: 50%
-					z-index: 99
+					z-index: 17
 					&:hover
 						background-color: $yellow-secundary
 					i
@@ -573,6 +573,32 @@ header
 		.modal-content
 			.modal-body
 				text-align: center
+				.p-puntuacion
+					font-family: $f-proximan-regular
+					font-size: 1.2em
+					margin-bottom: 10px
+					text-align: center
+					label
+						font-family: $f-proximan-bold
+				.form-group
+					align-items: center
+					display: flex
+					justify-content: center
+					input[type="text"].form-control
+						border: 1px solid #CCC
+						font-family: $f-proximan-regular
+						font-size: 1.1em
+						height: 40px
+						margin-left: 10px
+						padding: 0 14px
+						// width: calc(100% - 40px)
+						&.input-short
+							margin-left: 0
+							width: 100%
+						&:active,
+						&:focus
+							border: 1px solid $yellow
+							outline: none
 				button
 					background-color: $yellow
 					border: none

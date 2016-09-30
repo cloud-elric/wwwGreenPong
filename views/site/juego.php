@@ -77,7 +77,7 @@ $form = ActiveForm::begin ( [
 			<!-- end - .modal-header -->
 			<!-- .modal-body -->
 			<div class="modal-body">
-			Tu puntuación fue de <label class='puntuaje-usuario'></label>
+				<p class="p-puntuacion">Tu puntuación fue de <label class='puntuaje-usuario'></label></p>
 				<?= $form->field($puntuaje, 'txt_game_tag')->textInput(['maxlength' => true])?>
 				<button class="btn-volver-a-jugar" onclick="iniciarJuego()">Volver a jugar</button>
 				<button class="btn-finalizar">Finalizar</button>
