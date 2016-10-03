@@ -320,20 +320,38 @@
 //			$("body").trigger(e);
 //		});
 		
-		$("#js-boton-arriba").mousedown(function(){
+//		$("#js-boton-arriba").mousedown(function(){
+//			keys['38']=true;
+//			keys['40']=false;
+//	    });
+//	    $("#js-boton-arriba").mouseup(function(){
+//	    	keys['38']=false;
+//			keys['40']=false;
+//	    });
+//	    
+//	    $("#js-boton-abajo").mousedown(function(){
+//	    	keys['38']=false;
+//			keys['40']=true;
+//	    });
+//	    $("#js-boton-abajo").mouseup(function(){
+//	    	keys['38']=false;
+//			keys['40']=false;
+//	    });
+		
+		$("#js-boton-arriba").on('touchstart',function(){
 			keys['38']=true;
 			keys['40']=false;
 	    });
-	    $("#js-boton-arriba").mouseup(function(){
+	    $("#js-boton-arriba").on('touchend',function(){
 	    	keys['38']=false;
 			keys['40']=false;
 	    });
 	    
-	    $("#js-boton-abajo").mousedown(function(){
+	    $("#js-boton-abajo").on('touchstart',function(){
 	    	keys['38']=false;
 			keys['40']=true;
 	    });
-	    $("#js-boton-abajo").mouseup(function(){
+	    $("#js-boton-abajo").on('touchend',function(){
 	    	keys['38']=false;
 			keys['40']=false;
 	    });
