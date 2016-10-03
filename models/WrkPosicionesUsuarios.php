@@ -45,7 +45,7 @@ class WrkPosicionesUsuarios extends \yii\db\ActiveRecord
         return [
             'id_posicion_usuario' => 'Id Posicion Usuario',
             'id_usuario' => 'Id Usuario',
-            'txt_game_tag' => 'Tag',
+            'txt_game_tag' => 'Escribe tus iniciales',
             'num_puntuacion' => 'Num Puntuacion',
         ];
     }

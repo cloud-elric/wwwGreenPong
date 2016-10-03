@@ -10,6 +10,7 @@ $form = ActiveForm::begin ( [
 ] );
 
 ?>
+
 <!-- .jugar -->
 <div class="jugar">
 	
@@ -35,6 +36,13 @@ $form = ActiveForm::begin ( [
 			</div>
 			<!-- end - .jugar-lives -->
 
+<input type="button" id="js-boton-arriba" style="
+    width: 100px;
+">
+
+<input type="button" id="js-boton-abajo" style="
+    width: 100px;
+">
 		</div>
 		<!-- end - .jugar-cont-header -->
 		

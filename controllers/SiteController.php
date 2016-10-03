@@ -82,10 +82,10 @@ class SiteController extends Controller {
 			
 			if ($codigo->save ()) {
 				
-				// $message = urlencode ( 'Usa el siguiente codigo ' . $codigo->txt_codigo );
-				// $url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
+// 				$message = urlencode ( 'Usa el siguiente codigo ' . $codigo->txt_codigo );
+// 				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
 				
-				// $sms = file_get_contents ( $url );
+// 				$sms = file_get_contents ( $url );
 				
 				return $this->redirect ( 'site/ingresar-codigo' );
 			}
@@ -253,7 +253,7 @@ class SiteController extends Controller {
 	public function actionPuntuacion($codigo=null) {
 		
 	$codigoEncontrado = WrkCodigos::find ()->where ( [ 
-				'txt_codigo' => $token,
+				'txt_codigo' => $codigo,
 				'b_codigo_usado' => 0 
 		] )->one ();
 		
