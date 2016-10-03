@@ -413,6 +413,30 @@ header .header-cont .logo img {
   margin-top: 6px;
 }
 
+.login-cont .btn-ver-puntuacion {
+  background-color: rgba(255, 223, 39, 0.3);
+  border: 2px solid #FFDF27;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  padding: 10px 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.login-cont .btn-ver-puntuacion:hover {
+  background-color: #d9c400;
+  outline: none;
+}
+
 .login-cont .aviso-privacidad {
   bottom: 20px;
   left: 30px;
@@ -1026,8 +1050,14 @@ header .header-cont .logo img {
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles {
   align-items: center;
   background-color: red;
-  display: flex;
+  display: none;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles {
+    display: flex;
+  }
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles .jugar-cont-body-canvas-controles-btn {
@@ -1550,6 +1580,31 @@ header .header-cont .logo img {
 }
 
 .bienvenida .bienvenida-cont .bienvenida-btn-comenzar:hover {
+  background-color: #d9c400;
+  outline: none;
+}
+
+.bienvenida .bienvenida-cont .btn-ver-puntuacion {
+  background-color: rgba(255, 223, 39, 0.3);
+  border: 2px solid #FFDF27;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 30px auto 0;
+  max-width: 300px;
+  padding: 10px 30px;
+  text-align: center;
+  width: 90%;
+}
+
+.bienvenida .bienvenida-cont .btn-ver-puntuacion:hover {
   background-color: #d9c400;
   outline: none;
 }

@@ -390,6 +390,10 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 			<!-- end - .modal -->
 
 		</div>
+
+		<div class="col-xs-12">
+			<a href="<?=Url::base()?>/site/puntuacion" class="btn-ver-puntuacion">Ver puntuación</a>
+		</div>
 	</div>
 
 

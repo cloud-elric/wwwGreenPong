@@ -124,6 +124,24 @@ header
 		.help-block-error
 			color: $white
 			margin-top: 6px
+	// Btn ver puntuación
+	.btn-ver-puntuacion
+		background-color: rgba($yellow-primary,.3)
+		border: 2px solid $yellow-primary
+		+border-radius(12px)
+		color: $white
+		cursor: pointer
+		display: inline-block
+		font-size: 1.2em
+		font-weight: bold
+		letter-spacing: 1px
+		margin-top: 30px
+		padding: 10px 30px
+		text-align: center
+		width: 100%
+		&:hover
+			background-color: $yellow-secundary
+			outline: none
 	// Aviso de privacidad
 	.aviso-privacidad
 		bottom: 20px
@@ -590,8 +608,10 @@ header
 					.jugar-cont-body-canvas-controles
 						align-items: center
 						background-color: red
-						display: flex
+						display: none
 						justify-content: center
+						@include respond-to(xs)
+							display: flex
 						.jugar-cont-body-canvas-controles-btn
 							background-color: $yellow-primary
 							border: 1px solid rgba($text-base,.7)
@@ -899,6 +919,25 @@ header
 			letter-spacing: 1px
 			margin-top: 30px
 			padding: 10px 30px
+			&:hover
+				background-color: $yellow-secundary
+				outline: none
+		// Btn ver puntuación
+		.btn-ver-puntuacion
+			background-color: rgba($yellow-primary,.3)
+			border: 2px solid $yellow-primary
+			+border-radius(12px)
+			color: $white
+			cursor: pointer
+			display: block
+			font-size: 1.2em
+			font-weight: bold
+			letter-spacing: 1px
+			margin: 30px auto 0
+			max-width: 300px
+			padding: 10px 30px
+			text-align: center
+			width: 90%
 			&:hover
 				background-color: $yellow-secundary
 				outline: none
