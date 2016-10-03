@@ -1228,12 +1228,16 @@ header .header-cont .logo img {
   }
 }
 
-/*  Aviso de Privacidad
+/*  Aviso de Privacidad y Terminos y Condiciones
 	@mixin =============================================== */
+.modal-terminos-condiciones,
 .modal-aviso-privacidad {
   padding: 30px 0;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum h3,
+.modal-terminos-condiciones .aviso-privacidad-colum h3,
+.modal-aviso-privacidad .terminos-condiciones-colum h3,
 .modal-aviso-privacidad .aviso-privacidad-colum h3 {
   font-size: 2.2em;
   font-weight: bold;
@@ -1241,44 +1245,127 @@ header .header-cont .logo img {
   text-transform: uppercase;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum h4,
+.modal-terminos-condiciones .aviso-privacidad-colum h4,
+.modal-aviso-privacidad .terminos-condiciones-colum h4,
 .modal-aviso-privacidad .aviso-privacidad-colum h4 {
   font-size: 1.1em;
   margin: 30px 0 10px;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum p,
+.modal-terminos-condiciones .aviso-privacidad-colum p,
+.modal-aviso-privacidad .terminos-condiciones-colum p,
 .modal-aviso-privacidad .aviso-privacidad-colum p {
   margin-bottom: 20px;
   text-align: justify;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum p .link,
+.modal-terminos-condiciones .aviso-privacidad-colum p .link,
+.modal-aviso-privacidad .terminos-condiciones-colum p .link,
 .modal-aviso-privacidad .aviso-privacidad-colum p .link {
+  color: #d9c400;
   text-decoration: underline;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum p .link:hover,
+.modal-terminos-condiciones .aviso-privacidad-colum p .link:hover,
+.modal-aviso-privacidad .terminos-condiciones-colum p .link:hover,
+.modal-aviso-privacidad .aviso-privacidad-colum p .link:hover {
+  color: #FFDF27;
+}
+
+.modal-terminos-condiciones .terminos-condiciones-colum ol,
+.modal-terminos-condiciones .aviso-privacidad-colum ol,
+.modal-aviso-privacidad .terminos-condiciones-colum ol,
 .modal-aviso-privacidad .aviso-privacidad-colum ol {
   margin-left: 50px;
   margin-top: 16px;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum ol li,
+.modal-terminos-condiciones .aviso-privacidad-colum ol li,
+.modal-aviso-privacidad .terminos-condiciones-colum ol li,
 .modal-aviso-privacidad .aviso-privacidad-colum ol li {
   margin-bottom: 20px;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum ol li span.text-e,
+.modal-terminos-condiciones .aviso-privacidad-colum ol li span.text-e,
+.modal-aviso-privacidad .terminos-condiciones-colum ol li span.text-e,
 .modal-aviso-privacidad .aviso-privacidad-colum ol li span.text-e {
   font-style: italic;
   text-decoration: underline;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum ol li span.text-M,
+.modal-terminos-condiciones .aviso-privacidad-colum ol li span.text-M,
+.modal-aviso-privacidad .terminos-condiciones-colum ol li span.text-M,
 .modal-aviso-privacidad .aviso-privacidad-colum ol li span.text-M {
   text-transform: uppercase;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum ol li span.text-t,
+.modal-terminos-condiciones .aviso-privacidad-colum ol li span.text-t,
+.modal-aviso-privacidad .terminos-condiciones-colum ol li span.text-t,
 .modal-aviso-privacidad .aviso-privacidad-colum ol li span.text-t {
   display: block;
   font-weight: bold;
 }
 
+.modal-terminos-condiciones .terminos-condiciones-colum small,
+.modal-terminos-condiciones .aviso-privacidad-colum small,
+.modal-aviso-privacidad .terminos-condiciones-colum small,
 .modal-aviso-privacidad .aviso-privacidad-colum small {
   font-size: .9em;
   font-style: italic;
+}
+
+.modal-terminos-condiciones .terminos-condiciones-colum table,
+.modal-terminos-condiciones .aviso-privacidad-colum table,
+.modal-aviso-privacidad .terminos-condiciones-colum table,
+.modal-aviso-privacidad .aviso-privacidad-colum table {
+  width: 100%;
+}
+
+.modal-terminos-condiciones .terminos-condiciones-colum table,
+.modal-terminos-condiciones .terminos-condiciones-colum th,
+.modal-terminos-condiciones .terminos-condiciones-colum td,
+.modal-terminos-condiciones .aviso-privacidad-colum table,
+.modal-terminos-condiciones .aviso-privacidad-colum th,
+.modal-terminos-condiciones .aviso-privacidad-colum td,
+.modal-aviso-privacidad .terminos-condiciones-colum table,
+.modal-aviso-privacidad .terminos-condiciones-colum th,
+.modal-aviso-privacidad .terminos-condiciones-colum td,
+.modal-aviso-privacidad .aviso-privacidad-colum table,
+.modal-aviso-privacidad .aviso-privacidad-colum th,
+.modal-aviso-privacidad .aviso-privacidad-colum td {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+}
+
+.modal-terminos-condiciones .terminos-condiciones-colum th, .modal-terminos-condiciones .terminos-condiciones-colum td,
+.modal-terminos-condiciones .aviso-privacidad-colum th,
+.modal-terminos-condiciones .aviso-privacidad-colum td,
+.modal-aviso-privacidad .terminos-condiciones-colum th,
+.modal-aviso-privacidad .terminos-condiciones-colum td,
+.modal-aviso-privacidad .aviso-privacidad-colum th,
+.modal-aviso-privacidad .aviso-privacidad-colum td {
+  padding: 5px;
+  text-align: left;
+}
+
+.modal-terminos-condiciones .terminos-condiciones-colum th,
+.modal-terminos-condiciones .aviso-privacidad-colum th,
+.modal-aviso-privacidad .terminos-condiciones-colum th,
+.modal-aviso-privacidad .aviso-privacidad-colum th {
+  text-align: center;
+}
+
+.modal-terminos-condiciones .terminos-condiciones-colum th.table-score,
+.modal-terminos-condiciones .aviso-privacidad-colum th.table-score,
+.modal-aviso-privacidad .terminos-condiciones-colum th.table-score,
+.modal-aviso-privacidad .aviso-privacidad-colum th.table-score {
+  width: 140px;
 }
