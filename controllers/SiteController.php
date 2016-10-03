@@ -101,6 +101,7 @@ class SiteController extends Controller {
 	 */
 	public function actionIngresarCodigo() {
 		$codigo = new WrkCodigos ();
+		$usuario = new EntUsuarios();
 		
 		if ($codigo->load ( Yii::$app->request->post () )) {
 			$codigoEncontrado = WrkCodigos::find ()->where ( [ 
@@ -119,7 +120,8 @@ class SiteController extends Controller {
 		}
 		
 		return $this->render ( 'ingresarCodigo', [ 
-				'codigo' => $codigo 
+				'codigo' => $codigo,
+				'usuario'=>$usuario
 		] );
 	}
 	
@@ -281,6 +283,17 @@ class SiteController extends Controller {
 	 */
 	public function actionBienvenida() {
 		return $this->render ( 'bienvenida' );
+	}
+	
+	/**
+	 * Reenvia codigo al usuario
+	 */
+	public function actionReenviarCodigo(){
+		$usuario = new EntUsuarios();
+		if ($usuario->load ( Yii::$app->request->post () )) {
+				
+			
+		}		
 	}
 	
 }

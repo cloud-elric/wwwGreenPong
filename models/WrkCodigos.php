@@ -31,6 +31,10 @@ class WrkCodigos extends \yii\db\ActiveRecord
         return [
             [['id_usuario', 'txt_codigo'], 'required'],
             [['id_usuario'], 'integer'],
+        		[
+        		'txt_codigo',
+        		'trim'
+        				],
             [['txt_codigo'], 'string', 'max' => 50],
             [['id_usuario'], 'exist', 'skipOnError' => true, 'targetClass' => EntUsuarios::className(), 'targetAttribute' => ['id_usuario' => 'id_usuario']],
         ];

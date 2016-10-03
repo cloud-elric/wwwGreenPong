@@ -93,6 +93,34 @@ $this->title = 'Ingresar codigo';
 	</div>
 	<!-- end - .modal -->
 	
+	<!-- .modal (Reenviar codigo) -->
+	<div id="modal-reenviar-codigo" class="modal">
+
+		<!-- .modal-content -->
+		<div class="modal-content">
+			<!-- .modal-header -->
+			<div class="modal-header">
+				<span class="close modal-aviso-privacidad-close">×</span>
+				<h2>Reenviar codigo</h2>
+			</div>
+			<!-- end - .modal-header -->
+			<!-- .modal-body -->
+			<div class="modal-body">
+				<p>
+					<?php  $form = ActiveForm::begin(['id' => 'reenviar-codigo-form']); ?>
+
+					<?php  $form->field($usuario, 'tel_numero_celular')->textInput(['maxlength' => 10])?>
+
+					<?php  ActiveForm::end(); ?>
+				</p>
+			</div>
+			<!-- end - .modal-body -->
+		</div>
+		<!-- end - .modal-content -->
+
+	</div>
+	<!-- end - .modal -->
+	
 </div>
 <!-- end - .ingresar-codigo-cont -->
 
