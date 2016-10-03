@@ -7,6 +7,7 @@ $config = [
 		'bootstrap' => [ 
 				'log' 
 		],
+		'defaultRoute' => 'site/bienvenida',
 		'components' => [ 
 				
 				'assetManager' => [ 
