@@ -32,13 +32,21 @@ $this->title = 'Ingresar codigo';
 			<!-- .ingresar-codigo-card-body -->
 			<div class="ingresar-codigo-card-body">
 
-				<div class="id">
-					<?= $form->field($codigo, 'txt_codigo')->textInput(['maxlength' => 10])-> label(false) -> textInput(["placeholder" => "ID 579Y26ER"])?>
-				</div>
-				
 				<p class="recibiras">
 					Recibirás tu ID vía sms
 				</p>
+
+				<div class="id">
+					<?= $form->field($codigo, 'txt_codigo')->textInput(['maxlength' => 10])-> label(false) -> textInput(["placeholder" => "ID 579Y26ER"])?>
+				</div>
+
+				<?= Html::submitButton('Jugar', ['class' => 'ingresar-codigo-card-btn-jugar', 'name' => 'contact-button'])?>
+
+				<div class="msj-tardara">
+					<p class="msj-tardara-codigo">El código puede tardar hasta 2 minutos en llegar.</p>
+					<p class="small">No te llego el código:</p>
+					<button>Reenviar código</button>
+				</div>
 
 				<hr>
 
@@ -54,8 +62,6 @@ $this->title = 'Ingresar codigo';
 
 			</div>
 			<!-- end - .ingresar-codigo-card-body -->
-
-			<?= Html::submitButton('Jugar', ['class' => 'ingresar-codigo-card-btn-jugar', 'name' => 'contact-button'])?>
 		
 		<?php ActiveForm::end(); ?>
 		<!-- end - #ingresar-codigo-form -->

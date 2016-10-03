@@ -81,7 +81,7 @@ use yii\helpers\Url;
 					<span class="bienvenida-head-numero">
 						<img src="<?=Url::base()?>/images/4.png" alt="1">
 					</span>
-					<span class="bienvenida-head-title">
+					<span class="bienvenida-head-title bienvenida-head-title-lg">
 						<!-- <img src="<?=Url::base()?>/images/bienvenida/Registrate.png" alt="Registrate"> -->
 						¡El score más alto ganará!
 					</span>
@@ -101,7 +101,7 @@ use yii\helpers\Url;
 		</a>
 		<!-- end - .bienvenida-btn-comenzar -->
 
-		<a href="<?=Url::base()?>/site/puntuacion" class="btn-ver-puntuacion">Ver puntuación</a>
+		<a href="<?=Url::base()?>/site/puntuacion" class="btn-ver-puntuacion">Ver puntuaciones</a>
 
 	</div>
 	<!-- end - .bienvenida-cont -->
