@@ -87,7 +87,7 @@ class SiteController extends Controller {
 				
 // 				$sms = file_get_contents ( $url );
 				
-				return $this->redirect ( 'site/ingresar-codigo' );
+				return $this->redirect ( 'ingresar-codigo' );
 			}
 		}
 		
@@ -113,7 +113,7 @@ class SiteController extends Controller {
 			}
 			
 			return Yii::$app->response->redirect ( [ 
-					'site/juego',
+					'juego',
 					'token' => $codigo->txt_codigo 
 			] );
 		}
@@ -273,4 +273,14 @@ class SiteController extends Controller {
 		$puntuaciones = $dataProvider->getModels ();
 		return $this->render ( 'puntuacion', ['puntuaciones'=>$puntuaciones]);
 	}
+
+	/**
+	 * Displays bienvenida page.
+	 *
+	 * @return string
+	 */
+	public function actionBienvenida() {
+		return $this->render ( 'bienvenida' );
+	}
+	
 }

@@ -148,6 +148,7 @@ header
 	background-size: cover
 	display: flex
 	justify-content: center
+	min-height: 100vh
 	position: relative
 	width: 100%
 	// Card
@@ -512,14 +513,14 @@ header
 			// 	background-color: green
 		// body
 		.jugar-cont-body
-			background-color: dodgerblue
+			// background-color: dodgerblue
 			height: calc(100vh - 250px)
 			margin: 20px auto
 			overflow: hidden
 			position: relative
 			text-align: center
 			.jugar-cont-body-canvas
-				background-color: rgba($white,.2)
+				// background-color: rgba($white,.2)
 				height: 100%
 				overflow: hidden
 				position: relative
@@ -528,13 +529,16 @@ header
 					border: rgba($white,.3)
 					// height: 100%
 					// width: auto
-					height: 300px
-					margin-left: -300px
-					margin-top: -150px
-					position: absolute
-					top: 50%
-					width: 600px
+					// height: 300px
+					// margin-left: -300px
+					// margin-top: -150px
+					// position: absolute
+					// top: 50%
+					// width: 600px
+					// height: 100%
 					z-index: 14
+					@include respond-to(xs)
+						width: 100%
 				.jugar-cont-body-btn-jugar
 					+border-radius(12px)
 					background-color: $yellow
@@ -766,3 +770,106 @@ header
 			text-align: center
 			&.table-score
 				width: 140px
+
+/*  Bienvenida
+	================================================ */
+.bienvenida
+	background-image: url(../images/bg-bienvenida.png)
+	nd-size: cover
+	display: flex
+	min-height: 100vh
+	justify-content: center
+	position: relative
+	padding: 40px 0
+	width: 100%
+	// Contedor
+	.bienvenida-cont
+		// background-color: teal
+		margin: 150px auto 0
+		max-width: 1024px
+		text-align: center
+		width: 90%
+		// Title
+		.bienvenida-tile
+			color: $white
+			font-family: $f-proximan-black
+			font-size: 4em
+			margin-bottom: 40px
+			text-transform: uppercase
+		// Cámo participar
+		.bienvenida-como-participar
+			color: $yellow-primary
+			font-family: $f-proximan-bold
+			font-size: 3.2em
+			margin-bottom: 30px
+			text-transform: uppercase
+			// width: 400px
+			img
+				width: 400px
+		// Textos
+		.bienvenida-cont-textos
+			// background-color: yellow
+			display: flex
+			flex-direction: column
+			margin: 0 auto
+			max-width: 800px
+			// flex-wrap: wrap
+			.bienvenida-registrate,
+			.bienvenida-juega,
+			.bienvenida-confirma,
+			.bienvenida-score-alto-gana
+				// background-color: teal
+				display: flex
+				flex-wrap: wrap
+				margin-bottom: 60px
+				width: 100%
+				.bienvenida-head
+					align-items: center
+					// background-color: blue
+					display: flex
+					justify-content: center
+					margin-bottom: 10px
+					width: 100%
+					span
+						// background-color: red
+						display: block
+						&.bienvenida-head-numero
+							width: 50px
+						&.bienvenida-head-title
+							color: $yellow-primary
+							font-family: $f-proximan-bold
+							font-size: 2.4em
+							margin-left: 20px
+							text-transform: uppercase
+							// width: 220px
+						img
+							width: 100%
+				.bienvenida-registrate-desc
+					// background-color: pink
+					color: $white
+					font-family: $f-proximan-regular
+					font-size: 1.8em
+					width: 100%
+					span
+						font-family: $f-proximan-bold
+						font-size: 1.3em
+						display: block
+						margin-top: 20px
+					img
+						width: 100%
+		// Btn Comenzar
+		.bienvenida-btn-comenzar
+			background-color: $yellow
+			border: none
+			+border-radius(12px)
+			color: $white
+			cursor: pointer
+			display: inline-block
+			font-size: 1.1em
+			font-weight: bold
+			letter-spacing: 1px
+			margin-top: 30px
+			padding: 10px 30px
+			&:hover
+				background-color: $yellow-secundary
+				outline: none
