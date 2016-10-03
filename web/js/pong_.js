@@ -91,6 +91,7 @@
 		scoreLabel.innerHTML = score ;
 		$('#wrkposicionesusuarios-num_puntuacion').val(score);
 		$('.puntuaje-usuario').text(score);
+		updateSH();
 	}
 	
 	function updateVidas(){
@@ -110,6 +111,9 @@
 		$('.live').addClass('ion-ios-tennisball');
 	}
 	
+	function updateSH(){
+		sH = score;
+	}
 
 	
 	/* ------------- FLUJO DEL JUEGO -------------- */
@@ -216,6 +220,8 @@
 		}, 1000 / fps);
 	}
 	
+	var sH = 0;
+	
 	function moveBall(){
 		posX = posX + (dirX * speedX);
 		posY = posY  + (dirY * speedY);
@@ -315,11 +321,20 @@
 	/* ---------- DOCUMENT READY ------------------- */
 	$( document ).ready(function() {
 		
-		$("#js-boton-arriba").mousedown(function(e){
+		$(".btn-finalizar").on('click',function(e){
+			e.preventDefault();
+			scoreLabel.innerHTML = sH ;
+			$('#wrkposicionesusuarios-num_puntuacion').val(sH);
+			$('.puntuaje-usuario').text(sH);
+			
+			$("#finalizar-juego").submit();
+		});
+		
+		$("#js-boton-arriba").on('click',function(e){
 			e.preventDefault();
 	    });
 	    
-	    $("#js-boton-abajo").mousedown(function(e){
+	    $("#js-boton-abajo").on('click',function(e){
 	    	e.preventDefault();
 	    });
 		
