@@ -441,6 +441,7 @@ header .header-cont .logo img {
   background-size: cover;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
   position: relative;
   width: 100%;
 }
@@ -932,7 +933,6 @@ header .header-cont .logo img {
 }
 
 .jugar .jugar-cont .jugar-cont-body {
-  background-color: dodgerblue;
   height: calc(100vh - 250px);
   margin: 20px auto;
   overflow: hidden;
@@ -941,7 +941,6 @@ header .header-cont .logo img {
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas {
-  background-color: rgba(255, 255, 255, 0.2);
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -950,13 +949,13 @@ header .header-cont .logo img {
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas #myCanvas {
   background-color: #FFF;
   border: rgba(255, 255, 255, 0.3);
-  height: 300px;
-  margin-left: -300px;
-  margin-top: -150px;
-  position: absolute;
-  top: 50%;
-  width: 600px;
   z-index: 14;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas #myCanvas {
+    width: 100%;
+  }
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar {
@@ -1368,4 +1367,153 @@ header .header-cont .logo img {
 .modal-aviso-privacidad .terminos-condiciones-colum th.table-score,
 .modal-aviso-privacidad .aviso-privacidad-colum th.table-score {
   width: 140px;
+}
+
+/*  Bienvenida
+	@mixin =============================================== */
+.bienvenida {
+  background-image: url(../images/bg-bienvenida.png);
+  nd-size: cover;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.bienvenida .bienvenida-cont {
+  margin: 150px auto 0;
+  max-width: 1024px;
+  text-align: center;
+  width: 90%;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-tile {
+  color: #FFF;
+  font-family: "proxima_novablack";
+  font-size: 4em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-como-participar {
+  color: #FFDF27;
+  font-family: "proxima_nova_rgbold";
+  font-size: 3.2em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-como-participar img {
+  width: 400px;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head span,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head span,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head span {
+  display: block;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span.bienvenida-head-numero,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head span.bienvenida-head-numero,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head span.bienvenida-head-numero,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head span.bienvenida-head-numero {
+  width: 50px;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span.bienvenida-head-title,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head span.bienvenida-head-title,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head span.bienvenida-head-title,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head span.bienvenida-head-title {
+  color: #FFDF27;
+  font-family: "proxima_nova_rgbold";
+  font-size: 2.4em;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span img,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head span img,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head span img,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head span img {
+  width: 100%;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-registrate-desc,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-registrate-desc,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-registrate-desc,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-registrate-desc {
+  color: #FFF;
+  font-family: "proxima_nova_rgregular";
+  font-size: 1.8em;
+  width: 100%;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-registrate-desc span,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-registrate-desc span,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-registrate-desc span,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-registrate-desc span {
+  font-family: "proxima_nova_rgbold";
+  font-size: 1.3em;
+  display: block;
+  margin-top: 20px;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-registrate-desc img,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-registrate-desc img,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-registrate-desc img,
+.bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-registrate-desc img {
+  width: 100%;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-btn-comenzar {
+  background-color: #FBE300;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  padding: 10px 30px;
+}
+
+.bienvenida .bienvenida-cont .bienvenida-btn-comenzar:hover {
+  background-color: #d9c400;
+  outline: none;
 }

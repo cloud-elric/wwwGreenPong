@@ -46,6 +46,7 @@ $form = ActiveForm::begin ( [
 				<canvas id="myCanvas" width="600" height="300">
 					
 				</canvas>
+				<!-- <canvas id="myCanvas" width="600" height="300"> -->
 				<p class="jugar-cont-body-btn-jugar" onclick="iniciarJuego()">
 					<i class="ion ion-play"></i>
 					<!-- <i class="ion ion-refresh"></i> -->

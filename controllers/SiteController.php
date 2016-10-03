@@ -273,4 +273,14 @@ class SiteController extends Controller {
 		$puntuaciones = $dataProvider->getModels ();
 		return $this->render ( 'puntuacion', ['puntuaciones'=>$puntuaciones]);
 	}
+
+	/**
+	 * Displays bienvenida page.
+	 *
+	 * @return string
+	 */
+	public function actionBienvenida() {
+		return $this->render ( 'bienvenida' );
+	}
+	
 }
