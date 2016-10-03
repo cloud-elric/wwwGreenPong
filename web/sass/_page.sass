@@ -132,7 +132,7 @@ header
 		color: $white
 		cursor: pointer
 		display: inline-block
-		font-size: 1.2em
+		font-size: 1.1em
 		font-weight: bold
 		letter-spacing: 1px
 		margin-top: 30px
@@ -845,6 +845,10 @@ header
 			font-size: 4em
 			margin-bottom: 40px
 			text-transform: uppercase
+			@include respond-to(xs)
+				font-size: 3.3em
+			@include respond-to(xx)
+				font-size: 2.2em
 		// Cámo participar
 		.bienvenida-como-participar
 			color: $yellow-primary
@@ -852,9 +856,10 @@ header
 			font-size: 3.2em
 			margin-bottom: 30px
 			text-transform: uppercase
-			// width: 400px
-			img
-				width: 400px
+			@include respond-to(xs)
+				font-size: 2.7em
+			@include respond-to(xx)
+				font-size: 1.9em
 		// Textos
 		.bienvenida-cont-textos
 			// background-color: yellow
@@ -890,7 +895,14 @@ header
 							font-size: 2.4em
 							margin-left: 20px
 							text-transform: uppercase
-							// width: 220px
+							@include respond-to(xs)
+								font-size: 2em
+							@include respond-to(xx)
+								font-size: 1.6em
+								text-align: left
+							&.bienvenida-head-title-lg
+								@include respond-to(xx)
+									width: 100%
 						img
 							width: 100%
 				.bienvenida-registrate-desc
@@ -930,12 +942,12 @@ header
 			color: $white
 			cursor: pointer
 			display: block
-			font-size: 1.2em
+			font-size: 1.1em
 			font-weight: bold
 			letter-spacing: 1px
 			margin: 30px auto 0
-			max-width: 300px
-			padding: 10px 30px
+			max-width: 220px
+			padding: 10px
 			text-align: center
 			width: 90%
 			&:hover

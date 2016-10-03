@@ -423,7 +423,7 @@ header .header-cont .logo img {
   color: #FFF;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   letter-spacing: 1px;
   margin-top: 30px;
@@ -1463,6 +1463,18 @@ header .header-cont .logo img {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px) {
+  .bienvenida .bienvenida-cont .bienvenida-tile {
+    font-size: 3.3em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bienvenida .bienvenida-cont .bienvenida-tile {
+    font-size: 2.2em;
+  }
+}
+
 .bienvenida .bienvenida-cont .bienvenida-como-participar {
   color: #FFDF27;
   font-family: "proxima_nova_rgbold";
@@ -1471,8 +1483,16 @@ header .header-cont .logo img {
   text-transform: uppercase;
 }
 
-.bienvenida .bienvenida-cont .bienvenida-como-participar img {
-  width: 400px;
+@media screen and (max-width: 768px) {
+  .bienvenida .bienvenida-cont .bienvenida-como-participar {
+    font-size: 2.7em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bienvenida .bienvenida-cont .bienvenida-como-participar {
+    font-size: 1.9em;
+  }
 }
 
 .bienvenida .bienvenida-cont .bienvenida-cont-textos {
@@ -1526,6 +1546,34 @@ header .header-cont .logo img {
   font-size: 2.4em;
   margin-left: 20px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span.bienvenida-head-title,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head span.bienvenida-head-title,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head span.bienvenida-head-title,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head span.bienvenida-head-title {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span.bienvenida-head-title,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head span.bienvenida-head-title,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head span.bienvenida-head-title,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head span.bienvenida-head-title {
+    font-size: 1.6em;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span.bienvenida-head-title.bienvenida-head-title-lg,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-juega .bienvenida-head span.bienvenida-head-title.bienvenida-head-title-lg,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-confirma .bienvenida-head span.bienvenida-head-title.bienvenida-head-title-lg,
+  .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head span.bienvenida-head-title.bienvenida-head-title-lg {
+    width: 100%;
+  }
 }
 
 .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate .bienvenida-head span img,
@@ -1594,12 +1642,12 @@ header .header-cont .logo img {
   color: #FFF;
   cursor: pointer;
   display: block;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 30px auto 0;
-  max-width: 300px;
-  padding: 10px 30px;
+  max-width: 220px;
+  padding: 10px;
   text-align: center;
   width: 90%;
 }
