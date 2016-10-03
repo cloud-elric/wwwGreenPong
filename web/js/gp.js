@@ -9,10 +9,13 @@
 // modal - aviso de privacidad
 var modalAvisoPrivacidad = document.getElementById('modal-aviso-privacidad');
 var btnAvisoPrivacidad = document.getElementsByClassName("btn-aviso-privacidad")[0];
+var btnReenviarCodigo = document.getElementById("js-reenviar-codigo");
 var closeAvisoPrivacidad = document.getElementsByClassName("modal-aviso-privacidad-close")[0];
+var closeReenviarCodigo = document.getElementsByClassName("modal-reenviar-close")[0];
 
 var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
 var modalGameOver = document.getElementById('modal-gameover');
+var modalReenviarCodigo = document.getElementById('modal-reenviar-codigos');
 
 /**
  * Document Ready
@@ -69,6 +72,24 @@ $(document).ready(function(){
 	$(closeAvisoPrivacidad).on("click", function(){
 		modalAvisoPrivacidad.style.display = "none";
 	});
+	
+	
+	// open
+	// Reenviar codigo modal
+	$(btnReenviarCodigo).on("click", function(e){
+		e.preventDefault();
+		modalReenviarCodigo.style.display = "flex";
+	});
+	// btnAvisoPrivacidad.onclick = function() {
+	// 	modalAvisoPrivacidad.style.display = "flex";
+	// }
+
+
+	// close
+	// Reenviar codigo modal
+	$(closeReenviarCodigo).on("click", function(){
+		modalReenviarCodigo.style.display = "none";
+	});
 
 
 	$("#entusuarios-aceptaterminos").click(function() {
@@ -92,6 +113,11 @@ $(document).ready(function(){
 		// modal - GameOver
 		if (event.target == modalGameOver) {
 			modalGameOver.style.display = "none";
+		}
+		
+		// modal -reenviar codigo
+		if (event.target == modalReenviarCodigo) {
+			modalReenviarCodigo.style.display = "none";
 		}
 	}
 

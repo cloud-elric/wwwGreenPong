@@ -29,7 +29,7 @@ class WrkCodigos extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_usuario', 'txt_codigo'], 'required'],
+            [['id_usuario', 'txt_codigo'], 'required', 'on'=>'Necesita ingresar un codigo'],
             [['id_usuario'], 'integer'],
         		[
         		'txt_codigo',
