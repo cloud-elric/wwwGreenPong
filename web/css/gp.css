@@ -973,10 +973,9 @@ header .header-cont .logo img {
   left: 50%;
   letter-spacing: 1px;
   margin-left: -68px;
-  margin-top: -24px;
   padding: 10px 30px;
   position: absolute;
-  top: 50%;
+  top: 25%;
   z-index: 17;
 }
 
@@ -986,6 +985,12 @@ header .header-cont .logo img {
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar i {
   margin-right: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar {
+    top: 35%;
+  }
 }
 
 .jugar .jugar-cont .jugar-cont-body p {
@@ -1516,4 +1521,36 @@ header .header-cont .logo img {
 .bienvenida .bienvenida-cont .bienvenida-btn-comenzar:hover {
   background-color: #d9c400;
   outline: none;
+}
+
+/*  Código NO valido
+	@mixin =============================================== */
+.codigo-no-valido {
+  background-image: url(../images/bg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.codigo-no-valido .codigo-no-valido-cont {
+  margin: 190px 0 40px;
+  max-width: 1024px;
+  text-align: center;
+  width: 90%;
+}
+
+.codigo-no-valido .codigo-no-valido-cont h3 {
+  color: #FFF;
+  font-family: "proxima_novablack";
+  margin-bottom: 30px;
+}
+
+.codigo-no-valido .codigo-no-valido-cont a {
+  font-size: 1.1em;
+  text-decoration: underline;
 }
