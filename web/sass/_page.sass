@@ -590,8 +590,10 @@ header
 					.jugar-cont-body-canvas-controles
 						align-items: center
 						background-color: red
-						display: flex
+						display: none
 						justify-content: center
+						@include respond-to(xs)
+							display: flex
 						.jugar-cont-body-canvas-controles-btn
 							background-color: $yellow-primary
 							border: 1px solid rgba($text-base,.7)

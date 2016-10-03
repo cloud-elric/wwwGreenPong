@@ -1026,8 +1026,14 @@ header .header-cont .logo img {
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles {
   align-items: center;
   background-color: red;
-  display: flex;
+  display: none;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles {
+    display: flex;
+  }
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles .jugar-cont-body-canvas-controles-btn {
