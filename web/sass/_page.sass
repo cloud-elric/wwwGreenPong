@@ -519,63 +519,90 @@ header
 			overflow: hidden
 			position: relative
 			text-align: center
-			.jugar-cont-body-canvas
-				// background-color: rgba($white,.2)
+			.jugar-cont-body-gral
 				height: 100%
 				overflow: hidden
 				position: relative
-				#myCanvas
-					background-color: $white
-					border: rgba($white,.3)
-					// height: 100%
-					// width: auto
-					// height: 300px
-					// margin-left: -300px
-					// margin-top: -150px
-					// position: absolute
-					// top: 50%
-					// width: 600px
-					// height: 100%
-					z-index: 14
-					@include respond-to(xs)
-						width: 100%
-				.jugar-cont-body-btn-jugar
-					+border-radius(12px)
-					background-color: $yellow
-					border: none
-					color: $white
-					cursor: pointer
-					display: block
-					font-size: 1.2em
-					font-weight: bold
-					left: 50%
-					letter-spacing: 1px
-					margin-left: -68px
-					// margin-top: -24px
-					padding: 10px 30px
-					position: absolute
-					top: 25%
-					z-index: 17
-					&:hover
-						background-color: $yellow-secundary
-					i
-						margin-right: 6px
-					@include respond-to(xs)
-						top: 35%
-			p
-				background-color: $yellow
-				border: none
-				+border-radius(12px)
-				color: $white
-				cursor: pointer
-				display: inline-block
-				font-size: 1.2em
-				font-weight: bold
-				letter-spacing: 1px
-				margin-top: 30px
-				padding: 10px 30px
-				&:hover
-					background-color: $yellow-secundary
+				display: flex
+				justify-content: center
+				.jugar-cont-body-canvas
+					// background-color: rgba($white,.2)
+					display: flex
+					flex-direction: column
+					height: auto
+					overflow: hidden
+					position: relative
+					.jugar-cont-body-overflow
+						position: relative
+						#myCanvas
+							background-color: $white
+							border: rgba($white,.3)
+							// height: 100%
+							// width: auto
+							// height: 300px
+							// margin-left: -300px
+							// margin-top: -150px
+							// position: absolute
+							// top: 50%
+							// width: 600px
+							// height: 100%
+							z-index: 14
+							@include respond-to(xs)
+								width: 100%
+						.jugar-cont-body-btn-jugar
+							+border-radius(12px)
+							background-color: $yellow
+							border: none
+							color: $white
+							cursor: pointer
+							display: block
+							font-size: 1.2em
+							font-weight: bold
+							left: 50%
+							letter-spacing: 1px
+							margin-left: -68px
+							margin-top: -24px
+							padding: 10px 30px
+							position: absolute
+							top: 50%
+							z-index: 17
+							&:hover
+								background-color: $yellow-secundary
+							i
+								margin-right: 6px
+							// @include respond-to(xs)
+							// 	top: 35%
+					p
+						background-color: $yellow
+						border: none
+						+border-radius(12px)
+						color: $white
+						cursor: pointer
+						display: inline-block
+						font-size: 1.2em
+						font-weight: bold
+						letter-spacing: 1px
+						margin-top: 30px
+						padding: 10px 30px
+						&:hover
+							background-color: $yellow-secundary
+					// Controles
+					.jugar-cont-body-canvas-controles
+						align-items: center
+						background-color: red
+						display: flex
+						justify-content: center
+						.jugar-cont-body-canvas-controles-btn
+							background-color: $yellow-primary
+							border: 1px solid rgba($text-base,.7)
+							padding: 10px 20px
+							width: 50%
+							&:active,
+							&:focus
+								outline: none
+							i
+								font-size: 1.6em
+
 	.modal-gameover
 		.modal-content
 			.modal-body

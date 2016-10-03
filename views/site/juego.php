@@ -36,13 +36,10 @@ $form = ActiveForm::begin ( [
 			</div>
 			<!-- end - .jugar-lives -->
 
-<input type="button" id="js-boton-arriba" style="
-    width: 100px;
-">
+			<!-- <input type="button" id="js-boton-arriba" style="width: 100px;">
 
-<input type="button" id="js-boton-abajo" style="
-    width: 100px;
-">
+			<input type="button" id="js-boton-abajo" style="width: 100px;"> -->
+
 		</div>
 		<!-- end - .jugar-cont-header -->
 		
@@ -50,16 +47,28 @@ $form = ActiveForm::begin ( [
 		<!-- .jugar-cont-body -->
 		<div class="jugar-cont-body">
 			
-			<div class="jugar-cont-body-canvas">
-				<canvas id="myCanvas" width="600" height="300">
-					
-				</canvas>
-				<!-- <canvas id="myCanvas" width="600" height="300"> -->
-				<p class="jugar-cont-body-btn-jugar" onclick="iniciarJuego()" id="js-button-jugar">
-					<i class="ion ion-play"></i>
-					<!-- <i class="ion ion-refresh"></i> -->
-					Jugar
-				</p>
+			<div class="jugar-cont-body-gral">
+
+				<div class="jugar-cont-body-canvas">
+
+					<div class="jugar-cont-body-overflow">
+						<canvas id="myCanvas" width="600" height="300">
+							
+						</canvas>
+						<p class="jugar-cont-body-btn-jugar" onclick="iniciarJuego()" id="js-button-jugar">
+							<i class="ion ion-play"></i>
+							<!-- <i class="ion ion-refresh"></i> -->
+							Jugar
+						</p>
+					</div>
+
+					<div class="jugar-cont-body-canvas-controles">
+						<button class="jugar-cont-body-canvas-controles-btn" id="js-boton-arriba"><i class="ion ion-chevron-up"></i></button>
+						<button class="jugar-cont-body-canvas-controles-btn" id="js-boton-abajo"><i class="ion ion-chevron-down"></i></button>
+					</div>
+
+					<!-- <canvas id="myCanvas" width="600" height="300"> -->
+				</div>
 			</div>
 			<div>
 				<img id="ball" src="<?=Url::base()?>/images/tennisball.png">

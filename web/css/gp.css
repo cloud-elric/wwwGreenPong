@@ -940,25 +940,39 @@ header .header-cont .logo img {
   text-align: center;
 }
 
-.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral {
   height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas {
+  display: flex;
+  flex-direction: column;
+  height: auto;
   overflow: hidden;
   position: relative;
 }
 
-.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas #myCanvas {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-overflow {
+  position: relative;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-overflow #myCanvas {
   background-color: #FFF;
   border: rgba(255, 255, 255, 0.3);
   z-index: 14;
 }
 
 @media screen and (max-width: 768px) {
-  .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas #myCanvas {
+  .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-overflow #myCanvas {
     width: 100%;
   }
 }
 
-.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-overflow .jugar-cont-body-btn-jugar {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
@@ -973,27 +987,22 @@ header .header-cont .logo img {
   left: 50%;
   letter-spacing: 1px;
   margin-left: -68px;
+  margin-top: -24px;
   padding: 10px 30px;
   position: absolute;
-  top: 25%;
+  top: 50%;
   z-index: 17;
 }
 
-.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar:hover {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-overflow .jugar-cont-body-btn-jugar:hover {
   background-color: #d9c400;
 }
 
-.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar i {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-overflow .jugar-cont-body-btn-jugar i {
   margin-right: 6px;
 }
 
-@media screen and (max-width: 768px) {
-  .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-canvas .jugar-cont-body-btn-jugar {
-    top: 35%;
-  }
-}
-
-.jugar .jugar-cont .jugar-cont-body p {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas p {
   background-color: #FBE300;
   border: none;
   -webkit-border-radius: 12px;
@@ -1010,8 +1019,30 @@ header .header-cont .logo img {
   padding: 10px 30px;
 }
 
-.jugar .jugar-cont .jugar-cont-body p:hover {
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas p:hover {
   background-color: #d9c400;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles {
+  align-items: center;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles .jugar-cont-body-canvas-controles-btn {
+  background-color: #FFDF27;
+  border: 1px solid rgba(24, 21, 20, 0.7);
+  padding: 10px 20px;
+  width: 50%;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles .jugar-cont-body-canvas-controles-btn:active, .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles .jugar-cont-body-canvas-controles-btn:focus {
+  outline: none;
+}
+
+.jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles .jugar-cont-body-canvas-controles-btn i {
+  font-size: 1.6em;
 }
 
 .jugar .modal-gameover .modal-content .modal-body {
