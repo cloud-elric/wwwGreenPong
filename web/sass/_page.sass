@@ -91,6 +91,7 @@ header
 			input[type="email"],
 			input[type="text"]
 				border: 1px solid $white
+				+border-radius(0)
 				font-family: $f-proximan-regular
 				font-size: 1.1em
 				height: 40px
@@ -219,6 +220,7 @@ header
 		.ingresar-codigo-card-body
 			background-color: $white
 			color: $black
+			margin-top: -27px
 			padding: 4px 30px 0
 			.id
 				text-align: center
@@ -229,6 +231,7 @@ header
 					display: inline-block
 					font-family: $f-proximan-bold
 					font-size: 2em
+					margin: 10px 0
 					padding: 6px 16px
 					text-align: center
 					width: 100%
@@ -241,6 +244,29 @@ header
 					margin-top: 4px
 				p
 					display: block
+			.msj-tardara
+				.msj-tardara-codigo
+					font-family: $f-proximan-bold
+				.small
+					font-family: $f-proximan-regular
+					margin-top: 10px
+					margin-bottom: 5px
+				button
+					background-color: #CCC
+					border: none
+					+border-radius(12px)
+					color: $white
+					cursor: pointer
+					display: inline-block
+					font-size: 1.2em
+					font-weight: bold
+					letter-spacing: 1px
+					margin-bottom: 30px
+					padding: 10px 30px
+					&:active,
+					&:focus
+						background-color: $yellow-secundary
+						outline: none
 			.recibiras
 				font-family: $f-proximan-regular
 				letter-spacing: 1px
@@ -275,7 +301,7 @@ header
 			font-size: 1.2em
 			font-weight: bold
 			letter-spacing: 1px
-			margin-top: 30px
+			margin-bottom: 10px
 			padding: 10px 30px
 			&:active,
 			&:focus
@@ -487,6 +513,11 @@ header
 		margin-top: 20px
 		padding: 8px 20px
 		cursor: pointer
+		position: fixed
+		bottom: 44px
+		left: 50%
+		margin-left: -140px
+		z-index: 99999
 		&:hover
 			background-color: #c3c3c3
 		@include respond-to(xs)
@@ -702,6 +733,8 @@ header
 			text-align: center
 		.puntuacion-cont-tabla
 			background-color: $white
+			margin: 0 auto
+			max-width: 600px
 			.puntuacion-cont-tabla-head
 				background-color: $yellow-secundary
 				display: flex
@@ -716,7 +749,7 @@ header
 						@include respond-to(xs)
 							width: 10%
 					&:nth-child(2)
-						width: 30%
+						width: 50%
 						word-wrap: break-word;
 						@include respond-to(xs)
 							width: 30%
@@ -726,16 +759,18 @@ header
 							text-align: center
 							width: 32%
 					&:nth-child(4)
-						width: 42%
+						text-align: center
+						width: 20%
 						word-wrap: break-word;
 						@include respond-to(xs)
 							width: 28%
 			.puntuacion-cont-tabla-body
-				// background-color: rgba(yellow,.2)
+				// background-color: rgba(red,.2)
 				.puntuacion-cont-tabla-body-tr
+					// background-color: rgba(blue,.2)
 					align-items: center
 					display: flex
-					padding: 16px 10px
+					padding: 16px 5px
 					&:nth-child(odd)
 						background-color: $white
 					&:nth-child(even)
@@ -743,23 +778,27 @@ header
 					.puntuacion-cont-tabla-body-td
 						// background-color: rgba(green,.2)
 						&:nth-child(1)
+							// background-color: rgba(pink,.4)
 							text-align: center
 							width: 6%
 							@include respond-to(xs)
 								width: 10%
 						&:nth-child(2)
-							width: 30%
-							word-wrap: break-word;
+							padding-left: 10px
+							width: 50%
+							word-wrap: break-word
 							@include respond-to(xs)
 								width: 30%
 						&:nth-child(3)
+							text-align: center
+							text-transform: uppercase
 							width: 18%
 							@include respond-to(xs)
-								text-align: center
 								width: 32%
 						&:nth-child(4)
-							width: 42%
-							word-wrap: break-word;
+							text-align: center
+							width: 20%
+							word-wrap: break-word
 							@include respond-to(xs)
 								width: 28%
 
@@ -768,6 +807,9 @@ header
 .modal-terminos-condiciones,
 .modal-aviso-privacidad
 	padding: 30px 0
+	.modal-content
+		max-height: 90vh
+		overflow-y: scroll
 	.terminos-condiciones-colum,
 	.aviso-privacidad-colum
 		h3
@@ -784,6 +826,8 @@ header
 			.link
 				color: $yellow-secundary
 				text-decoration: underline
+				max-width: 90%
+				word-wrap: break-word 
 				&:hover
 					color: $yellow-primary
 		ol
@@ -819,6 +863,10 @@ header
 			text-align: center
 			&.table-score
 				width: 140px
+
+.modal-terminos-condiciones
+	.modal-content
+		max-height: 70vh
 
 /*  Bienvenida
 	================================================ */
@@ -866,7 +914,7 @@ header
 			display: flex
 			flex-direction: column
 			margin: 0 auto
-			max-width: 800px
+			max-width: 600px
 			// flex-wrap: wrap
 			.bienvenida-registrate,
 			.bienvenida-juega,
@@ -881,9 +929,10 @@ header
 					align-items: center
 					// background-color: blue
 					display: flex
-					justify-content: center
-					margin-top: 100px
+					justify-content: flex-start
+					margin-top: 50px
 					margin-bottom: 10px
+					text-align: left
 					width: 100%
 					span
 						// background-color: red

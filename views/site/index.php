@@ -377,7 +377,7 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 						</div>
 
 						<span class="aceptar-terminos-condiciones-btn"> Acepto los
-							terminos y condiciones </span>
+							términos y condiciones </span>
 					</div>
 					<!-- <div class="modal-footer">
 							<h3>Modal Footer</h3>
@@ -392,7 +392,7 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 		</div>
 
 		<div class="col-xs-12">
-			<a href="<?=Url::base()?>/site/puntuacion" class="btn-ver-puntuacion">Ver puntuación</a>
+			<a href="<?=Url::base()?>/site/puntuacion" class="btn-ver-puntuacion">Ver puntuaciones</a>
 		</div>
 	</div>
 

@@ -353,6 +353,10 @@ header .header-cont .logo img {
 .login-cont .form-login .btn-field input[type="email"],
 .login-cont .form-login .btn-field input[type="text"] {
   border: 1px solid #FFF;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
   font-family: "proxima_nova_rgregular";
   font-size: 1.1em;
   height: 40px;
@@ -541,6 +545,7 @@ header .header-cont .logo img {
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body {
   background-color: #FFF;
   color: #000;
+  margin-top: -27px;
   padding: 4px 30px 0;
 }
 
@@ -558,6 +563,7 @@ header .header-cont .logo img {
   display: inline-block;
   font-family: "proxima_nova_rgbold";
   font-size: 2em;
+  margin: 10px 0;
   padding: 6px 16px;
   text-align: center;
   width: 100%;
@@ -575,6 +581,38 @@ header .header-cont .logo img {
 
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .id p {
   display: block;
+}
+
+.ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .msj-tardara .msj-tardara-codigo {
+  font-family: "proxima_nova_rgbold";
+}
+
+.ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .msj-tardara .small {
+  font-family: "proxima_nova_rgregular";
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .msj-tardara button {
+  background-color: #CCC;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+}
+
+.ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .msj-tardara button:active, .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .msj-tardara button:focus {
+  background-color: #d9c400;
+  outline: none;
 }
 
 .ingresar-codigo-cont .ingresar-codigo-card .ingresar-codigo-card-body .recibiras {
@@ -626,7 +664,7 @@ header .header-cont .logo img {
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-top: 30px;
+  margin-bottom: 10px;
   padding: 10px 30px;
 }
 
@@ -901,6 +939,11 @@ header .header-cont .logo img {
   margin-top: 20px;
   padding: 8px 20px;
   cursor: pointer;
+  position: fixed;
+  bottom: 44px;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 99999;
 }
 
 .modal-body .aceptar-terminos-condiciones-btn:hover {
@@ -1178,6 +1221,8 @@ header .header-cont .logo img {
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla {
   background-color: #FFF;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head {
@@ -1203,7 +1248,7 @@ header .header-cont .logo img {
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(2) {
-  width: 30%;
+  width: 50%;
   word-wrap: break-word;
 }
 
@@ -1225,7 +1270,8 @@ header .header-cont .logo img {
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-head .puntuacion-cont-tabla-head-td:nth-child(4) {
-  width: 42%;
+  text-align: center;
+  width: 20%;
   word-wrap: break-word;
 }
 
@@ -1238,7 +1284,7 @@ header .header-cont .logo img {
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr {
   align-items: center;
   display: flex;
-  padding: 16px 10px;
+  padding: 16px 5px;
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr:nth-child(odd) {
@@ -1261,7 +1307,8 @@ header .header-cont .logo img {
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(2) {
-  width: 30%;
+  padding-left: 10px;
+  width: 50%;
   word-wrap: break-word;
 }
 
@@ -1272,18 +1319,20 @@ header .header-cont .logo img {
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(3) {
+  text-align: center;
+  text-transform: uppercase;
   width: 18%;
 }
 
 @media screen and (max-width: 768px) {
   .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(3) {
-    text-align: center;
     width: 32%;
   }
 }
 
 .puntuacion .puntuacion-cont .puntuacion-cont-tabla .puntuacion-cont-tabla-body .puntuacion-cont-tabla-body-tr .puntuacion-cont-tabla-body-td:nth-child(4) {
-  width: 42%;
+  text-align: center;
+  width: 20%;
   word-wrap: break-word;
 }
 
@@ -1298,6 +1347,12 @@ header .header-cont .logo img {
 .modal-terminos-condiciones,
 .modal-aviso-privacidad {
   padding: 30px 0;
+}
+
+.modal-terminos-condiciones .modal-content,
+.modal-aviso-privacidad .modal-content {
+  max-height: 90vh;
+  overflow-y: scroll;
 }
 
 .modal-terminos-condiciones .terminos-condiciones-colum h3,
@@ -1332,6 +1387,8 @@ header .header-cont .logo img {
 .modal-aviso-privacidad .aviso-privacidad-colum p .link {
   color: #d9c400;
   text-decoration: underline;
+  max-width: 90%;
+  word-wrap: break-word;
 }
 
 .modal-terminos-condiciones .terminos-condiciones-colum p .link:hover,
@@ -1435,6 +1492,10 @@ header .header-cont .logo img {
   width: 140px;
 }
 
+.modal-terminos-condiciones .modal-content {
+  max-height: 70vh;
+}
+
 /*  Bienvenida
 	@mixin =============================================== */
 .bienvenida {
@@ -1499,7 +1560,7 @@ header .header-cont .logo img {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-registrate,
@@ -1518,9 +1579,10 @@ header .header-cont .logo img {
 .bienvenida .bienvenida-cont .bienvenida-cont-textos .bienvenida-score-alto-gana .bienvenida-head {
   align-items: center;
   display: flex;
-  justify-content: center;
-  margin-top: 100px;
+  justify-content: flex-start;
+  margin-top: 50px;
   margin-bottom: 10px;
+  text-align: left;
   width: 100%;
 }
 

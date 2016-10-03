@@ -101,7 +101,7 @@ use yii\helpers\Url;
 		</a>
 		<!-- end - .bienvenida-btn-comenzar -->
 
-		<a href="<?=Url::base()?>/site/puntuacion" class="btn-ver-puntuacion">Ver puntuación</a>
+		<a href="<?=Url::base()?>/site/puntuacion" class="btn-ver-puntuacion">Ver puntuaciones</a>
 
 	</div>
 	<!-- end - .bienvenida-cont -->

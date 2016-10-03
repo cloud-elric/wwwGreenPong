@@ -4,7 +4,7 @@
 	<!-- .puntuacion-cont -->
 	<div class="puntuacion-cont">
 		
-		<h3>Puntuación</h3>
+		<h3>Salón de la fama</h3>
 
 		<div class="puntuacion-cont-tabla">
 
