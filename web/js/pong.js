@@ -122,6 +122,9 @@
 	}
 
 	function iniciarJuego(){
+		
+		$('#js-button-jugar').hide();
+		
 		if(isPlayig){
 			return;
 		}
@@ -142,6 +145,9 @@
 	
 	//PIERDE UNA PELOTA
 	function dead(){
+		
+		$('#js-button-jugar').show();
+		
 		console.log("dead!");
 		isPlayig = false;
 		setCourt();
@@ -162,10 +168,12 @@
 	
 	function movePlayer(){
 		if(keys['38']){
+			console.log('arriba');
 			playerPosY = playerPosY - playerSpeed;
 		}
 		
 		if(keys['40']){
+			console.log('abajo');
 			playerPosY = playerPosY + playerSpeed;
 		}
 		
@@ -176,6 +184,14 @@
 		if(playerPosY > (300 - playerH) ) {
 			playerPosY = (300 - playerH);
 		}
+	}
+	
+	function moveUp(){
+		playerPosY = playerPosY - playerSpeed;
+	}
+	
+	function moveDown(){
+		playerPosY = playerPosY + playerSpeed;
 	}
 	
 	
@@ -286,18 +302,65 @@
 	
 	window.onkeyup = function(e) {
 		keys[e.keyCode]=false;
-		//console.log("ku " + e.keyCode);
+		console.log("ku " + e.keyCode);
 	}
 
 	window.onkeydown = function(e) {
 		keys[e.keyCode]=true;
-		//console.log("kd " + e.keyCode);
+		console.log("kd " + e.keyCode);
 	}
 	
 	
 	
 	/* ---------- DOCUMENT READY ------------------- */
 	$( document ).ready(function() {
+		
+//		$('#js-boton-arriba').on("click",function(e){
+//			var e = $.Event("keyup", { keyCode: 38}); 
+//			$("body").trigger(e);
+//		});
+		
+//		$("#js-boton-arriba").mousedown(function(){
+//			keys['38']=true;
+//			keys['40']=false;
+//	    });
+//	    $("#js-boton-arriba").mouseup(function(){
+//	    	keys['38']=false;
+//			keys['40']=false;
+//	    });
+//	    
+//	    $("#js-boton-abajo").mousedown(function(){
+//	    	keys['38']=false;
+//			keys['40']=true;
+//	    });
+//	    $("#js-boton-abajo").mouseup(function(){
+//	    	keys['38']=false;
+//			keys['40']=false;
+//	    });
+		
+		$("#js-boton-arriba").on('touchstart',function(){
+			keys['38']=true;
+			keys['40']=false;
+	    });
+	    $("#js-boton-arriba").on('touchend',function(){
+	    	keys['38']=false;
+			keys['40']=false;
+	    });
+	    
+	    $("#js-boton-abajo").on('touchstart',function(){
+	    	keys['38']=false;
+			keys['40']=true;
+	    });
+	    $("#js-boton-abajo").on('touchend',function(){
+	    	keys['38']=false;
+			keys['40']=false;
+	    });
+		
+//		$('#js-boton-abajo').on("click",function(e){
+//			var e = $.Event("keydown", { keyCode: 40}); 
+//			$("body").trigger(e);
+//		});
+		
 		console.log( "ready!" );
 		init();
 		
