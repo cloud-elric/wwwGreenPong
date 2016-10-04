@@ -16,7 +16,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\Response;
 
 class SiteController extends Controller {
-	public $defaultAction = 'bienvenida';
+	public $defaultAction = 'home';
 	/**
 	 * @inheritdoc
 	 */
