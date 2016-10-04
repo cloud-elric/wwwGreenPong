@@ -730,6 +730,7 @@ header .header-cont .logo img {
 }
 
 .label--checkbox .label--checkbox-row {
+  position: relative;
   text-align: left;
 }
 
@@ -753,6 +754,11 @@ header .header-cont .logo img {
 .label--checkbox .label--checkbox-row .label--checkbox-row-col span {
   display: block;
   text-decoration: underline;
+}
+
+.label--checkbox .label--checkbox-row .label--checkbox-row-col .help-block-error {
+  bottom: -40px;
+  position: absolute;
 }
 
 .checkbox {

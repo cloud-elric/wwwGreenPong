@@ -357,6 +357,7 @@ header
 	color: $white
 	font-size: .8em
 	.label--checkbox-row
+		position: relative
 		text-align: left
 		@include respond-to(xs)
 			text-align: center
@@ -368,6 +369,9 @@ header
 			span
 				display: block
 				text-decoration: underline
+			.help-block-error
+				bottom: -40px
+				position: absolute
 
 .checkbox 
 	position: relative
