@@ -32,6 +32,11 @@ $(document).ready(function(){
 	 */
 	$("#js-reenviar-codigo-cel").on("click", function(e){
 		e.preventDefault();
+
+		// Ladda
+		var l = Ladda.create(this);
+	 	l.start();
+
 		var url = 'reenviar-codigo'
 		var data = $('#reenviar-codigo-form').serialize();
 		$.ajax({
@@ -45,6 +50,7 @@ $(document).ready(function(){
 				}else{
 					$('.mensaje-codigo-enviado-error').text(response.message);
 				}
+				l.stop();
 			}
 			
 		});

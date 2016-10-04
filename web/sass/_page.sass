@@ -665,7 +665,7 @@ header
 								outline: none
 							i
 								font-size: 1.6em
-
+	// Modal GAME OVER
 	.modal-gameover
 		.modal-content
 			.modal-body
@@ -1054,3 +1054,51 @@ header
 		a
 			font-size: 1.1em
 			text-decoration: underline
+
+/*  Reeviar código
+	================================================ */
+.modal-reenviar-codigo
+	// Contedor
+	.modal-reenviar-codigo-cont
+		text-align: center
+		width: 100%
+		form
+			label
+				display: block
+				font-family: $f-proximan-bold
+				margin-bottom: 6px
+			input[type="text"]
+				border: 1px solid #CCC
+				+border-radius(0)
+				font-family: $f-proximan-regular
+				font-size: 1.6em
+				height: 40px
+				padding: 0 14px
+				text-align: center
+				width: 100%
+				&:active,
+				&:focus
+					border: 1px solid $yellow
+					outline: none
+			.mensaje-codigo-enviado-success,
+			.mensaje-codigo-enviado-error
+				margin-top: 8px
+				text-align: center
+			.mensaje-codigo-enviado-success
+				color: #2ECC71
+			.mensaje-codigo-enviado-error
+				color: red
+			button
+				background-color: $yellow
+				border: none
+				+border-radius(12px)
+				color: $white
+				cursor: pointer
+				font-size: 1.18em
+				letter-spacing: 1px
+				margin-top: 30px
+				padding: 10px 30px
+				&:active,
+				&:focus
+					background-color: $yellow-secundary
+					outline: none
