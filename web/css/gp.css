@@ -1562,26 +1562,6 @@ header .header-cont .logo img {
   width: 90%;
 }
 
-.bienvenida .bienvenida-cont .bienvenida-tile {
-  color: #FFF;
-  font-family: "proxima_novablack";
-  font-size: 4em;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 768px) {
-  .bienvenida .bienvenida-cont .bienvenida-tile {
-    font-size: 3.3em;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .bienvenida .bienvenida-cont .bienvenida-tile {
-    font-size: 2.2em;
-  }
-}
-
 .bienvenida .bienvenida-cont .bienvenida-como-participar {
   color: #FFDF27;
   font-family: "proxima_nova_rgbold";
@@ -1863,6 +1843,74 @@ header .header-cont .logo img {
 }
 
 .modal-reenviar-codigo .modal-reenviar-codigo-cont form button:active, .modal-reenviar-codigo .modal-reenviar-codigo-cont form button:focus {
+  background-color: #d9c400;
+  outline: none;
+}
+
+/*  home
+	@mixin =============================================== */
+.home {
+  background-image: url(../images/bg-home.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px 0;
+  position: relative;
+  width: 100%;
+}
+
+.home .home-tile,
+.home .home-btn-comenzar {
+  left: 50%;
+  position: absolute;
+}
+
+.home .home-tile {
+  color: #FFF;
+  font-family: "proxima_novablack";
+  font-size: 4em;
+  margin-left: -199px;
+  text-transform: uppercase;
+  top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .home .home-tile {
+    font-size: 3.3em;
+    margin-left: -165px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home .home-tile {
+    font-size: 2.2em;
+    margin-left: -109px;
+  }
+}
+
+.home .home-btn-comenzar {
+  background-color: #FBE300;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  bottom: 20px;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: -110px;
+  padding: 10px 30px;
+  position: absolute;
+}
+
+.home .home-btn-comenzar:hover {
   background-color: #d9c400;
   outline: none;
 }

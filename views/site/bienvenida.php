@@ -10,12 +10,6 @@ use yii\helpers\Url;
 	<!-- .bienvenida-cont -->
 	<div class="bienvenida-cont">
 
-		<!-- .bienvenida-tile -->
-		<h2 class="bienvenida-tile">
-			Bienvenido
-		</h2>
-		<!-- end - .bienvenida-tile -->
-
 		<!-- ¿Cómo Participar? -->
 		<p class="bienvenida-como-participar">
 			¿Cómo Participar?
