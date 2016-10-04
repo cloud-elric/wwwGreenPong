@@ -321,14 +321,14 @@
 	/* ---------- DOCUMENT READY ------------------- */
 	$( document ).ready(function() {
 		
-//		$(".btn-finalizar").on('click',function(e){
-//			e.preventDefault();
-//			scoreLabel.innerHTML = sH ;
-//			$('#wrkposicionesusuarios-num_puntuacion').val(sH);
-//			$('.puntuaje-usuario').text(sH);
-//			
-//			$("#finalizar-juego").submit();
-//		});
+		$(".btn-finalizar").on('click',function(e){
+			e.preventDefault();
+			scoreLabel.innerHTML = sH ;
+			$('#wrkposicionesusuarios-num_puntuacion').val(sH);
+			$('.puntuaje-usuario').text(sH);
+			
+			$("#finalizar-juego").submit();
+		});
 		
 		$("#js-boton-arriba").on('click',function(e){
 			e.preventDefault();

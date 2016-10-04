@@ -84,7 +84,7 @@ class SiteController extends Controller {
 			
 			if ($codigo->save ()) {
 				
-				$message = urlencode ( 'Bienvenido a MastersExperience tu código de acceso es: ' . $codigo->txt_codigo );
+				$message = urlencode ( 'Bienvenido a MastersExperience tu codigo de acceso es: ' . $codigo->txt_codigo );
 				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
 				
 				$sms = file_get_contents ( $url );
@@ -310,7 +310,7 @@ class SiteController extends Controller {
 			
 			if ($codigo) {
 				
-				$message = urlencode ( 'Bienvenido a MastersExperience tu código de acceso es: ' . $codigo->txt_codigo );
+				$message = urlencode ( 'Bienvenido a MastersExperience tu codigo de acceso es: ' . $codigo->txt_codigo );
 				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
 				
 				$sms = file_get_contents ( $url );
