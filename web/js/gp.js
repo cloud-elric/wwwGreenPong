@@ -113,6 +113,7 @@ $(document).ready(function(){
 	$(btnReenviarCodigo).on("click", function(e){
 		e.preventDefault();
 		modalReenviarCodigo.style.display = "flex";
+		resetFormReenviar();
 	});
 	// btnAvisoPrivacidad.onclick = function() {
 	// 	modalAvisoPrivacidad.style.display = "flex";
@@ -123,7 +124,14 @@ $(document).ready(function(){
 	// Reenviar codigo modal
 	$(closeReenviarCodigo).on("click", function(){
 		modalReenviarCodigo.style.display = "none";
+		resetFormReenviar();
 	});
+	
+	function resetFormReenviar(){
+		$('.mensaje-codigo-enviado-success').text('');
+		$('.mensaje-codigo-enviado-error').text('');
+		document.getElementById("reenviar-codigo-form").reset();
+	}
 
 
 	$("#entusuarios-aceptaterminos").click(function() {

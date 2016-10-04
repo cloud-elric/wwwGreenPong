@@ -57,7 +57,7 @@ $config = [
 				],
 				'db' => require (__DIR__ . '/db.php'),
 				
-				'urlManager' => [ 
+				'urlManager' => [
 						'class' => 'yii\web\UrlManager',
 						// Disable index.php
 						'showScriptName' => false,

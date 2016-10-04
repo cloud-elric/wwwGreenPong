@@ -75,21 +75,23 @@ class SiteController extends Controller {
 		
 		if ($usuario->load ( Yii::$app->request->post () )) {
 			$usuario->txt_token = Utils::generateToken ( 'usr_' );
-			$usuario->save ();
 			
-			$codigo = new WrkCodigos ();
-			$codigo->id_usuario = $usuario->id_usuario;
-			$codigo->txt_codigo = substr ( md5 ( microtime () ), 1, 10 );
-			$codigo->txt_token = Utils::generateToken ( 'cod_' );
-			
-			if ($codigo->save ()) {
+			if ($usuario->save ()) {
 				
-				$message = urlencode ( 'Bienvenido a MastersExperience tu codigo de acceso es: ' . $codigo->txt_codigo );
-				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
+				$codigo = new WrkCodigos ();
+				$codigo->id_usuario = $usuario->id_usuario;
+				$codigo->txt_codigo = substr ( md5 ( microtime () ), 1, 10 );
+				$codigo->txt_token = Utils::generateToken ( 'cod_' );
 				
-				$sms = file_get_contents ( $url );
-				
-				return $this->redirect ( 'ingresar-codigo' );
+				if ($codigo->save ()) {
+					
+					$message = urlencode ( 'Bienvenido a MastersExperience tu codigo de acceso es: ' . $codigo->txt_codigo );
+					$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
+					
+					$sms = file_get_contents ( $url );
+					
+					return $this->redirect ( 'ingresar-codigo' );
+				}
 			}
 		}
 		
@@ -146,7 +148,7 @@ class SiteController extends Controller {
 		if ($puntuaje->load ( Yii::$app->request->post () ) && $puntuaje->save ()) {
 			
 			$codigoEncontrado->b_codigo_usado = 1;
-			$codigoEncontrado->save();
+			$codigoEncontrado->save ();
 			return $this->redirect ( 'puntuacion' );
 		}
 	}
@@ -306,21 +308,24 @@ class SiteController extends Controller {
 				];
 			}
 			
-			$codigo = WrkCodigos::find()->where(['id_usuario'=>$usuario->id_usuario])->orderBy('fch_creacion DESC')->one();
+			$codigo = WrkCodigos::find ()->where ( [ 
+					'id_usuario' => $usuario->id_usuario 
+			] )->orderBy ( 'fch_creacion DESC' )->one ();
 			
 			if ($codigo) {
 				
-				$message = urlencode ( 'Bienvenido a MastersExperience tu codigo de acceso es: ' . $codigo->txt_codigo );
-				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
+				// $message = urlencode ( 'Bienvenido a MastersExperience tu codigo de acceso es: ' . $codigo->txt_codigo );
+				// $url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
 				
-				$sms = file_get_contents ( $url );
+				// $sms = file_get_contents ( $url );
 				
 				return [ 
 						'status' => 'success',
-						'message' => 'Código reenviado',
-						//'codigo'=>$codigo->txt_codigo
-						
-				];
+						'message' => 'Código reenviado' 
+				]
+				// 'codigo'=>$codigo->txt_codigo
+				
+				;
 			}
 		}
 	}

@@ -42,12 +42,12 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 						'requiredValue' => 1,
 						'message' => 'Debe aceptar los terminos y condiciones' 
 				],
-// 				[
-// 				[
-// 						'tel_numero_celular','txt_email'
-// 				],
-// 				'unique','message'=>'Dato ya registrado utilice otro'
-// 								],
+				[
+				[
+						'tel_numero_celular','txt_email'
+				],
+				'unique','message'=>'Dato ya registrado utilice otro'
+								],
 				
 				[ 
 						[ 
