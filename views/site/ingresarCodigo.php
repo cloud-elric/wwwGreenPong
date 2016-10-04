@@ -44,8 +44,8 @@ $this->title = 'Ingresar codigo';
 
 				<div class="msj-tardara">
 					<p class="msj-tardara-codigo">El código puede tardar hasta 2 minutos en llegar.</p>
-					<p class="small">No te llego el código:</p>
-					<button>Reenviar código</button>
+<!-- 					<p class="small">No te llego el código:</p> -->
+<!-- 					<button id="js-reenviar-codigo">Reenviar código</button> -->
 				</div>
 
 				<hr>
@@ -187,7 +187,7 @@ $this->title = 'Ingresar codigo';
 		<div class="modal-content">
 			<!-- .modal-header -->
 			<div class="modal-header">
-				<span class="close modal-aviso-privacidad-close">×</span>
+				<span class="close modal-reenviar-close">×</span>
 				<h2>Reenviar codigo</h2>
 			</div>
 			<!-- end - .modal-header -->

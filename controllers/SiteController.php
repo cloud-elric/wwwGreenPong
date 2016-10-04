@@ -143,8 +143,8 @@ class SiteController extends Controller {
 		$puntuaje->id_usuario = $codigoEncontrado->id_usuario;
 		if ($puntuaje->load ( Yii::$app->request->post () ) && $puntuaje->save() ) {
 			
-// 			$codigoEncontrado->b_codigo_usado = 1;
-// 			$codigoEncontrado->save();
+			$codigoEncontrado->b_codigo_usado = 1;
+			$codigoEncontrado->save();
 			return $this->redirect('puntuacion');
 		}
 		

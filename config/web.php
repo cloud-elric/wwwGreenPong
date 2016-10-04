@@ -64,7 +64,9 @@ $config = [
 						// Disable r= routes
 						'enablePrettyUrl' => true,
 						'enableStrictParsing' => false,
-						'rules' => [ ] 
+						'rules' => [ 
+								'site'=>'site/bienvenida'
+						] 
 				] 
 		]
 		,
