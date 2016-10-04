@@ -71,7 +71,7 @@ use yii\helpers\Url;
 				</p>
 				<p class="bienvenida-registrate-desc">
 					<!-- <img src="<?=Url::base()?>/images/bienvenida/Registrate-Texto.png" alt="Registrate Texto"> -->
-					Diviértete en nuestra Mater Experience.
+					Diviértete en nuestra Master Experience.
 				</p>
 			</div>
 

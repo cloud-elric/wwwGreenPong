@@ -65,7 +65,7 @@ $config = [
 						'enablePrettyUrl' => true,
 						'enableStrictParsing' => false,
 						'rules' => [ 
-								'site'=>'site/bienvenida'
+								'site'=>'site/bienvenida',
 						] 
 				] 
 		]

@@ -26,16 +26,16 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 		<div class="col-xs-12 col-sm-6 input-field">
 			<i class="ion ion-ios-person"></i>
 			<!-- <input type="text" placeholder="First Name"> -->
-				<?= $form->field($usuario, 'txt_nombre')->textInput(['autofocus' => true]) -> label(false) -> textInput(["placeholder" => "First Name"])?>
+				<?= $form->field($usuario, 'txt_nombre')->textInput(['autofocus' => true]) -> label(false) -> textInput(["placeholder" => "Nombre"])?>
 			</div>
 		<div class="col-xs-12 col-sm-6 input-field">
 			<!-- <input type="text" class="input-short" placeholder="Last Name"> -->
-				<?= $form->field($usuario, 'txt_apellido_paterno') -> label(false) -> textInput(["placeholder" => "Last Name", "class"=>"input-short"])?>
+				<?= $form->field($usuario, 'txt_apellido_paterno') -> label(false) -> textInput(["placeholder" => "Apellido paterno", "class"=>"input-short"])?>
 			</div>
 		<div class="col-xs-12 input-field">
 			<i class="ion ion-ios-telephone"></i>
 			<!-- <input type="text" placeholder="Phone Number"> -->
-				<?= $form->field($usuario, 'tel_numero_celular') -> label(false) -> textInput(["placeholder" => "Phone Number"])?>
+				<?= $form->field($usuario, 'tel_numero_celular') -> label(false) -> textInput(["placeholder" => "Número celular"])?>
 			</div>
 		<div class="col-xs-12 input-field">
 			<i class="ion ion-at"></i>
@@ -61,7 +61,7 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 <!-- 									<input type="checkbox" id="checkbox" class="checkbox"> -->
 							</div>
 							<div class="label--checkbox-row-col">
-								Acepta <span>Terminos y condiciones</span>
+								Acepta <span>Términos y condiciones</span>
 							</div>
 						</div>
 				</label></li>
