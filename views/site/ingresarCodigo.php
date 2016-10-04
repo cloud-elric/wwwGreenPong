@@ -43,9 +43,9 @@ $this->title = 'Ingresar codigo';
 				<?= Html::submitButton('Jugar', ['class' => 'ingresar-codigo-card-btn-jugar', 'name' => 'contact-button'])?>
 
 				<div class="msj-tardara">
-					<p class="msj-tardara-codigo">El código puede tardar hasta 2 minutos en llegar.</p>
-<!-- 					<p class="small">No te llego el código:</p> -->
-<!-- 					<button id="js-reenviar-codigo">Reenviar código</button> -->
+					<p class="msj-tardara-codigo">El código puede tardar algunos minutos.</p>
+					<p class="small">No te llego el código:</p>
+						<button id="js-reenviar-codigo">Reenviar código</button> 
 				</div>
 
 				<hr>

@@ -9,7 +9,9 @@
 // modal - aviso de privacidad
 var modalAvisoPrivacidad = document.getElementById('modal-aviso-privacidad');
 var btnAvisoPrivacidad = document.getElementsByClassName("btn-aviso-privacidad")[0];
+
 var btnReenviarCodigo = document.getElementById("js-reenviar-codigo");
+
 var closeAvisoPrivacidad = document.getElementsByClassName("modal-aviso-privacidad-close")[0];
 var closeReenviarCodigo = document.getElementsByClassName("modal-reenviar-close")[0];
 

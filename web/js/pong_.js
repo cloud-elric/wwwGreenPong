@@ -45,7 +45,7 @@
 	var playerW 	= 10;
 	var playerPosY 	= 0;
 	var playerPosX 	= 80;
-	var playerSpeed = 10;
+	var playerSpeed = 50;
 	var playerHit = false;
 	
 	//CONTROL DE TECLAS
@@ -321,14 +321,14 @@
 	/* ---------- DOCUMENT READY ------------------- */
 	$( document ).ready(function() {
 		
-		$(".btn-finalizar").on('click',function(e){
-			e.preventDefault();
-			scoreLabel.innerHTML = sH ;
-			$('#wrkposicionesusuarios-num_puntuacion').val(sH);
-			$('.puntuaje-usuario').text(sH);
-			
-			$("#finalizar-juego").submit();
-		});
+//		$(".btn-finalizar").on('click',function(e){
+//			e.preventDefault();
+//			scoreLabel.innerHTML = sH ;
+//			$('#wrkposicionesusuarios-num_puntuacion').val(sH);
+//			$('.puntuaje-usuario').text(sH);
+//			
+//			$("#finalizar-juego").submit();
+//		});
 		
 		$("#js-boton-arriba").on('click',function(e){
 			e.preventDefault();

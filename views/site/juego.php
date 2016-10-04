@@ -6,6 +6,7 @@ $this->registerJsFile('@web/js/juego.js',['depends' => [\app\assets\AppAsset::cl
 
 <?php
 $form = ActiveForm::begin ( [ 
+		'id'=>'finalizar-juego',
 		'action'=>'finalizar-juego?token='.$token 
 ] );
 
