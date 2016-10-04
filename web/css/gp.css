@@ -253,7 +253,7 @@ header {
   height: 100px;
   display: flex;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   width: 100%;
@@ -970,14 +970,14 @@ header .header-cont .logo img {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   position: relative;
   width: 100%;
 }
 
 .jugar .jugar-cont {
-  margin: 140px 0 40px;
+  margin: 120px 0 40px;
   max-width: 1280px;
   width: 90%;
 }
@@ -1011,6 +1011,12 @@ header .header-cont .logo img {
   overflow: hidden;
   position: relative;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar .jugar-cont .jugar-cont-body {
+    height: 320px;
+  }
 }
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral {
@@ -1098,9 +1104,11 @@ header .header-cont .logo img {
 
 .jugar .jugar-cont .jugar-cont-body .jugar-cont-body-gral .jugar-cont-body-canvas .jugar-cont-body-canvas-controles {
   align-items: center;
-  background-color: red;
+  bottom: -1px;
   display: none;
   justify-content: center;
+  position: fixed;
+  width: 90%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1145,13 +1153,27 @@ header .header-cont .logo img {
   justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .jugar .modal-gameover .modal-content .modal-body .form-group {
+    flex-direction: column;
+  }
+}
+
 .jugar .modal-gameover .modal-content .modal-body .form-group input[type="text"].form-control {
   border: 1px solid #CCC;
   font-family: "proxima_nova_rgregular";
-  font-size: 1.1em;
+  font-size: 2em;
   height: 40px;
   margin-left: 10px;
   padding: 0 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar .modal-gameover .modal-content .modal-body .form-group input[type="text"].form-control {
+    width: 100%;
+  }
 }
 
 .jugar .modal-gameover .modal-content .modal-body .form-group input[type="text"].form-control.input-short {
@@ -1190,12 +1212,24 @@ header .header-cont .logo img {
   margin-right: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .jugar .modal-gameover .modal-content .modal-body button.btn-volver-a-jugar {
+    margin-right: 0;
+  }
+}
+
 .jugar .modal-gameover .modal-content .modal-body button.btn-finalizar {
   background-color: #181514;
 }
 
 .jugar .modal-gameover .modal-content .modal-body button.btn-finalizar:active, .jugar .modal-gameover .modal-content .modal-body button.btn-finalizar:focus {
   background-color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar .modal-gameover .modal-content .modal-body button {
+    width: 100%;
+  }
 }
 
 /*  Puntuación

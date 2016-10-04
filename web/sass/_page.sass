@@ -21,7 +21,8 @@ header
 	height: 100px
 	display: flex
 	left: 0
-	position: fixed
+	// position: fixed
+	position: absolute
 	right: 0
 	top: 0
 	width: 100%
@@ -536,14 +537,14 @@ header
 	background-repeat: no-repeat
 	background-size: cover
 	display: flex
-	height: 100vh
+	min-height: 100vh
 	justify-content: center
 	position: relative
 	width: 100%
 	// Contedor
 	.jugar-cont
 		// background-color: teal
-		margin: 140px 0 40px
+		margin: 120px 0 40px
 		max-width: 1280px
 		width: 90%
 		// header
@@ -572,6 +573,8 @@ header
 			overflow: hidden
 			position: relative
 			text-align: center
+			@include respond-to(xs)
+				height: 320px
 			.jugar-cont-body-gral
 				height: 100%
 				overflow: hidden
@@ -642,9 +645,12 @@ header
 					// Controles
 					.jugar-cont-body-canvas-controles
 						align-items: center
-						background-color: red
+						// background-color: red
+						bottom: -1px
 						display: none
 						justify-content: center
+						position: fixed
+						width: 90%
 						@include respond-to(xs)
 							display: flex
 						.jugar-cont-body-canvas-controles-btn
@@ -673,14 +679,19 @@ header
 					align-items: center
 					display: flex
 					justify-content: center
+					@include respond-to(xs)
+						flex-direction: column
 					input[type="text"].form-control
 						border: 1px solid #CCC
 						font-family: $f-proximan-regular
-						font-size: 1.1em
+						font-size: 2em
 						height: 40px
 						margin-left: 10px
 						padding: 0 14px
-						// width: calc(100% - 40px)
+						text-align: center
+						text-transform: uppercase
+						@include respond-to(xs)
+							width: 100%
 						&.input-short
 							margin-left: 0
 							width: 100%
@@ -706,11 +717,15 @@ header
 						outline: none
 					&.btn-volver-a-jugar
 						margin-right: 20px
+						@include respond-to(xs)
+							margin-right: 0
 					&.btn-finalizar
 						background-color: $text-base
 						&:active,
 						&:focus
 							background-color: #666
+					@include respond-to(xs)
+						width: 100%
 
 /*  Puntuación
 	================================================ */
