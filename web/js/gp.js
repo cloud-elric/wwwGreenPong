@@ -19,6 +19,9 @@ var modalTerminosCondiciones = document.getElementById('modal-terminos-condicion
 var modalGameOver = document.getElementById('modal-gameover');
 var modalReenviarCodigo = document.getElementById('modal-reenviar-codigo');
 
+window.onhashchange = function() {
+	 alert();
+	}
 /**
  * Document Ready
  */

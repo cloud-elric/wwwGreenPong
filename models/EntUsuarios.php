@@ -89,7 +89,7 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 				'txt_nombre' => 'Nombre',
 				'txt_apellido_paterno' => 'Apellido paterno',
 				'txt_email' => 'Correo electrónico',
-				'tel_numero_celular' => 'Nùmero celular',
+				'tel_numero_celular' => 'Número celular',
 				'b_participo' => 'B Participo' 
 		];
 	}
