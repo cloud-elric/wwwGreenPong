@@ -908,16 +908,16 @@ header
 		text-align: center
 		width: 90%
 		// Title
-		.bienvenida-tile
-			color: $white
-			font-family: $f-proximan-black
-			font-size: 4em
-			margin-bottom: 40px
-			text-transform: uppercase
-			@include respond-to(xs)
-				font-size: 3.3em
-			@include respond-to(xx)
-				font-size: 2.2em
+		// .bienvenida-tile
+		// 	color: $white
+		// 	font-family: $f-proximan-black
+		// 	font-size: 4em
+		// 	margin-bottom: 40px
+		// 	text-transform: uppercase
+		// 	@include respond-to(xs)
+		// 		font-size: 3.3em
+		// 	@include respond-to(xx)
+		// 		font-size: 2.2em
 		// Cámo participar
 		.bienvenida-como-participar
 			color: $yellow-primary
@@ -1102,3 +1102,52 @@ header
 				&:focus
 					background-color: $yellow-secundary
 					outline: none
+/*  home
+	================================================ */
+.home
+	background-image: url(../images/bg-home.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	justify-content: center
+	height: 100vh
+	padding: 40px 0
+	position: relative
+	width: 100%
+	.home-tile,
+	.home-btn-comenzar
+		left: 50%
+		position: absolute
+	// Title
+	.home-tile
+		color: $white
+		font-family: $f-proximan-black
+		font-size: 4em
+		margin-left: -199px
+		text-transform: uppercase
+		top: 20px
+		@include respond-to(xs)
+			font-size: 3.3em
+			margin-left: -165px
+		@include respond-to(xx)
+			font-size: 2.2em
+			margin-left: -109px
+	// Btn Comenzar
+	.home-btn-comenzar
+		background-color: $yellow
+		border: none
+		+border-radius(12px)
+		bottom: 20px
+		color: $white
+		cursor: pointer
+		display: inline-block
+		font-size: 1.1em
+		font-weight: bold
+		letter-spacing: 1px
+		margin-left: -110px
+		padding: 10px 30px
+		position: absolute
+		&:hover
+			background-color: $yellow-secundary
+			outline: none

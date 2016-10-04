@@ -329,4 +329,14 @@ class SiteController extends Controller {
 			}
 		}
 	}
+
+	/**
+	 * Displays home page.
+	 *
+	 * @return string
+	 */
+	public function actionHome() {
+		$this->layout = 'mainHome';
+		return $this->render ( 'home' );
+	}
 }
