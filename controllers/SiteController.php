@@ -13,9 +13,9 @@ use app\models\WrkCodigos;
 use app\models\Utils;
 use app\models\WrkPosicionesUsuarios;
 use yii\data\ActiveDataProvider;
+use yii\web\Response;
 
 class SiteController extends Controller {
-	
 	public $defaultAction = 'bienvenida';
 	/**
 	 * @inheritdoc
@@ -84,7 +84,7 @@ class SiteController extends Controller {
 			
 			if ($codigo->save ()) {
 				
-				$message = urlencode ( 'Usa el siguiente codigo ' . $codigo->txt_codigo );
+				$message = urlencode ( 'Bienvenido a MastersExperience tu código de acceso es: ' . $codigo->txt_codigo );
 				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
 				
 				$sms = file_get_contents ( $url );
@@ -103,7 +103,7 @@ class SiteController extends Controller {
 	 */
 	public function actionIngresarCodigo() {
 		$codigo = new WrkCodigos ();
-		$usuario = new EntUsuarios();
+		$usuario = new EntUsuarios ();
 		
 		if ($codigo->load ( Yii::$app->request->post () )) {
 			$codigoEncontrado = WrkCodigos::find ()->where ( [ 
@@ -123,17 +123,17 @@ class SiteController extends Controller {
 		
 		return $this->render ( 'ingresarCodigo', [ 
 				'codigo' => $codigo,
-				'usuario'=>$usuario
+				'usuario' => $usuario 
 		] );
 	}
 	
 	/**
 	 * Guarda el puntuaje del usuario
 	 */
-	public function actionFinalizarJuego($token){
-		$codigoEncontrado = WrkCodigos::find ()->where ( [
+	public function actionFinalizarJuego($token) {
+		$codigoEncontrado = WrkCodigos::find ()->where ( [ 
 				'txt_codigo' => $token,
-				'b_codigo_usado' => 0
+				'b_codigo_usado' => 0 
 		] )->one ();
 		
 		if (empty ( $codigoEncontrado )) {
@@ -141,15 +141,14 @@ class SiteController extends Controller {
 		}
 		
 		// Guardar puntuaje
-		$puntuaje = new WrkPosicionesUsuarios();
+		$puntuaje = new WrkPosicionesUsuarios ();
 		$puntuaje->id_usuario = $codigoEncontrado->id_usuario;
-		if ($puntuaje->load ( Yii::$app->request->post () ) && $puntuaje->save() ) {
+		if ($puntuaje->load ( Yii::$app->request->post () ) && $puntuaje->save ()) {
 			
-// 			$codigoEncontrado->b_codigo_usado = 1;
-// 			$codigoEncontrado->save();
-			return $this->redirect('puntuacion');
+			// $codigoEncontrado->b_codigo_usado = 1;
+			// $codigoEncontrado->save();
+			return $this->redirect ( 'puntuacion' );
 		}
-		
 	}
 	
 	/**
@@ -168,11 +167,11 @@ class SiteController extends Controller {
 			return $this->goHome ();
 		}
 		
-		$puntuaje = new WrkPosicionesUsuarios();
+		$puntuaje = new WrkPosicionesUsuarios ();
 		
 		return $this->render ( 'juego', [ 
 				'token' => $codigoEncontrado->txt_codigo,
-				'puntuaje'=>$puntuaje
+				'puntuaje' => $puntuaje 
 		] );
 	}
 	
@@ -254,30 +253,31 @@ class SiteController extends Controller {
 	 *
 	 * @return string
 	 */
-	public function actionPuntuacion($codigo=null) {
-		
-	$codigoEncontrado = WrkCodigos::find ()->where ( [ 
+	public function actionPuntuacion($codigo = null) {
+		$codigoEncontrado = WrkCodigos::find ()->where ( [ 
 				'txt_codigo' => $codigo,
 				'b_codigo_usado' => 0 
 		] )->one ();
 		
-		$query = WrkPosicionesUsuarios::find()->orderBy('num_puntuacion desc, fch_puntuacion desc');
+		$query = WrkPosicionesUsuarios::find ()->orderBy ( 'num_puntuacion desc, fch_puntuacion desc' );
 		// Carga el dataprovider
-		$dataProvider = new ActiveDataProvider( [ 
+		$dataProvider = new ActiveDataProvider ( [ 
 				'query' => $query,
-// 				'sort' => [ 
-// 						'defaultOrder' => $order 
-// 				],
+				// 'sort' => [
+				// 'defaultOrder' => $order
+				// ],
 				'pagination' => [ 
-						'pageSize' =>30,
+						'pageSize' => 30,
 						'page' => 0 
 				] 
 		] );
 		
 		$puntuaciones = $dataProvider->getModels ();
-		return $this->render ( 'puntuacion', ['puntuaciones'=>$puntuaciones]);
+		return $this->render ( 'puntuacion', [ 
+				'puntuaciones' => $puntuaciones 
+		] );
 	}
-
+	
 	/**
 	 * Displays bienvenida page.
 	 *
@@ -290,12 +290,38 @@ class SiteController extends Controller {
 	/**
 	 * Reenvia codigo al usuario
 	 */
-	public function actionReenviarCodigo(){
-		$usuario = new EntUsuarios();
+	public function actionReenviarCodigo() {
+		Yii::$app->response->format = Response::FORMAT_JSON;
+		$usuario = new EntUsuarios ();
 		if ($usuario->load ( Yii::$app->request->post () )) {
-				
 			
-		}		
+			$usuario = EntUsuarios::find ()->where ( [ 
+					'tel_numero_celular' => $usuario->tel_numero_celular 
+			] )->one ();
+			
+			if (empty ( $usuario )) {
+				return [ 
+						'status' => 'error',
+						'message' => 'Usuario no encontrado' 
+				];
+			}
+			
+			$codigo = WrkCodigos::find()->where(['id_usuario'=>$usuario->id_usuario])->orderBy('fch_creacion DESC')->one();
+			
+			if ($codigo) {
+				
+				$message = urlencode ( 'Bienvenido a MastersExperience tu código de acceso es: ' . $codigo->txt_codigo );
+				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_celular;
+				
+				$sms = file_get_contents ( $url );
+				
+				return [ 
+						'status' => 'success',
+						'message' => 'Código reenviado',
+						//'codigo'=>$codigo->txt_codigo
+						
+				];
+			}
+		}
 	}
-	
 }

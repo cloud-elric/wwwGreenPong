@@ -83,7 +83,7 @@ class EntUsuarios extends \yii\db\ActiveRecord {
 				] 
 		];
 	}
-	public function labels() {
+	public function attributeLabels() {
 		return [ 
 				'id_usuario' => 'Id Usuario',
 				'txt_nombre' => 'Nombre',

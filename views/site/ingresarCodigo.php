@@ -196,8 +196,10 @@ $this->title = 'Ingresar codigo';
 				<p>
 					<?php  $form = ActiveForm::begin(['id' => 'reenviar-codigo-form']); ?>
 
-					<?php  $form->field($usuario, 'tel_numero_celular')->textInput(['maxlength' => 10])?>
-
+					<?=$form->field($usuario, 'tel_numero_celular')->textInput(['maxlength' => 10])?>
+					<button class="btn-reenviar" id="js-reenviar-codigo-cel">Reenviar código</button>
+					<p class="mensaje-codigo-enviado-success"></p>
+					<p class="mensaje-codigo-enviado-error"></p>
 					<?php  ActiveForm::end(); ?>
 				</p>
 			</div>

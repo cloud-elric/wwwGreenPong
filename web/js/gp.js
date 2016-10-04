@@ -17,13 +17,36 @@ var closeReenviarCodigo = document.getElementsByClassName("modal-reenviar-close"
 
 var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
 var modalGameOver = document.getElementById('modal-gameover');
-var modalReenviarCodigo = document.getElementById('modal-reenviar-codigos');
+var modalReenviarCodigo = document.getElementById('modal-reenviar-codigo');
 
 /**
  * Document Ready
  */
 $(document).ready(function(){
 
+	/**
+	 * Reenvia el codigo 
+	 */
+	$("#js-reenviar-codigo-cel").on("click", function(e){
+		e.preventDefault();
+		var url = 'reenviar-codigo'
+		var data = $('#reenviar-codigo-form').serialize();
+		$.ajax({
+			url:url,
+			data:data,
+			dataType:'JSON',
+			type:'POST',
+			success:function(response){
+				if(response.status=="success"){
+					$('.mensaje-codigo-enviado-success').text(response.message);
+				}else{
+					$('.mensaje-codigo-enviado-error').text(response.message);
+				}
+			}
+			
+		});
+	});
+	
 	/**
 	 * Modal
 	 */
