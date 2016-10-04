@@ -970,10 +970,16 @@ header .header-cont .logo img {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
   position: relative;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .jugar {
+    min-height: 100vh;
+  }
 }
 
 .jugar .jugar-cont {

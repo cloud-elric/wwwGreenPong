@@ -537,10 +537,12 @@ header
 	background-repeat: no-repeat
 	background-size: cover
 	display: flex
-	min-height: 100vh
+	height: 100vh
 	justify-content: center
 	position: relative
 	width: 100%
+	@include respond-to(xs)
+		min-height: 100vh
 	// Contedor
 	.jugar-cont
 		// background-color: teal
