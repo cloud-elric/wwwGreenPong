@@ -8,6 +8,12 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Ingresar codigo';
+
+$this->registerCssFile('@web/css/ladda-themeless.min.css',['depends' => [\app\assets\AppAsset::className()]]);
+
+$this->registerJsFile('@web/js/spin.min.js',['depends' => [\app\assets\AppAsset::className()]]);
+
+$this->registerJsFile('@web/js/ladda.min.js',['depends' => [\app\assets\AppAsset::className()]]);
 ?>
 
 <!-- .ingresar-codigo-cont -->
@@ -181,27 +187,29 @@ $this->title = 'Ingresar codigo';
 	<!-- end - .modal -->
 	
 	<!-- .modal (Reenviar codigo) -->
-	<div id="modal-reenviar-codigo" class="modal">
+	<div id="modal-reenviar-codigo" class="modal modal-reenviar-codigo">
 
 		<!-- .modal-content -->
 		<div class="modal-content">
 			<!-- .modal-header -->
 			<div class="modal-header">
 				<span class="close modal-reenviar-close">×</span>
-				<h2>Reenviar codigo</h2>
+				<h2>Reenviar código</h2>
 			</div>
 			<!-- end - .modal-header -->
 			<!-- .modal-body -->
 			<div class="modal-body">
-				<p>
+				<div class="modal-reenviar-codigo-cont">
 					<?php  $form = ActiveForm::begin(['id' => 'reenviar-codigo-form']); ?>
 
 					<?=$form->field($usuario, 'tel_numero_celular')->textInput(['maxlength' => 10])?>
-					<button class="btn-reenviar" id="js-reenviar-codigo-cel">Reenviar código</button>
 					<p class="mensaje-codigo-enviado-success"></p>
 					<p class="mensaje-codigo-enviado-error"></p>
+
+					<button class="btn-reenviar ladda-button" id="js-reenviar-codigo-cel" data-style="zoom-out"><span class="ladda-label">Reenviar código</span></button>
+
 					<?php  ActiveForm::end(); ?>
-				</p>
+				</div>
 			</div>
 			<!-- end - .modal-body -->
 		</div>
