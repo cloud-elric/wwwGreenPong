@@ -39,7 +39,7 @@ use yii\helpers\Url;
 			
 
 <!-- .modal (Términos y condiciones) -->
-<div id="modal-terminos-condiciones-home" class="modal modal-terminos-condiciones">
+<div id="modal-terminos-condiciones-home" class="modal modal-terminos-condiciones modal-terminos-condiciones-home">
 
 	<!-- Modal content -->
 	<div class="modal-content">
@@ -346,12 +346,7 @@ use yii\helpers\Url;
 
 			</div>
 
-			<span class="aceptar-terminos-condiciones-btn"> Acepto los
-				términos y condiciones </span>
 		</div>
-		<!-- <div class="modal-footer">
-				<h3>Modal Footer</h3>
-			</div> -->
 
 	</div>
 
