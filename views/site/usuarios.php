@@ -2,15 +2,10 @@
 use yii\widgets\ListView;
 ?>
 <!-- .puntuacion -->
-<div class="puntuacion">
-
+	<div class="puntuacion">
 	<!-- .puntuacion-cont -->
 	<div class="puntuacion-cont">
-
 		<h3>Usuarios registrados</h3>
-
-
-			
 				<?php
 				echo ListView::widget ( [ 
 						'dataProvider' => $dataProvider,
@@ -32,10 +27,7 @@ use yii\widgets\ListView;
 						'itemView' => '_itemUsuario' 
 				] );
 				?>
-
-
 	</div>
 	<!-- end - .puntuacion-cont -->
-
 </div>
 <!-- end - .puntuacion -->
