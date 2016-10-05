@@ -9,18 +9,28 @@ use yii\helpers\Url;
 <!-- .home -->
 <div class="home">
 	
-	<!-- .home-tile -->
-	<h2 class="home-tile">
-		Bienvenido
-	</h2>
-	<!-- end - .home-tile -->
+	<!-- .home-cont -->
+	<div class="home-cont">
+		
+		<!-- .home-title -->
+		<h2 class="home-title">
+			Bienvenido
+		</h2>
+		<!-- end - .home-title -->
 
-	<!-- .home-btn-comenzar -->
-	<a class="home-btn-comenzar" href="<?=Url::base()?>/site/index">
-		Jugar
-	</a>
-	<!-- end - .home-btn-comenzar -->
+		<!-- .home-imagen -->
+		<img src="<?=Url::base()?>/images/bg-home.png" alt="" class="home-imagen">
+		<!-- end - .home-imagen -->
 
+		<!-- .home-btn-comenzar -->
+		<a class="home-btn-comenzar" href="<?=Url::base()?>/site/index">
+			Jugar
+		</a>
+		<!-- end - .home-btn-comenzar -->
+
+	</div>
+	<!-- end - .home-cont -->
+	
 	<!-- .home-footer -->
 	<div class="home-footer">
 		<div class="home-footer-left">
