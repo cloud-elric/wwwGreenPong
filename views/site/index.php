@@ -68,7 +68,7 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 			</ul>
 			<div class="aceptar-mask"></div>
 
-			<!-- .modal -->
+			<!-- .modal (Términos y condiciones) -->
 			<div id="modal-terminos-condiciones" class="modal modal-terminos-condiciones">
 
 				<!-- Modal content -->
