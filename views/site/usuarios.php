@@ -1,26 +1,26 @@
 <?php
 use yii\widgets\ListView;
 ?>
-<!-- .puntuacion -->
-	<div class="puntuacion">
-	<!-- .puntuacion-cont -->
-	<div class="puntuacion-cont">
+<!-- .user-register -->
+	<div class="user-register">
+	<!-- .user-register-cont -->
+	<div class="user-register-cont">
 		<h3>Usuarios registrados</h3>
 				<?php
 				echo ListView::widget ( [ 
 						'dataProvider' => $dataProvider,
 						// 'options' => [
 						// 'tag' => 'div',
-						// 'class' => 'puntuacion-cont-tabla-body',
+						// 'class' => 'user-register-cont-tabla-body',
 						// 'id' => 'list-wrapper'
 						// ],
 						'summary' => "Mostrando {begin} - {end} de {totalCount}",
-						'layout' => '<div class="puntuacion-cont-tabla">
-										<div class="puntuacion-cont-tabla-head">
-											<div class="puntuacion-cont-tabla-head-td">Nombre</div>
-											<div class="puntuacion-cont-tabla-head-td">Telefono</div>
+						'layout' => '<div class="user-register-cont-tabla">
+										<div class="user-register-cont-tabla-head">
+											<div class="user-register-cont-tabla-head-td">Nombre</div>
+											<div class="user-register-cont-tabla-head-td">Telefono</div>
 										</div>
-										<div class="puntuacion-cont-tabla-body">
+										<div class="user-register-cont-tabla-body">
 											{items}
 										</div>
 									</div>{summary}{pager}',
@@ -28,6 +28,6 @@ use yii\widgets\ListView;
 				] );
 				?>
 	</div>
-	<!-- end - .puntuacion-cont -->
+	<!-- end - .user-register-cont -->
 </div>
-<!-- end - .puntuacion -->
+<!-- end - .user-register -->
