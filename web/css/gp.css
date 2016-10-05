@@ -1542,6 +1542,10 @@ header .header-cont .logo img {
   max-height: 70vh;
 }
 
+.modal-terminos-condiciones-home .modal-content {
+  max-height: 90vh;
+}
+
 /*  Bienvenida
 	@mixin =============================================== */
 .bienvenida {
