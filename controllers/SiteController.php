@@ -353,7 +353,7 @@ class SiteController extends Controller {
 				 'defaultOrder' => ['txt_nombre'=>SORT_ASC],
 				 ],
 				'pagination' => [
-						'pageSize' => 1,
+						'pageSize' => 30,
 						'page' => 0
 				]
 		] );
