@@ -9,30 +9,30 @@ use yii\widgets\ListView;
 
 		<h3>Usuarios registrados</h3>
 
-		<div class="puntuacion-cont-tabla">
-
-			<div class="puntuacion-cont-tabla-head">
-				<div class="puntuacion-cont-tabla-head-td">Nombre</div>
-				<div class="puntuacion-cont-tabla-head-td">Telefono</div>
-
-			</div>
 
 			
 				<?php
 				echo ListView::widget ( [ 
 						'dataProvider' => $dataProvider,
-						'options' => [ 
-								'tag' => 'div',
-								'class' => 'puntuacion-cont-tabla-body',
-								'id' => 'list-wrapper' 
-						],
+						// 'options' => [
+						// 'tag' => 'div',
+						// 'class' => 'puntuacion-cont-tabla-body',
+						// 'id' => 'list-wrapper'
+						// ],
 						'summary' => "Mostrando {begin} - {end} de {totalCount}",
-						'layout' => "{items}\n{summary}\n{pager}",
+						'layout' => '<div class="puntuacion-cont-tabla">
+										<div class="puntuacion-cont-tabla-head">
+											<div class="puntuacion-cont-tabla-head-td">Nombre</div>
+											<div class="puntuacion-cont-tabla-head-td">Telefono</div>
+										</div>
+										<div class="puntuacion-cont-tabla-body">
+											{items}
+										</div>
+									</div>{summary}{pager}',
 						'itemView' => '_itemUsuario' 
 				] );
 				?>
 
-		</div>
 
 	</div>
 	<!-- end - .puntuacion-cont -->
