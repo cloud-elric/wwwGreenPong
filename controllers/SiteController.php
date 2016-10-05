@@ -339,4 +339,28 @@ class SiteController extends Controller {
 		$this->layout = 'mainHome';
 		return $this->render ( 'home' );
 	}
+	
+	/**
+	 * Vista para mostrar a los usuarios
+	 */
+	public function actionUsuarios53469Pong(){
+		
+		$query = EntUsuarios::find ();
+		// Carga el dataprovider
+		$dataProvider = new ActiveDataProvider ( [
+				'query' => $query,
+				 'sort' => [
+				 'defaultOrder' => ['txt_nombre'=>SORT_ASC],
+				 ],
+				'pagination' => [
+						'pageSize' => 1,
+						'page' => 0
+				]
+		] );
+		
+	
+		return $this->render ( 'usuarios', [
+				'dataProvider' => $dataProvider
+		] );
+	}
 }
