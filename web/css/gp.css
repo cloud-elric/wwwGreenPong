@@ -1898,19 +1898,101 @@ header .header-cont .logo img {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   border-radius: 12px;
-  bottom: 20px;
+  bottom: 46px;
   color: #FFF;
   cursor: pointer;
   display: inline-block;
   font-size: 1.1em;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-left: -110px;
+  margin-left: -55px;
   padding: 10px 30px;
   position: absolute;
+  z-index: 15;
 }
 
 .home .home-btn-comenzar:hover {
   background-color: #d9c400;
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .home .home-btn-comenzar {
+    bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home .home-btn-comenzar {
+    bottom: 108px;
+  }
+}
+
+.home .home-footer {
+  background-color: rgba(255, 223, 39, 0.4);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  justify-content: space-between;
+  padding: 8px 30px;
+  position: fixed;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .home .home-footer {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home .home-footer .home-footer-left {
+    margin-bottom: 6px;
+  }
+}
+
+.home .home-footer .home-footer-left span {
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  cursor: pointer;
+  font-size: .9em;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.home .home-footer .home-footer-left span:hover {
+  color: #FFF;
+}
+
+@media screen and (max-width: 450px) {
+  .home .home-footer .home-footer-left span {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+}
+
+.home .home-footer .home-footer-right a {
+  color: rgba(251, 227, 0, 0.8);
+  display: inline-block;
+  font-size: .9em;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.home .home-footer .home-footer-right a:hover {
+  color: #FBE300;
+}
+
+@media screen and (max-width: 450px) {
+  .home .home-footer .home-footer-right a {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 3px;
+    text-align: center;
+  }
 }

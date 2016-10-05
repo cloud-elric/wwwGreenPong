@@ -1138,16 +1138,67 @@ header
 		background-color: $yellow
 		border: none
 		+border-radius(12px)
-		bottom: 20px
+		bottom: 46px
 		color: $white
 		cursor: pointer
 		display: inline-block
 		font-size: 1.1em
 		font-weight: bold
 		letter-spacing: 1px
-		margin-left: -110px
+		margin-left: -55px
 		padding: 10px 30px
 		position: absolute
+		z-index: 15
 		&:hover
 			background-color: $yellow-secundary
 			outline: none
+		@include respond-to(xs)
+			bottom: 70px
+		@include respond-to(xx)
+			bottom: 108px
+	// Footer
+	.home-footer
+		background-color: rgba($yellow-primary,.4)
+		bottom: 0
+		display: flex
+		left: 0
+		justify-content: space-between
+		padding: 8px 30px
+		position: fixed
+		right: 0
+		@include respond-to(xs)
+			align-items: center
+			flex-direction: column
+		.home-footer-left
+			@include respond-to(xs)
+				margin-bottom: 6px
+			span
+				color: rgba($white,.9)
+				display: inline-block
+				cursor: pointer
+				font-size: .9em
+				letter-spacing: 1px
+				margin-left: 10px
+				text-decoration: underline
+				&:hover
+					color: $white
+				@include respond-to(xx)
+					display: block
+					margin-left: 0
+					margin-bottom: 3px
+					text-align: center
+		.home-footer-right
+			a
+				color: rgba($yellow,.8)
+				display: inline-block
+				font-size: .9em
+				letter-spacing: 1px
+				margin-left: 10px
+				text-decoration: underline
+				&:hover
+					color: $yellow
+				@include respond-to(xx)
+					display: block
+					margin-left: 0
+					margin-bottom: 3px
+					text-align: center

@@ -10,6 +10,16 @@
 var modalAvisoPrivacidad = document.getElementById('modal-aviso-privacidad');
 var btnAvisoPrivacidad = document.getElementsByClassName("btn-aviso-privacidad")[0];
 
+// HOME - Términos y condiciones
+var modalTerminosCondicionesHome = document.getElementById('modal-terminos-condiciones-home');
+var btnTerminosCondicionesHome = document.getElementsByClassName("btn-terminos-condiciones-home")[0];
+var closeTerminosCondicionesHome = document.getElementsByClassName("modal-terminos-condiciones-close-home")[0];
+
+// HOME - Aviso de privacidad
+var modalAvisoPrivacidadHome = document.getElementById('modal-aviso-privacidad-home');
+var btnAvisoPrivacidadHome = document.getElementsByClassName("btn-aviso-privacidad-home")[0];
+var closeAvisoPrivacidadHome = document.getElementsByClassName("modal-aviso-privacidad-close-home")[0];
+
 var btnReenviarCodigo = document.getElementById("js-reenviar-codigo");
 
 var closeAvisoPrivacidad = document.getElementsByClassName("modal-aviso-privacidad-close")[0];
@@ -95,11 +105,19 @@ $(document).ready(function(){
 	$(btnAvisoPrivacidad).on("click", function(){
 		modalAvisoPrivacidad.style.display = "flex";
 	});
-	// btnAvisoPrivacidad.onclick = function() {
-	// 	modalAvisoPrivacidad.style.display = "flex";
-	// }
 
+	// open
+	// Términos y condiciones (HOME)
+	$(btnTerminosCondicionesHome).on("click", function(){
+		modalTerminosCondicionesHome.style.display = "flex";
+	});
 
+	// open
+	// Aviso de privacidad (HOME)
+	$(btnAvisoPrivacidadHome).on("click", function(){
+		modalAvisoPrivacidadHome.style.display = "flex";
+	});
+	
 	// close
 	// Aviso de privacidad
 	// closeAvisoPrivacidad.onclick = function() {
@@ -126,7 +144,27 @@ $(document).ready(function(){
 		modalReenviarCodigo.style.display = "none";
 		resetFormReenviar();
 	});
-	
+
+	// close
+	// Términos y condiciones - HOME
+	$(closeTerminosCondicionesHome).on("click", function(){
+		modalTerminosCondicionesHome.style.display = "none";
+		resetFormReenviar();
+	});
+
+
+	// close
+	// Aviso de privacidad - HOME
+	$(closeAvisoPrivacidadHome).on("click", function(){
+		modalAvisoPrivacidadHome.style.display = "none";
+		resetFormReenviar();
+	});
+
+
+
+
+
+
 	function resetFormReenviar(){
 		$('.mensaje-codigo-enviado-success').text('');
 		$('.mensaje-codigo-enviado-error').text('');
@@ -160,6 +198,16 @@ $(document).ready(function(){
 		// modal -reenviar codigo
 		if (event.target == modalReenviarCodigo) {
 			modalReenviarCodigo.style.display = "none";
+		}
+
+		// modal - HOME Términos y condiciones
+		if (event.target == modalTerminosCondicionesHome) {
+			modalTerminosCondicionesHome.style.display = "none";
+		}
+
+		// modal - HOME Aviso de privacidad
+		if (event.target == modalAvisoPrivacidadHome) {
+			modalAvisoPrivacidadHome.style.display = "none";
 		}
 	}
 
