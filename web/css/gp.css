@@ -1854,48 +1854,65 @@ header .header-cont .logo img {
 /*  home
 	@mixin =============================================== */
 .home {
-  background-image: url(../images/bg-home.png);
+  background-image: url(../images/bg-bienvenida.png);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   height: 100vh;
-  padding: 40px 0;
   position: relative;
   width: 100%;
 }
 
-.home .home-tile,
-.home .home-btn-comenzar {
-  left: 50%;
-  position: absolute;
-}
-
-.home .home-tile {
-  color: #FFF;
-  font-family: "proxima_novablack";
-  font-size: 4em;
-  margin-left: -199px;
-  text-transform: uppercase;
-  top: 20px;
+.home .home-cont {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 40px);
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
 }
 
 @media screen and (max-width: 768px) {
-  .home .home-tile {
-    font-size: 3.3em;
-    margin-left: -165px;
+  .home .home-cont {
+    height: calc(100vh - 70px);
+    padding: 30px 0;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .home .home-tile {
-    font-size: 2.2em;
-    margin-left: -109px;
+  .home .home-cont {
+    height: calc(100vh - 112px);
   }
 }
 
-.home .home-btn-comenzar {
+.home .home-cont .home-title {
+  color: #FFF;
+  font-family: "proxima_novablack";
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .home .home-cont .home-title {
+    font-size: 3.3em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home .home-cont .home-title {
+    font-size: 2.2em;
+  }
+}
+
+.home .home-cont .home-imagen {
+  width: 100%;
+}
+
+.home .home-cont .home-btn-comenzar {
   background-color: #FBE300;
   border: none;
   -webkit-border-radius: 12px;
@@ -1909,27 +1926,13 @@ header .header-cont .logo img {
   font-size: 1.1em;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-left: -55px;
   padding: 10px 30px;
-  position: absolute;
   z-index: 15;
 }
 
-.home .home-btn-comenzar:hover {
+.home .home-cont .home-btn-comenzar:hover {
   background-color: #d9c400;
   outline: none;
-}
-
-@media screen and (max-width: 768px) {
-  .home .home-btn-comenzar {
-    bottom: 70px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .home .home-btn-comenzar {
-    bottom: 108px;
-  }
 }
 
 .home .home-footer {

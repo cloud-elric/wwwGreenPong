@@ -1109,57 +1109,78 @@ header
 /*  home
 	================================================ */
 .home
-	background-image: url(../images/bg-home.png)
+	background-image: url(../images/bg-bienvenida.png)
 	background-position: 50%
 	background-repeat: no-repeat
 	background-size: cover
 	display: flex
 	justify-content: center
 	height: 100vh
-	padding: 40px 0
+	// padding: 40px 0
 	position: relative
 	width: 100%
-	.home-tile,
-	.home-btn-comenzar
-		left: 50%
-		position: absolute
-	// Title
-	.home-tile
-		color: $white
-		font-family: $f-proximan-black
-		font-size: 4em
-		margin-left: -199px
-		text-transform: uppercase
-		top: 20px
+	// .home-title,
+	// .home-btn-comenzar
+	// 	left: 50%
+	// 	position: absolute
+	// Cont
+	.home-cont
+		// align-content: center
+		align-items: center
+		// background-color: rgba($white,.4)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: calc(100vh - 40px)
+		margin: 0 auto
+		max-width: 800px
+		width: 90%
 		@include respond-to(xs)
-			font-size: 3.3em
-			margin-left: -165px
+			height: calc(100vh - 70px)
+			padding: 30px 0
 		@include respond-to(xx)
-			font-size: 2.2em
-			margin-left: -109px
-	// Btn Comenzar
-	.home-btn-comenzar
-		background-color: $yellow
-		border: none
-		+border-radius(12px)
-		bottom: 46px
-		color: $white
-		cursor: pointer
-		display: inline-block
-		font-size: 1.1em
-		font-weight: bold
-		letter-spacing: 1px
-		margin-left: -55px
-		padding: 10px 30px
-		position: absolute
-		z-index: 15
-		&:hover
-			background-color: $yellow-secundary
-			outline: none
-		@include respond-to(xs)
-			bottom: 70px
-		@include respond-to(xx)
-			bottom: 108px
+			height: calc(100vh - 112px)
+		// Title
+		.home-title
+			color: $white
+			font-family: $f-proximan-black
+			font-size: 4em
+			// margin-left: -199px
+			text-transform: uppercase
+			// top: 20px
+			@include respond-to(xs)
+				font-size: 3.3em
+				// margin-left: -165px
+			@include respond-to(xx)
+				font-size: 2.2em
+				// margin-left: -109px
+		// Imagen
+		.home-imagen
+			// max-width: 600px
+			width: 100%
+		// Btn Comenzar
+		.home-btn-comenzar
+			background-color: $yellow
+			border: none
+			+border-radius(12px)
+			bottom: 46px
+			color: $white
+			cursor: pointer
+			display: inline-block
+			font-size: 1.1em
+			font-weight: bold
+			letter-spacing: 1px
+			// margin-left: -55px
+			padding: 10px 30px
+			// position: absolute
+			z-index: 15
+			&:hover
+				background-color: $yellow-secundary
+				outline: none
+			// @include respond-to(xs)
+			// 	bottom: 70px
+			// @include respond-to(xx)
+			// 	bottom: 108px
 	// Footer
 	.home-footer
 		background-color: rgba($yellow-primary,.4)
