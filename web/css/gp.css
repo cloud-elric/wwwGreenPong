@@ -1550,12 +1550,12 @@ header .header-cont .logo img {
 	@mixin =============================================== */
 .bienvenida {
   background-image: url(../images/bg-bienvenida.png);
-  nd-size: cover;
+  background-size: cover;
   display: flex;
   min-height: 100vh;
   justify-content: center;
   position: relative;
-  padding: 40px 0;
+  padding: 40px 0 60px;
   width: 100%;
 }
 
@@ -1869,10 +1869,10 @@ header .header-cont .logo img {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: calc(100vh - 40px);
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 700px;
   width: 90%;
 }
 
@@ -1896,6 +1896,18 @@ header .header-cont .logo img {
   text-transform: uppercase;
 }
 
+@media (min-width: 1201px) {
+  .home .home-cont .home-title {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .home .home-cont .home-title {
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .home .home-cont .home-title {
     font-size: 3.3em;
@@ -1912,7 +1924,20 @@ header .header-cont .logo img {
   width: 100%;
 }
 
-.home .home-cont .home-btn-comenzar {
+.home .home-cont .home-botones {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .home .home-cont .home-botones {
+    flex-direction: column;
+  }
+}
+
+.home .home-cont .home-botones .home-btn {
   background-color: #FBE300;
   border: none;
   -webkit-border-radius: 12px;
@@ -1927,12 +1952,27 @@ header .header-cont .logo img {
   font-weight: bold;
   letter-spacing: 1px;
   padding: 10px 30px;
+  text-align: center;
+  width: 38%;
   z-index: 15;
 }
 
-.home .home-cont .home-btn-comenzar:hover {
+.home .home-cont .home-botones .home-btn:hover {
   background-color: #d9c400;
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .home .home-cont .home-botones .home-btn {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home .home-cont .home-botones .home-btn {
+    margin-bottom: 12px;
+    width: 90%;
+  }
 }
 
 .home .home-footer {
@@ -1944,6 +1984,12 @@ header .header-cont .logo img {
   padding: 8px 30px;
   position: fixed;
   right: 0;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .home .home-footer {
+    padding: 8px 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1965,8 +2011,7 @@ header .header-cont .logo img {
   cursor: pointer;
   font-size: .9em;
   letter-spacing: 1px;
-  margin-left: 10px;
-  text-decoration: underline;
+  margin-left: 8px;
 }
 
 .home .home-footer .home-footer-left span:hover {
@@ -1987,8 +2032,7 @@ header .header-cont .logo img {
   display: inline-block;
   font-size: .9em;
   letter-spacing: 1px;
-  margin-left: 10px;
-  text-decoration: underline;
+  margin-left: 8px;
 }
 
 .home .home-footer .home-footer-right a:hover {
@@ -2104,4 +2148,84 @@ header .header-cont .logo img {
 
 .user-register .user-register-cont .list-view .user-register-cont-tabla {
   color: #181514;
+}
+
+/*  Footer
+	@mixin =============================================== */
+.footer {
+  background-color: rgba(255, 223, 39, 0.4);
+  display: flex;
+  justify-content: space-between;
+  margin-top: -35px;
+  padding: 8px 30px;
+  position: relative;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .footer {
+    padding: 8px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    align-items: center;
+    flex-direction: column;
+    margin-top: -60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    margin-top: -122px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .footer-left {
+    margin-bottom: 6px;
+  }
+}
+
+.footer .footer-left span {
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  cursor: pointer;
+  font-size: .9em;
+  letter-spacing: 1px;
+  margin-left: 8px;
+}
+
+.footer .footer-left span:hover {
+  color: #FFF;
+}
+
+@media screen and (max-width: 450px) {
+  .footer .footer-left span {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+}
+
+.footer .footer-right a {
+  color: rgba(251, 227, 0, 0.8);
+  display: inline-block;
+  font-size: .9em;
+  letter-spacing: 1px;
+  margin-left: 8px;
+}
+
+.footer .footer-right a:hover {
+  color: #FBE300;
+}
+
+@media screen and (max-width: 450px) {
+  .footer .footer-right a {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 3px;
+    text-align: center;
+  }
 }

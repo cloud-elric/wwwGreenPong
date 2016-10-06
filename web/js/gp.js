@@ -96,8 +96,6 @@ $(document).ready(function(){
 		$("#entusuarios-aceptaterminos").prop( "checked", true );
 		modalTerminosCondiciones.style.display = "none";
 
-	
-
 });
 	
 	// open
@@ -137,7 +135,6 @@ $(document).ready(function(){
 	// 	modalAvisoPrivacidad.style.display = "flex";
 	// }
 
-
 	// close
 	// Reenviar codigo modal
 	$(closeReenviarCodigo).on("click", function(){
@@ -159,11 +156,6 @@ $(document).ready(function(){
 		modalAvisoPrivacidadHome.style.display = "none";
 		resetFormReenviar();
 	});
-
-
-
-
-
 
 	function resetFormReenviar(){
 		$('.mensaje-codigo-enviado-success').text('');
@@ -209,6 +201,7 @@ $(document).ready(function(){
 		if (event.target == modalAvisoPrivacidadHome) {
 			modalAvisoPrivacidadHome.style.display = "none";
 		}
+
 	}
 
 $(window).load(function(){
