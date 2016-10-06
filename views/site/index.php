@@ -61,7 +61,7 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 <!-- 									<input type="checkbox" id="checkbox" class="checkbox"> -->
 							</div>
 							<div class="label--checkbox-row-col">
-								Acepta <span>Términos y condiciones</span>
+								<span>Términos y condiciones</span>
 							</div>
 						</div>
 				</label></li>
