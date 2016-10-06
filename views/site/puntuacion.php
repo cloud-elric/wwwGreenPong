@@ -1,3 +1,11 @@
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+use yii\helpers\Url;
+
+?>
+
 <!-- .puntuacion -->
 <div class="puntuacion">
 	

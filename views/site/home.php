@@ -21,12 +21,24 @@ $this->title = 'Participa y gana una Master Experience con Fiesta Americana Vaca
 		<!-- .home-imagen -->
 		<img src="<?=Url::base()?>/images/bg-home.png" alt="" class="home-imagen">
 		<!-- end - .home-imagen -->
+		
+		<!-- .home-botones -->
+		<div class="home-botones">
 
-		<!-- .home-btn-comenzar -->
-		<a class="home-btn-comenzar" href="<?=Url::base()?>/site/index">
-			Jugar
-		</a>
-		<!-- end - .home-btn-comenzar -->
+			<!-- .home-btn-comenzar -->
+			<a class="home-btn" href="<?=Url::base()?>/site/index">
+				Participar
+			</a>
+			<!-- end - .home-btn-comenzar -->
+
+			<!-- .home-btn-comenzar -->
+			<a class="home-btn" href="<?=Url::base()?>/site/como-participar">
+				¿Cómo Participar?
+			</a>
+			<!-- end - .home-btn-comenzar -->
+
+		</div>
+		<!-- end - .home-botones -->
 
 	</div>
 	<!-- end - .home-cont -->
@@ -38,6 +50,7 @@ $this->title = 'Participa y gana una Master Experience con Fiesta Americana Vaca
 			<span class="btn-terminos-condiciones-home">Términos y condiciones</span>
 		</div>
 		<div class="home-footer-right">
+			<a href="<?=Url::base()?>/site/index">Participar</a>
 			<a href="<?=Url::base()?>/site/como-participar">¿Cómo Participar?</a>
 			<a href="<?=Url::base()?>/site/puntuacion">Ver puntuaciones</a>
 		</div>

@@ -53,11 +53,3 @@ $(document).ready(function(){
 closeTerminosCondiciones.onclick = function() {
 	modalTerminosCondiciones.style.display = "none";
 }
-
-// // close it
-// window.onclick = function(event) {
-// 	// modal - Terminos y condiciones
-// 	if (event.target == modalTerminosCondiciones) {
-// 		modalTerminosCondiciones.style.display = "none";
-// 	}
-// }

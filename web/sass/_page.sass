@@ -146,6 +146,7 @@ header
 			outline: none
 	// Aviso de privacidad
 	.aviso-privacidad
+		// background-color: red
 		bottom: 20px
 		left: 30px
 		position: absolute
@@ -897,12 +898,12 @@ header
 	================================================ */
 .bienvenida
 	background-image: url(../images/bg-bienvenida.png)
-	nd-size: cover
+	background-size: cover
 	display: flex
 	min-height: 100vh
 	justify-content: center
 	position: relative
-	padding: 40px 0
+	padding: 40px 0 60px
 	width: 100%
 	// Contedor
 	.bienvenida-cont
@@ -1130,10 +1131,10 @@ header
 		// background-color: rgba($white,.4)
 		display: flex
 		flex-direction: column
-		justify-content: space-between
+		justify-content: space-around
 		height: calc(100vh - 40px)
 		margin: 0 auto
-		max-width: 800px
+		max-width: 700px
 		width: 90%
 		@include respond-to(xs)
 			height: calc(100vh - 70px)
@@ -1145,9 +1146,12 @@ header
 			color: $white
 			font-family: $f-proximan-black
 			font-size: 4em
-			// margin-left: -199px
+			// margin-top: 30px
 			text-transform: uppercase
-			// top: 20px
+			@include respond-to(lg)
+				margin-top: 40px
+			@include respond-to(md)
+				margin-top: 20px
 			@include respond-to(xs)
 				font-size: 3.3em
 				// margin-left: -165px
@@ -1158,29 +1162,42 @@ header
 		.home-imagen
 			// max-width: 600px
 			width: 100%
-		// Btn Comenzar
-		.home-btn-comenzar
-			background-color: $yellow
-			border: none
-			+border-radius(12px)
-			bottom: 46px
-			color: $white
-			cursor: pointer
-			display: inline-block
-			font-size: 1.1em
-			font-weight: bold
-			letter-spacing: 1px
-			// margin-left: -55px
-			padding: 10px 30px
-			// position: absolute
-			z-index: 15
-			&:hover
-				background-color: $yellow-secundary
-				outline: none
-			// @include respond-to(xs)
-			// 	bottom: 70px
-			// @include respond-to(xx)
-			// 	bottom: 108px
+		// Botones
+		.home-botones
+			align-items: center
+			display: flex
+			justify-content: space-around
+			width: 100%
+			@include respond-to(xx)
+				flex-direction: column
+			// Btn Comenzar
+			.home-btn
+				background-color: $yellow
+				border: none
+				+border-radius(12px)
+				bottom: 46px
+				color: $white
+				cursor: pointer
+				display: inline-block
+				font-size: 1.1em
+				font-weight: bold
+				letter-spacing: 1px
+				// margin-left: -55px
+				padding: 10px 30px
+				// position: absolute
+				text-align: center
+				width: 38%
+				z-index: 15
+				&:hover
+					background-color: $yellow-secundary
+					outline: none
+				@include respond-to(xs)
+					font-size: 1em
+				@include respond-to(xx)
+					margin-bottom: 12px
+					width: 90%
+				// @include respond-to(xx)
+				// 	bottom: 108px
 	// Footer
 	.home-footer
 		background-color: rgba($yellow-primary,.4)
@@ -1191,6 +1208,8 @@ header
 		padding: 8px 30px
 		position: fixed
 		right: 0
+		@include respond-to(sm)
+			padding: 8px 20px
 		@include respond-to(xs)
 			align-items: center
 			flex-direction: column
@@ -1203,8 +1222,8 @@ header
 				cursor: pointer
 				font-size: .9em
 				letter-spacing: 1px
-				margin-left: 10px
-				text-decoration: underline
+				margin-left: 8px
+				// text-decoration: underline
 				&:hover
 					color: $white
 				@include respond-to(xx)
@@ -1218,8 +1237,8 @@ header
 				display: inline-block
 				font-size: .9em
 				letter-spacing: 1px
-				margin-left: 10px
-				text-decoration: underline
+				margin-left: 8px
+				// text-decoration: underline
 				&:hover
 					color: $yellow
 				@include respond-to(xx)
@@ -1302,3 +1321,57 @@ header
 						display: block
 			.user-register-cont-tabla
 				color: $text-base
+
+/*  Footer
+	================================================ */
+.footer
+	background-color: rgba($yellow-primary,.4)
+	// bottom: 0
+	display: flex
+	// left: 0
+	justify-content: space-between
+	margin-top: -35px
+	padding: 8px 30px
+	position: relative
+	// right: 0
+	@include respond-to(sm)
+		padding: 8px 20px
+	@include respond-to(xs)
+		align-items: center
+		flex-direction: column
+		margin-top: -60px
+	@include respond-to(xx)
+		margin-top: -122px
+	.footer-left
+		@include respond-to(xs)
+			margin-bottom: 6px
+		span
+			color: rgba($white,.9)
+			display: inline-block
+			cursor: pointer
+			font-size: .9em
+			letter-spacing: 1px
+			margin-left: 8px
+			// text-decoration: underline
+			&:hover
+				color: $white
+			@include respond-to(xx)
+				display: block
+				margin-left: 0
+				margin-bottom: 3px
+				text-align: center
+	.footer-right
+		a
+			color: rgba($yellow,.8)
+			display: inline-block
+			font-size: .9em
+			letter-spacing: 1px
+			margin-left: 8px
+			// text-decoration: underline
+			&:hover
+				color: $yellow
+			@include respond-to(xx)
+				display: block
+				margin-left: 0
+				margin-bottom: 3px
+				text-align: center
