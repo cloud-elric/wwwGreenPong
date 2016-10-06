@@ -14,6 +14,8 @@ use yii\widgets\ListView;
 						// 'class' => 'user-register-cont-tabla-body',
 						// 'id' => 'list-wrapper'
 						// ],
+						'itemOptions'=>[
+						'class'=>'user-register-cont-tabla-body-tr'],
 						'summary' => "Mostrando {begin} - {end} de {totalCount}",
 						'layout' => '<div class="user-register-cont-tabla">
 										<div class="user-register-cont-tabla-head">
