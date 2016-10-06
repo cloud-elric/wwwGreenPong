@@ -285,7 +285,7 @@ class SiteController extends Controller {
 	 *
 	 * @return string
 	 */
-	public function actionBienvenida() {
+	public function actionComoParticipar() {
 		return $this->render ( 'bienvenida' );
 	}
 	

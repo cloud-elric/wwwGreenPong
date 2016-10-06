@@ -13,7 +13,7 @@ use yii\helpers\Url;
 		<!-- ¿Cómo Participar? -->
 		<p class="bienvenida-como-participar">
 			¿Cómo Participar?
-			<!-- <img src="<?=Url::base()?>/images/Como-Participar.png" alt="¿Cómo Participar?"> -->
+			<!-- <img src="<?=Url::base()?>/images/como-participar.png" alt="¿Cómo Participar?"> -->
 		</p>
 		
 		<!-- .bienvenida-cont-textos -->

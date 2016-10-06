@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 use yii\helpers\Url;
-
+$this->title = 'Bienvenida';
 ?>
 
 <!-- .home -->
@@ -38,7 +38,7 @@ use yii\helpers\Url;
 			<span class="btn-terminos-condiciones-home">Términos y condiciones</span>
 		</div>
 		<div class="home-footer-right">
-			<a href="<?=Url::base()?>/site/bienvenida">¿Cómo Participar?</a>
+			<a href="<?=Url::base()?>/site/como-participar">¿Cómo Participar?</a>
 			<a href="<?=Url::base()?>/site/puntuacion">Ver puntuaciones</a>
 		</div>
 	</div>
