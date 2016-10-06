@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 use yii\helpers\Url;
-
+$this->title = 'Participa y gana una Master Experience con Fiesta Americana Vacation Club';
 ?>
 <!-- .bienvenida -->
 <div class="bienvenida">

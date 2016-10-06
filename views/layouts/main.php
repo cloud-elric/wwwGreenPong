@@ -12,6 +12,7 @@ AppAsset::register ( $this );
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 	<head>
+	<link rel="shortcut icon" type="image/png" href="<?=Url::base()?>/favicon.png"/>
 		<meta charset="<?= Yii::$app->charset ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?= Html::csrfMetaTags()?>
@@ -38,7 +39,7 @@ AppAsset::register ( $this );
 
 			<header>
 				<div class="header-cont">
-					<a href="" class="logo">
+					<a href="<?=Url::base()?>" class="logo">
 						<img src="<?=Url::base()?>/images/logo.png" alt="Masters Experience">
 					</a>
 				</div>
