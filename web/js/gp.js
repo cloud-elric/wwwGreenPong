@@ -8,24 +8,25 @@
 // Variables
 // modal - aviso de privacidad
 var modalAvisoPrivacidad = document.getElementById('modal-aviso-privacidad');
-var btnAvisoPrivacidad = document.getElementsByClassName("btn-aviso-privacidad")[0];
+var closeAvisoPrivacidad = document.getElementById('modal-aviso-privacidad-close');
+var btnAvisoPrivacidad = document.getElementById('btn-aviso-privacidad');
 
-// HOME - Términos y condiciones
-var modalTerminosCondicionesHome = document.getElementById('modal-terminos-condiciones-home');
-var btnTerminosCondicionesHome = document.getElementsByClassName("btn-terminos-condiciones-home")[0];
-var closeTerminosCondicionesHome = document.getElementsByClassName("modal-terminos-condiciones-close-home")[0];
+// modal - Términos y condiciones
+var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
+var closeTerminosCondiciones = document.getElementById("modal-terminos-condiciones-close");
+var btnTerminosCondiciones = document.getElementById('btn-terminos-condiciones');
 
 // HOME - Aviso de privacidad
-var modalAvisoPrivacidadHome = document.getElementById('modal-aviso-privacidad-home');
-var btnAvisoPrivacidadHome = document.getElementsByClassName("btn-aviso-privacidad-home")[0];
-var closeAvisoPrivacidadHome = document.getElementsByClassName("modal-aviso-privacidad-close-home")[0];
+// var modalAvisoPrivacidadHome = document.getElementById('modal-aviso-privacidad-home');
+// var btnAvisoPrivacidadHome = document.getElementsByClassName("btn-aviso-privacidad-home")[0];
+// var closeAvisoPrivacidadHome = document.getElementsByClassName("modal-aviso-privacidad-close-home")[0];
 
 var btnReenviarCodigo = document.getElementById("js-reenviar-codigo");
 
-var closeAvisoPrivacidad = document.getElementsByClassName("modal-aviso-privacidad-close")[0];
+// var closeAvisoPrivacidad = document.getElementsByClassName("modal-aviso-privacidad-close")[0];
 var closeReenviarCodigo = document.getElementsByClassName("modal-reenviar-close")[0];
 
-var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
+// var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
 var modalGameOver = document.getElementById('modal-gameover');
 var modalReenviarCodigo = document.getElementById('modal-reenviar-codigo');
 
@@ -96,8 +97,8 @@ $(document).ready(function(){
 		$("#entusuarios-aceptaterminos").prop( "checked", true );
 		modalTerminosCondiciones.style.display = "none";
 
-});
-	
+	});
+
 	// open
 	// Aviso de privacidad
 	$(btnAvisoPrivacidad).on("click", function(){
@@ -105,25 +106,25 @@ $(document).ready(function(){
 	});
 
 	// open
-	// Términos y condiciones (HOME)
-	$(btnTerminosCondicionesHome).on("click", function(){
-		modalTerminosCondicionesHome.style.display = "flex";
+	// Términos y condiciones
+	$(btnTerminosCondiciones).on("click", function(){
+		modalTerminosCondiciones.style.display = "flex";
 	});
 
 	// open
 	// Aviso de privacidad (HOME)
-	$(btnAvisoPrivacidadHome).on("click", function(){
-		modalAvisoPrivacidadHome.style.display = "flex";
-	});
-	
+	// $(btnAvisoPrivacidadHome).on("click", function(){
+	// 	modalAvisoPrivacidadHome.style.display = "flex";
+	// });
+
 	// close
 	// Aviso de privacidad
 	// closeAvisoPrivacidad.onclick = function() {
 	$(closeAvisoPrivacidad).on("click", function(){
 		modalAvisoPrivacidad.style.display = "none";
 	});
-	
-	
+
+
 	// open
 	// Reenviar codigo modal
 	$(btnReenviarCodigo).on("click", function(e){
@@ -139,23 +140,23 @@ $(document).ready(function(){
 	// Reenviar codigo modal
 	$(closeReenviarCodigo).on("click", function(){
 		modalReenviarCodigo.style.display = "none";
-		resetFormReenviar();
+		// resetFormReenviar();
 	});
 
 	// close
-	// Términos y condiciones - HOME
-	$(closeTerminosCondicionesHome).on("click", function(){
-		modalTerminosCondicionesHome.style.display = "none";
-		resetFormReenviar();
+	// Términos y condiciones
+	$(closeTerminosCondiciones).on("click", function(){
+		modalTerminosCondiciones.style.display = "none";
+		// resetFormReenviar();
 	});
 
 
 	// close
 	// Aviso de privacidad - HOME
-	$(closeAvisoPrivacidadHome).on("click", function(){
-		modalAvisoPrivacidadHome.style.display = "none";
-		resetFormReenviar();
-	});
+	// $(closeAvisoPrivacidadHome).on("click", function(){
+	// 	modalAvisoPrivacidadHome.style.display = "none";
+	// 	resetFormReenviar();
+	// });
 
 	function resetFormReenviar(){
 		$('.mensaje-codigo-enviado-success').text('');
@@ -171,6 +172,10 @@ $(document).ready(function(){
 			$(".aceptar-mask").show();
 		}
 		});
+
+
+
+
 	// close it
 	window.onclick = function(event) {
 		// modal - Aviso de privacidad
@@ -178,10 +183,10 @@ $(document).ready(function(){
 			modalAvisoPrivacidad.style.display = "none";
 
 		}
-		// modal - Terminos y condiciones
-		if (event.target == modalTerminosCondiciones) {
-			modalTerminosCondiciones.style.display = "none";
-		}
+		// // modal - Terminos y condiciones
+		// if (event.target == modalTerminosCondiciones) {
+		// 	modalTerminosCondiciones.style.display = "none";
+		// }
 		// modal - GameOver
 		if (event.target == modalGameOver) {
 			modalGameOver.style.display = "none";
@@ -192,21 +197,21 @@ $(document).ready(function(){
 			modalReenviarCodigo.style.display = "none";
 		}
 
-		// modal - HOME Términos y condiciones
-		if (event.target == modalTerminosCondicionesHome) {
-			modalTerminosCondicionesHome.style.display = "none";
+		// modal - Términos y condiciones
+		if (event.target == modalTerminosCondiciones) {
+			modalTerminosCondiciones.style.display = "none";
 		}
 
-		// modal - HOME Aviso de privacidad
-		if (event.target == modalAvisoPrivacidadHome) {
-			modalAvisoPrivacidadHome.style.display = "none";
-		}
+		// // modal - HOME Aviso de privacidad
+		// if (event.target == modalAvisoPrivacidadHome) {
+		// 	modalAvisoPrivacidadHome.style.display = "none";
+		// }
 
 	}
 
-$(window).load(function(){
-	$(".loader").fadeOut();
-	$(".wrap").delay(3000).fadeIn();
-});
+	$(window).load(function(){
+		$(".loader").fadeOut();
+		$(".wrap").delay(3000).fadeIn();
+	});
 
 });

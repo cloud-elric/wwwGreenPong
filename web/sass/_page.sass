@@ -170,8 +170,12 @@ header
 	display: flex
 	justify-content: center
 	min-height: 100vh
+	padding: 0 0 90px
 	position: relative
-	width: 100%
+	@include respond-to(xs)
+		padding: 0 0 120px
+	@include respond-to(xx)
+		padding: 0 0 180px
 	// Card
 	.ingresar-codigo-card
 		// background-color: rgba($white,.2)
@@ -310,18 +314,18 @@ header
 				background-color: $yellow-secundary
 				outline: none
 	// Aviso de privacidad
-	.aviso-privacidad
-		bottom: 20px
-		left: 30px
-		position: absolute
-		span
-			color: rgba($white,.8)
-			cursor: pointer
-			font-size: .9em
-			letter-spacing: 1px
-			text-decoration: underline
-			&:hover
-				color: $white
+	// .aviso-privacidad
+	// 	bottom: 20px
+	// 	left: 30px
+	// 	position: absolute
+	// 	span
+	// 		color: rgba($white,.8)
+	// 		cursor: pointer
+	// 		font-size: .9em
+	// 		letter-spacing: 1px
+	// 		text-decoration: underline
+	// 		&:hover
+	// 			color: $white
 
 /*  Aceptar - Terminos y condiciones
 	================================================ */
@@ -359,13 +363,19 @@ header
 	color: $white
 	font-size: .8em
 	.label--checkbox-row
+		// background-color: red
+		display: flex
 		position: relative
 		text-align: left
 		@include respond-to(xs)
+			align-items: center
+			justify-content: center
 			text-align: center
 		.label--checkbox-row-col
-			display: inline-block
-			vertical-align: middle
+			align-items: center
+			display: flex
+			// display: inline-block
+			// vertical-align: middle
 			@include respond-to(xs)
 				text-align: left
 			span
@@ -740,8 +750,13 @@ header
 	display: flex
 	min-height: 100vh
 	justify-content: center
+	padding: 0 0 90px
 	position: relative
 	width: 100%
+	@include respond-to(xs)
+		padding: 0 0 120px
+	@include respond-to(xx)
+		padding: 0 0 180px
 	// Contedor
 	.puntuacion-cont
 		// background-color: teal
@@ -903,8 +918,12 @@ header
 	min-height: 100vh
 	justify-content: center
 	position: relative
-	padding: 40px 0 60px
+	padding: 40px 0 90px
 	width: 100%
+	@include respond-to(xs)
+		padding: 40px 0 120px
+	@include respond-to(xx)
+		padding: 40px 0 180px
 	// Contedor
 	.bienvenida-cont
 		// background-color: teal
@@ -1257,8 +1276,13 @@ header
 	display: flex
 	min-height: 100vh
 	justify-content: center
+	padding: 0 0 90px
 	position: relative
 	width: 100%
+	@include respond-to(xs)
+		padding: 0 0 120px
+	@include respond-to(xx)
+		padding: 0 0 180px
 	// Contedor
 	.user-register-cont
 		// background-color: teal
@@ -1375,3 +1399,42 @@ header
 				margin-left: 0
 				margin-bottom: 3px
 				text-align: center
+
+/*  Site Error
+	================================================ */
+.site-error
+	align-items: center
+	background-image: url(../images/bg.jpg)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	min-height: 100vh
+	justify-content: center
+	padding: 0 0 90px
+	position: relative
+	width: 100%
+	@include respond-to(xs)
+		padding: 0 0 120px
+	@include respond-to(xx)
+		padding: 0 0 180px
+	// Contedor
+	.site-error-cont
+		// background-color: teal
+		color: $white
+		margin: 150px 0 40px
+		max-width: 1280px
+		text-align: center
+		width: 90%
+		h3
+			font-family: $f-proximan-black
+			font-size: 3em
+			margin-bottom: 30px
+			text-align: center
+		.alert.alert-danger
+			color: $yellow-primary
+			font-family: $f-proximan-bold
+			font-size: 1.9em
+			margin-bottom: 30px
+		p
+			margin-bottom: 14px
