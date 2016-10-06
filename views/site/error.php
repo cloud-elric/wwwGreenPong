@@ -10,18 +10,23 @@ use yii\helpers\Html;
 $this->title = $name;
 ?>
 <div class="site-error">
+    
+    <!-- .site-error-cont -->
+    <div class="site-error-cont">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+        <h3><?= Html::encode($this->title) ?></h3>
 
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        <div class="alert alert-danger">
+            <?= nl2br(Html::encode($message)) ?>
+        </div>
+
+        <p>
+            The above error occurred while the Web server was processing your request.
+        </p>
+        <p>
+            Please contact us if you think this is a server error. Thank you.
+        </p>
     </div>
-
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
+    <!-- end - .site-error-cont -->
 
 </div>

@@ -7,8 +7,8 @@
  */
 // Variables
 // modal - terminos y condiciones
-var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
-var closeTerminosCondiciones = document.getElementsByClassName("modal-terminos-condiciones-close")[0];
+// var modalTerminosCondiciones = document.getElementById('modal-terminos-condiciones');
+// var closeTerminosCondiciones = document.getElementsByClassName("modal-terminos-condiciones-close")[0];
 
 /**
  * Document Ready
@@ -50,6 +50,6 @@ $(document).ready(function(){
  */
 // close
 // Terminos y condiciones
-closeTerminosCondiciones.onclick = function() {
-	modalTerminosCondiciones.style.display = "none";
-}
+// closeTerminosCondiciones.onclick = function() {
+// 	modalTerminosCondiciones.style.display = "none";
+// }

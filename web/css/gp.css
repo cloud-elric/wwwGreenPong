@@ -470,8 +470,20 @@ header .header-cont .logo img {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  padding: 0 0 90px;
   position: relative;
-  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .ingresar-codigo-cont {
+    padding: 0 0 120px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ingresar-codigo-cont {
+    padding: 0 0 180px;
+  }
 }
 
 .ingresar-codigo-cont .ingresar-codigo-card {
@@ -673,24 +685,6 @@ header .header-cont .logo img {
   outline: none;
 }
 
-.ingresar-codigo-cont .aviso-privacidad {
-  bottom: 20px;
-  left: 30px;
-  position: absolute;
-}
-
-.ingresar-codigo-cont .aviso-privacidad span {
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-  font-size: .9em;
-  letter-spacing: 1px;
-  text-decoration: underline;
-}
-
-.ingresar-codigo-cont .aviso-privacidad span:hover {
-  color: #FFF;
-}
-
 /*  Aceptar - Terminos y condiciones
 	@mixin =============================================== */
 .terminos-condiciones {
@@ -730,19 +724,22 @@ header .header-cont .logo img {
 }
 
 .label--checkbox .label--checkbox-row {
+  display: flex;
   position: relative;
   text-align: left;
 }
 
 @media screen and (max-width: 768px) {
   .label--checkbox .label--checkbox-row {
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
 }
 
 .label--checkbox .label--checkbox-row .label--checkbox-row-col {
-  display: inline-block;
-  vertical-align: middle;
+  align-items: center;
+  display: flex;
 }
 
 @media screen and (max-width: 768px) {
@@ -1248,8 +1245,21 @@ header .header-cont .logo img {
   display: flex;
   min-height: 100vh;
   justify-content: center;
+  padding: 0 0 90px;
   position: relative;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .puntuacion {
+    padding: 0 0 120px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .puntuacion {
+    padding: 0 0 180px;
+  }
 }
 
 .puntuacion .puntuacion-cont {
@@ -1555,8 +1565,20 @@ header .header-cont .logo img {
   min-height: 100vh;
   justify-content: center;
   position: relative;
-  padding: 40px 0 60px;
+  padding: 40px 0 90px;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .bienvenida {
+    padding: 40px 0 120px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bienvenida {
+    padding: 40px 0 180px;
+  }
 }
 
 .bienvenida .bienvenida-cont {
@@ -2058,8 +2080,21 @@ header .header-cont .logo img {
   display: flex;
   min-height: 100vh;
   justify-content: center;
+  padding: 0 0 90px;
   position: relative;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .user-register {
+    padding: 0 0 120px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .user-register {
+    padding: 0 0 180px;
+  }
 }
 
 .user-register .user-register-cont {
@@ -2228,4 +2263,58 @@ header .header-cont .logo img {
     margin-bottom: 3px;
     text-align: center;
   }
+}
+
+/*  Site Error
+	@mixin =============================================== */
+.site-error {
+  align-items: center;
+  background-image: url(../images/bg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 0 0 90px;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .site-error {
+    padding: 0 0 120px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .site-error {
+    padding: 0 0 180px;
+  }
+}
+
+.site-error .site-error-cont {
+  color: #FFF;
+  margin: 150px 0 40px;
+  max-width: 1280px;
+  text-align: center;
+  width: 90%;
+}
+
+.site-error .site-error-cont h3 {
+  font-family: "proxima_novablack";
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.site-error .site-error-cont .alert.alert-danger {
+  color: #FFDF27;
+  font-family: "proxima_nova_rgbold";
+  font-size: 1.9em;
+  margin-bottom: 30px;
+}
+
+.site-error .site-error-cont p {
+  margin-bottom: 14px;
 }
