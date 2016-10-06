@@ -46,8 +46,8 @@ $this->title = 'Participa y gana una Master Experience con Fiesta Americana Vaca
 	<!-- .home-footer -->
 	<div class="home-footer">
 		<div class="home-footer-left">
-			<span class="btn-aviso-privacidad-home">Aviso de privacidad</span>
-			<span class="btn-terminos-condiciones-home">Términos y condiciones</span>
+			<span id="btn-aviso-privacidad">Aviso de privacidad</span>
+			<span id="btn-terminos-condiciones">Términos y condiciones</span>
 		</div>
 		<div class="home-footer-right">
 			<a href="<?=Url::base()?>/site/index">Participar</a>
@@ -62,12 +62,12 @@ $this->title = 'Participa y gana una Master Experience con Fiesta Americana Vaca
 			
 
 <!-- .modal (Términos y condiciones) -->
-<div id="modal-terminos-condiciones-home" class="modal modal-terminos-condiciones modal-terminos-condiciones-home">
+<div id="modal-terminos-condiciones" class="modal modal-terminos-condiciones modal-terminos-condiciones-home">
 
 	<!-- Modal content -->
 	<div class="modal-content">
 		<div class="modal-header">
-			<span class="close modal-terminos-condiciones-close-home">×</span>
+			<span class="close" id="modal-terminos-condiciones-close">×</span>
 			<h2>Términos y Condiciones</h2>
 		</div>
 		<div class="modal-body">
@@ -379,13 +379,13 @@ $this->title = 'Participa y gana una Master Experience con Fiesta Americana Vaca
 
 
 <!-- .modal (Aviso de privacidad) -->
-<div id="modal-aviso-privacidad-home" class="modal modal-aviso-privacidad">
+<div id="modal-aviso-privacidad" class="modal modal-aviso-privacidad">
 
 	<!-- .modal-content -->
 	<div class="modal-content">
 		<!-- .modal-header -->
 		<div class="modal-header">
-			<span class="close modal-aviso-privacidad-close-home">×</span>
+			<span class="close" id="modal-aviso-privacidad-close">×</span>
 			<h2>Aviso de privacidad de PUBLICIDAD GREEN</h2>
 		</div>
 		<!-- end - .modal-header -->
