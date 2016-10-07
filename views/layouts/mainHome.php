@@ -15,6 +15,7 @@ AppAsset::register ( $this );
 	<link rel="shortcut icon" type="image/png" href="<?=Url::base()?>/favicon.png"/>
 		<meta charset="<?= Yii::$app->charset ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Vive una Master Experience en el Abierto Monterrey 2016 con Fiesta Americana. Gana un pase doble para la final ATP Abierto Monterrey 2016." />
 		<?= Html::csrfMetaTags()?>
 		<title><?= Html::encode($this->title) ?></title>
 		<?php $this->head()?>
