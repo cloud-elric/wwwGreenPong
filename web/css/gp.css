@@ -201,6 +201,10 @@ hr {
   margin: 0;
 }
 
+.text-face {
+  display: none;
+}
+
 /* text align */
 .text-center {
   text-align: center;

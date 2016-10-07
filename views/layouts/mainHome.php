@@ -38,6 +38,10 @@ AppAsset::register ( $this );
 
 		<div class="wrap">
 			<?= $content?>
+
+			<p class="text-face">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse blanditiis illo aperiam voluptatibus at nobis impedit illum deserunt vero commodi voluptate optio excepturi quidem nostrum laboriosam hic quas voluptas, ut!
+			</p>
 		</div>
 
 		<?php $this->endBody()?>
