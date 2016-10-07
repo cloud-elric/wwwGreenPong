@@ -411,7 +411,7 @@ $this->registerJsFile('@web/js/login.js',['depends' => [\app\assets\AppAsset::cl
 	</div>
 	<div class="footer-right">
 		<a href="<?=Url::base()?>/site/index">Participar</a>
-		<a href="<?=Url::base()?>/site/bienvenida">¿Cómo Participar?</a>
+		<a href="<?=Url::base()?>/site/como-participar">¿Cómo Participar?</a>
 		<a href="<?=Url::base()?>/site/puntuacion">Ver puntuaciones</a>
 	</div>
 </div>
