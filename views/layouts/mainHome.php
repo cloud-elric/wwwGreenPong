@@ -40,7 +40,7 @@ AppAsset::register ( $this );
 			<?= $content?>
 
 			<p class="text-face">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse blanditiis illo aperiam voluptatibus at nobis impedit illum deserunt vero commodi voluptate optio excepturi quidem nostrum laboriosam hic quas voluptas, ut!
+				“#ComienzaLaExperiencia regístrate y gana boletos para la final del Abierto de Monterrey 2016. “
 			</p>
 		</div>
 
