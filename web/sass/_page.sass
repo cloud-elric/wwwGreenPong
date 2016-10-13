@@ -1438,3 +1438,26 @@ header
 			margin-bottom: 30px
 		p
 			margin-bottom: 14px
+
+/*  Ganador
+	================================================ */
+.ganador
+	background-image: url(../images/bg.jpg)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	min-height: 100vh
+	justify-content: center
+	padding: 0 0 90px
+	position: relative
+	width: 100%
+	@include respond-to(xs)
+		padding: 0 0 120px
+	@include respond-to(xx)
+		padding: 0 0 180px
+	// Imagenes
+	img
+		height: calc(100vh - 250px)
+		margin-top: 150px
+		position: relative

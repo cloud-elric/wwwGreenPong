@@ -256,6 +256,9 @@ class SiteController extends Controller {
 	 * @return string
 	 */
 	public function actionPuntuacion($codigo = null) {
+
+		return $this->render('ganador');
+
 		$codigoEncontrado = WrkCodigos::find ()->where ( [ 
 				'txt_codigo' => $codigo,
 				'b_codigo_usado' => 0 
